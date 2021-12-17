@@ -1,5 +1,44 @@
+/* imports */
+
+/* Readex Pro [Bold 700] */
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@700&display=swap');
+
+/* Readex Pro [Reg 400] */
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+
 /* general */
 
 body {
+  font-family: 'Readex Pro';
   background: #0A0F24;
+  color: #FFFFFF;
+}
+
+/* nav-button (these will be displayed on all pages) */
+
+.nav-button {
+  display: inline-block;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 20px;
+  margin: 20px;
+  border-bottom: 3px solid #A97BFF;
+  padding-bottom: 5px;
+}
+
+/* home.js [ src/pages/home.js ] */
+
+.heading {
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 100px;
+  margin-top: 25%;
+  margin-left: 5%;
+}
+
+.heading-desc {
+  font-weight: 400;
+  color: #A97BFF;
+  font-size: 20px;
+  margin-left: 5.5%;
 }
