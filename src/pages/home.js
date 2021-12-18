@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
 function App() {
+
+  // Calls when page first renders
+  useEffect(() => {
+    document.title = 'Nexus | Home'
+  }, [])
+
   return (
     <body>
         <div className='nav-button--selected'><Link to='/Nexus'>Home</Link></div><div className='nav-button--notselected'><Link to='/Nexus/Browse'>Browse</Link></div>

@@ -112,3 +112,7 @@ input:focus {
   padding-right: 10px;
   border-radius: 4px;
 }
+
+.go-button-invis {
+  display: none;
+}
