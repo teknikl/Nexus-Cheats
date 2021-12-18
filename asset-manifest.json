@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Nexus/static/css/main.87ad04c5.css",
-    "main.js": "/Nexus/static/js/main.b7205f31.js",
+    "main.js": "/Nexus/static/js/main.ca91a39b.js",
     "static/js/787.966b0261.chunk.js": "/Nexus/static/js/787.966b0261.chunk.js",
     "static/media/Minecraft.png": "/Nexus/static/media/Minecraft.07f130710469723cf5fb.png",
     "static/media/Roblox.png": "/Nexus/static/media/Roblox.345e8edeeed965a340cb.png",
@@ -9,11 +9,11 @@
     "static/media/Amongus.png": "/Nexus/static/media/Amongus.45d69755401c84d9679b.png",
     "index.html": "/Nexus/index.html",
     "main.87ad04c5.css.map": "/Nexus/static/css/main.87ad04c5.css.map",
-    "main.b7205f31.js.map": "/Nexus/static/js/main.b7205f31.js.map",
+    "main.ca91a39b.js.map": "/Nexus/static/js/main.ca91a39b.js.map",
     "787.966b0261.chunk.js.map": "/Nexus/static/js/787.966b0261.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.87ad04c5.css",
-    "static/js/main.b7205f31.js"
+    "static/js/main.ca91a39b.js"
   ]
 }
