@@ -116,3 +116,27 @@ input:focus {
 .go-button-invis {
   display: none;
 }
+
+/* gametile.js [ src/components/gametile.js ] */
+
+
+.game-tile--wrapper {
+  display: block;
+  margin-left: 60px;
+}
+
+.gametile {
+  display: inline-block;
+  background: #25293B;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+  margin: 20px;
+  width: 250px;
+  height: 430px;
+}
+
+.gametile--name {
+  font-weight: 700;
+  font-size: 40px;
+}

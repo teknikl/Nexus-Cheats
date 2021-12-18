@@ -1,6 +1,12 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Gametile from '../components/gametile.js';
 import '../App.css';
+
+const games = [
+  { name: 'Minecraft', src: 'Minecraft.png', alt: 'Minecraft'},
+  { name: 'CS:GO', src: 'CSGO.png', alt: 'CS:GO'},
+]
 
 function App() {
 
@@ -29,6 +35,17 @@ function App() {
         <div className='browse-title'>Let's get started...</div>
         <div className='browse-title--desc'>First, help us figure out which games you would like to find cheats for:</div>
         <input name='name' placeholder='Search' type='text' onChange={searchChange}></input><div className={vis}>Go ❯</div>
+        <div className='game-tile--wrapper'>
+          {games.map((game) => {
+            return (
+              <Gametile
+                name={game.name}
+                src={game.src}
+                alt={game.alt}
+              />
+            )
+          })}
+        </div>
     </body>
   );
 }
