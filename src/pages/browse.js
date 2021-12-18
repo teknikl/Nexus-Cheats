@@ -7,6 +7,7 @@ const games = [
   { name: 'Minecraft', src: 'Minecraft.png', alt: 'Minecraft'},
   { name: 'CS:GO', src: 'CSGO.png', alt: 'CS:GO'},
   { name: 'Among Us', src: 'Amongus.png', alt: 'Among Us'},
+  { name: 'Roblox', src: 'Roblox.png', alt: 'Roblox'},
 ]
 
 function App() {
