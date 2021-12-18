@@ -131,6 +131,20 @@ input:focus {
   display: none;
 }
 
+/* Search error */
+
+.searchError {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 50px;
+}  
+
+.searchErrorInvis {
+  display: none;
+}
+
+
 /* gametile.js [ src/components/gametile.js ] */
 
 

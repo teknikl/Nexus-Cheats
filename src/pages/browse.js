@@ -15,7 +15,8 @@ function App() {
   // Calls when page first renders
   useEffect(() => {
     document.title = 'Nexus | Browse'
-    setVis('go-button-invis')
+    setVis('go-button-invis');
+    setSearchVis('searchErrorInvis');
   }, [])
 
   // Handles the search data
@@ -34,7 +35,18 @@ function App() {
     games = games.filter(game => game.name.toLowerCase().includes(search.toLowerCase()));
     // Forces the page to re-render (updates map)
     setVis('go-button-RENDER');
+    // Checks if the returned array is empty
+    if (games.length === 0) {
+      setSearchVis('searchError');
+    } else {
+      setSearchVis('searchErrorInvis');
+    }
   }
+
+  // Search Error meesage
+  const [searchVis, setSearchVis] = React.useState ({
+    searchVis: '',
+  });
 
   // Show and hide the search button (onChange)
   const searchChange = (e) => {
@@ -63,6 +75,7 @@ function App() {
         <div className='browse-title'>Let's get started...</div>
         <div className='browse-title--desc'>First, help us figure out which games you would like to find cheats for:</div>
         <input name='name' placeholder='Search' type='text' onChange={searchChange}></input><div onClick={clickGo} className={vis}>Go ❯</div>
+        <div className={searchVis}>Whoops! We couldn't find any games, did you enter the name correctly?</div>
         <div className='game-tile--wrapper'>
           {games.map((game) => {
             return (
