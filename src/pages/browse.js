@@ -53,6 +53,7 @@ function App() {
     const name = e.target.value;
     setSearch(e.target.value)
     if (name.length < 1) {
+      setSearchVis('searchErrorInvis');
       games = [
         { name: 'Minecraft', src: 'Minecraft.png', alt: 'Minecraft'},
         { name: 'CS:GO', src: 'CSGO.png', alt: 'CS:GO'},
