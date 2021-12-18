@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/Nexus/static/css/main.c244ad14.css",
-    "main.js": "/Nexus/static/js/main.5bca9556.js",
+    "main.css": "/Nexus/static/css/main.6aa37c1b.css",
+    "main.js": "/Nexus/static/js/main.65169e5e.js",
     "static/js/787.966b0261.chunk.js": "/Nexus/static/js/787.966b0261.chunk.js",
+    "static/media/Minecraft.png": "/Nexus/static/media/Minecraft.07f130710469723cf5fb.png",
+    "static/media/CSGO.png": "/Nexus/static/media/CSGO.94d87d1fe5c3eb47889c.png",
     "index.html": "/Nexus/index.html",
-    "main.c244ad14.css.map": "/Nexus/static/css/main.c244ad14.css.map",
-    "main.5bca9556.js.map": "/Nexus/static/js/main.5bca9556.js.map",
+    "main.6aa37c1b.css.map": "/Nexus/static/css/main.6aa37c1b.css.map",
+    "main.65169e5e.js.map": "/Nexus/static/js/main.65169e5e.js.map",
     "787.966b0261.chunk.js.map": "/Nexus/static/js/787.966b0261.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c244ad14.css",
-    "static/js/main.5bca9556.js"
+    "static/css/main.6aa37c1b.css",
+    "static/js/main.65169e5e.js"
   ]
 }
