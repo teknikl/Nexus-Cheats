@@ -55,6 +55,27 @@ function App() {
     }
   }
 
+  // Handles when enter is pressed while the search field is selected (onKeyDown)
+  const _handleEnter = (e) => {
+    const name = e.target.value;
+    if (e.key === 'Enter' && name.length > 1) {
+      games = [
+        { name: 'Minecraft', src: 'Minecraft.png', alt: 'Minecraft'},
+        { name: 'CS:GO', src: 'CSGO.png', alt: 'CS:GO'},
+        { name: 'Among Us', src: 'Amongus.png', alt: 'Among Us'},
+        { name: 'Roblox', src: 'Roblox.png', alt: 'Roblox'},
+      ]
+      games = games.filter(game => game.name.toLowerCase().includes(search.toLowerCase()));
+      // Forces the page to re-render (updates map)
+      setVis('go-button-RENDER');
+      if (games.length === 0) {
+        setSearchVis('searchError');
+      } else {
+        setSearchVis('searchErrorInvis');
+      }
+    }
+  }
+
   // Show and hide the search button (onChange)
   const searchChange = (e) => {
     const name = e.target.value;
@@ -79,8 +100,8 @@ function App() {
         <div className='nav-button--notselected'><Link to='/Nexus'>Home</Link></div><div className='nav-button--selected'><Link to='/Nexus/Browse'>Browse</Link></div>
         <div className='browse-title'>Let's get started...</div>
         <div className='browse-title--desc'>First, help us figure out which games you would like to find cheats for:</div>
-        <input name='name' placeholder='Search' type='text' onChange={searchChange}></input><div onClick={clickGo} className={vis}>Go ❯</div>
-        <div className={searchVis}>Whoops! We couldn't find any games, did you enter the name correctly?</div>
+        <input name='name' placeholder='Search' type='text' onKeyDown={_handleEnter} onChange={searchChange}></input><div onClick={clickGo} className={vis}>Go ❯</div>
+        <div className={searchVis}>Whoops! We couldn't find any games that matched your search, did you enter the name correctly?</div>
         <div className='game-tile--wrapper'>
           {games.map((game) => {
             return (
