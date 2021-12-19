@@ -12,17 +12,29 @@ let games = [
 
 function App() {
 
+  /* All states */
+
+  // Handles the search data
+  const [search, setSearch] =  React.useState ({
+    search: '',
+  });
+
+  // Search Error meesage
+  const [searchVis, setSearchVis] = React.useState ({
+    searchVis: '',
+  });
+
+  // Sets the vis of the search button
+  const [vis, setVis] = React.useState ({
+    vis: '',
+  });
+
   // Calls when page first renders
   useEffect(() => {
     document.title = 'Nexus | Browse'
     setVis('go-button-invis');
     setSearchVis('searchErrorInvis');
   }, [])
-
-  // Handles the search data
-  const [search, setSearch] =  React.useState ({
-    search: '',
-  });
 
   // Handles the click of the search button
   const clickGo = () => {
@@ -43,11 +55,6 @@ function App() {
     }
   }
 
-  // Search Error meesage
-  const [searchVis, setSearchVis] = React.useState ({
-    searchVis: '',
-  });
-
   // Show and hide the search button (onChange)
   const searchChange = (e) => {
     const name = e.target.value;
@@ -66,9 +73,6 @@ function App() {
       setVis('go-button')
     }
   }
-  const [vis, setVis] = React.useState ({
-    vis: '',
-  });
 
   return (
     <body>
