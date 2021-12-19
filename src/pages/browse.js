@@ -8,6 +8,7 @@ let games = [
   { name: 'CS:GO', src: 'CSGO.png', alt: 'CS:GO'},
   { name: 'Among Us', src: 'Amongus.png', alt: 'Among Us'},
   { name: 'Roblox', src: 'Roblox.png', alt: 'Roblox'},
+  { name: "Garry's Mod", src: 'Gmod.png', alt: "Garry's Mod"},
 ]
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
       { name: 'CS:GO', src: 'CSGO.png', alt: 'CS:GO'},
       { name: 'Among Us', src: 'Amongus.png', alt: 'Among Us'},
       { name: 'Roblox', src: 'Roblox.png', alt: 'Roblox'},
+      { name: "Garry's Mod", src: 'Gmod.png', alt: "Garry's Mod"},
     ]
     games = games.filter(game => game.name.toLowerCase().includes(search.toLowerCase()));
     // Forces the page to re-render (updates map)
@@ -64,6 +66,7 @@ function App() {
         { name: 'CS:GO', src: 'CSGO.png', alt: 'CS:GO'},
         { name: 'Among Us', src: 'Amongus.png', alt: 'Among Us'},
         { name: 'Roblox', src: 'Roblox.png', alt: 'Roblox'},
+        { name: "Garry's Mod", src: 'Gmod.png', alt: "Garry's Mod"},
       ]
       games = games.filter(game => game.name.toLowerCase().includes(search.toLowerCase()));
       // Forces the page to re-render (updates map)
@@ -87,6 +90,7 @@ function App() {
         { name: 'CS:GO', src: 'CSGO.png', alt: 'CS:GO'},
         { name: 'Among Us', src: 'Amongus.png', alt: 'Among Us'},
         { name: 'Roblox', src: 'Roblox.png', alt: 'Roblox'},
+        { name: "Garry's Mod", src: 'Gmod.png', alt: "Garry's Mod"},
       ]
     } else if (name.length < 2) {
       setVis('go-button-invis')
