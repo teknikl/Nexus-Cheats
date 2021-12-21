@@ -58,6 +58,14 @@ input:focus {
   margin: 20px;
 }
 
+.nav-button--arrow {
+  display: inline-block;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 20px;
+  margin: 20px;
+}
+
 /* home.js [ src/pages/home.js ] */
 
 .heading {
@@ -194,11 +202,30 @@ input:focus {
   border-radius: 4px;
   margin: 20px;
   width: 250px;
-  height: 430px;
+  height: 440px;
 }
 
 .gametile--name {
   font-weight: 700;
   font-size: 35px;
   margin-top: 3px;
+}
+
+/* ALL games [ src/pages/games/____.js ] */
+
+.game--name {
+  text-align: center;
+  margin-top: 20%;
+  font-weight: 700;
+  font-size: 75px;
+}
+
+.game--desc {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  color: #A97BFF;
+  max-width: 30ch;
+  font-weight: 700;
+  font-size: 20px;
 }
