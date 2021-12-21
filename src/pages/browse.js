@@ -30,14 +30,22 @@ function App() {
     vis: '',
   });
 
+  // Sets vis of the filter
+  const [filter, setFilter] = React.useState ({
+    filter: '',
+  });
+
+  // Sets the visivility of the filter options
+
   // Calls when page first renders
   useEffect(() => {
     document.title = 'Nexus | Browse'
     setVis('go-button-invis');
     setSearchVis('searchErrorInvis');
+    setFilter('atoz-invis');
   }, [])
 
-  // Handles the click of the search button
+  // Handles the click of the search button (onClick)
   const clickGo = () => {
     games = [
       { name: 'Minecraft', src: 'Minecraft.png', alt: 'Minecraft'},
@@ -55,6 +63,21 @@ function App() {
     } else {
       setSearchVis('searchErrorInvis');
     }
+  }
+
+  // Handles the click of the filter button (onClick)
+  const setFilterToggle = () => {
+    if (filter === 'atoz-invis') {
+      setFilter('atoz');
+    } else {
+      setFilter('atoz-invis');
+    }
+  }
+
+  // Handles the a-to-z filter
+  const filteratoz = () => {
+    games = games.sort((a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0));
+    setFilter('atoz-invis');
   }
 
   // Handles when enter is pressed while the search field is selected (onKeyDown)
@@ -104,7 +127,7 @@ function App() {
         <div className='nav-button--notselected'><Link to='/Nexus'>Home</Link></div><div className='nav-button--selected'><Link to='/Nexus/Browse'>Browse</Link></div>
         <div className='browse-title'>Let's get started...</div>
         <div className='browse-title--desc'>First, help us figure out which games you would like to find cheats for:</div>
-        <input name='name' placeholder='Search' type='text' onKeyDown={_handleEnter} onChange={searchChange}></input><div className='filter'></div><div onClick={clickGo} className={vis}>Go ❯</div>
+        <input name='name' placeholder='Search' type='text' onKeyDown={_handleEnter} onChange={searchChange}></input><div onClick={setFilterToggle} className='filter'></div><div onClick={filteratoz} className={filter}>Sort by: A - Z</div><div onClick={clickGo} className={vis}>Go ❯</div>
         <div className={searchVis}>Whoops! We couldn't find any games that matched your search, did you enter the name correctly?</div>
         <div className='game-tile--wrapper'>
           {games.map((game) => {

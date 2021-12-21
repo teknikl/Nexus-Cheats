@@ -116,6 +116,24 @@ input:focus {
   height: 50px;
 }
 
+.atoz {
+  display: inline-block;
+  cursor: pointer;
+  background: #A97BFF;
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+}
+
+.atoz-invis {
+  display: none;
+}
+
 .go-button {
   display: inline-block;
   cursor: pointer;
