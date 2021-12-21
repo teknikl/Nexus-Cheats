@@ -104,7 +104,7 @@ function App() {
         <div className='nav-button--notselected'><Link to='/Nexus'>Home</Link></div><div className='nav-button--selected'><Link to='/Nexus/Browse'>Browse</Link></div>
         <div className='browse-title'>Let's get started...</div>
         <div className='browse-title--desc'>First, help us figure out which games you would like to find cheats for:</div>
-        <input name='name' placeholder='Search' type='text' onKeyDown={_handleEnter} onChange={searchChange}></input><div onClick={clickGo} className={vis}>Go ❯</div>
+        <input name='name' placeholder='Search' type='text' onKeyDown={_handleEnter} onChange={searchChange}></input><div className='filter'></div><div onClick={clickGo} className={vis}>Go ❯</div>
         <div className={searchVis}>Whoops! We couldn't find any games that matched your search, did you enter the name correctly?</div>
         <div className='game-tile--wrapper'>
           {games.map((game) => {
