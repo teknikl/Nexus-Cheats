@@ -9,6 +9,11 @@ let games = [
   { name: 'Among Us', src: 'Amongus.png', alt: 'Among Us'},
   { name: 'Roblox', src: 'Roblox.png', alt: 'Roblox'},
   { name: "Garry's Mod", src: 'Gmod.png', alt: "Garry's Mod"},
+  { name: 'Overwatch', src: 'Overwatch.png', alt: 'Overwatch'},
+  { name: 'Fortnite', src: 'Fortnite.png', alt: 'Fortnite'},
+  { name: 'Warzone', src: 'Warzone.png', alt: 'Warzone'},
+  { name: 'Valorant', src: 'Valorant.png', alt: 'Valorant'},
+  { name: 'Apex Legends', src: 'Apex.png', alt: 'Apex Legends'},
 ]
 
 function App() {
@@ -53,6 +58,11 @@ function App() {
       { name: 'Among Us', src: 'Amongus.png', alt: 'Among Us'},
       { name: 'Roblox', src: 'Roblox.png', alt: 'Roblox'},
       { name: "Garry's Mod", src: 'Gmod.png', alt: "Garry's Mod"},
+      { name: 'Overwatch', src: 'Overwatch.png', alt: 'Overwatch'},
+      { name: 'Fortnite', src: 'Fortnite.png', alt: 'Fortnite'},
+      { name: 'Warzone', src: 'Warzone.png', alt: 'Warzone'},
+      { name: 'Valorant', src: 'Valorant.png', alt: 'Valorant'},
+      { name: 'Apex Legends', src: 'Apex.png', alt: 'Apex Legends'},
     ]
     games = games.filter(game => game.name.toLowerCase().includes(search.toLowerCase()));
     // Forces the page to re-render (updates map)
@@ -90,6 +100,11 @@ function App() {
         { name: 'Among Us', src: 'Amongus.png', alt: 'Among Us'},
         { name: 'Roblox', src: 'Roblox.png', alt: 'Roblox'},
         { name: "Garry's Mod", src: 'Gmod.png', alt: "Garry's Mod"},
+        { name: 'Overwatch', src: 'Overwatch.png', alt: 'Overwatch'},
+        { name: 'Fortnite', src: 'Fortnite.png', alt: 'Fortnite'},
+        { name: 'Warzone', src: 'Warzone.png', alt: 'Warzone'},
+        { name: 'Valorant', src: 'Valorant.png', alt: 'Valorant'},
+        { name: 'Apex Legends', src: 'Apex.png', alt: 'Apex Legends'},
       ]
       games = games.filter(game => game.name.toLowerCase().includes(search.toLowerCase()));
       // Forces the page to re-render (updates map)
@@ -114,6 +129,11 @@ function App() {
         { name: 'Among Us', src: 'Amongus.png', alt: 'Among Us'},
         { name: 'Roblox', src: 'Roblox.png', alt: 'Roblox'},
         { name: "Garry's Mod", src: 'Gmod.png', alt: "Garry's Mod"},
+        { name: 'Overwatch', src: 'Overwatch.png', alt: 'Overwatch'},
+        { name: 'Fortnite', src: 'Fortnite.png', alt: 'Fortnite'},
+        { name: 'Warzone', src: 'Warzone.png', alt: 'Warzone'},
+        { name: 'Valorant', src: 'Valorant.png', alt: 'Valorant'},
+        { name: 'Apex Legends', src: 'Apex.png', alt: 'Apex Legends'},
       ]
     } else if (name.length < 2) {
       setVis('go-button-invis')
