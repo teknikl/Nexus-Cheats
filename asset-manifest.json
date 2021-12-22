@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Nexus/static/css/main.8b9ed869.css",
-    "main.js": "/Nexus/static/js/main.ce18acf1.js",
+    "main.css": "/Nexus/static/css/main.a9aa3b8f.css",
+    "main.js": "/Nexus/static/js/main.27f0b6bf.js",
     "static/js/787.966b0261.chunk.js": "/Nexus/static/js/787.966b0261.chunk.js",
     "static/media/Minecraft.png": "/Nexus/static/media/Minecraft.07f130710469723cf5fb.png",
     "static/media/Warzone.png": "/Nexus/static/media/Warzone.fa9a36d7ce15ef7a7583.png",
@@ -14,12 +14,12 @@
     "static/media/Gmod.png": "/Nexus/static/media/Gmod.b49d7dc849ff9f12f0fa.png",
     "static/media/Amongus.png": "/Nexus/static/media/Amongus.45d69755401c84d9679b.png",
     "index.html": "/Nexus/index.html",
-    "main.8b9ed869.css.map": "/Nexus/static/css/main.8b9ed869.css.map",
-    "main.ce18acf1.js.map": "/Nexus/static/js/main.ce18acf1.js.map",
+    "main.a9aa3b8f.css.map": "/Nexus/static/css/main.a9aa3b8f.css.map",
+    "main.27f0b6bf.js.map": "/Nexus/static/js/main.27f0b6bf.js.map",
     "787.966b0261.chunk.js.map": "/Nexus/static/js/787.966b0261.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b9ed869.css",
-    "static/js/main.ce18acf1.js"
+    "static/css/main.a9aa3b8f.css",
+    "static/js/main.27f0b6bf.js"
   ]
 }
