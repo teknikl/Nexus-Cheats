@@ -215,7 +215,7 @@ input:focus {
 
 .game--name {
   text-align: center;
-  margin-top: 20%;
+  margin-top: 10%;
   font-weight: 700;
   font-size: 75px;
 }
@@ -228,4 +228,77 @@ input:focus {
   max-width: 30ch;
   font-weight: 700;
   font-size: 20px;
+}
+
+/* game tags */
+
+.game-tag--wrapper {
+  text-align: center;
+  margin: 10px;
+}
+
+.game-tag--dot {
+  display: inline-block;
+  background: #0A0F24;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* tag variations */
+
+.game-tag--yellow {
+  display: inline-block;
+  background: #FDFF7B;
+  margin-right: 10px;
+  color: #0A0F24;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: left;
+  height: 20px;
+}
+
+.game-tag--red {
+  display: inline-block;
+  background: #FF7B7B;
+  margin-right: 10px;
+  color: #0A0F24;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: left;
+  height: 20px;
+}
+
+.game-tag--green {
+  display: inline-block;
+  background: #91ff7b;
+  margin-right: 10px;
+  color: #0A0F24;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: left;
+  height: 20px;
+}
+
+.game-tag--blue {
+  display: inline-block;
+  background: #7bebff;
+  margin-right: 10px;
+  color: #0A0F24;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: left;
+  height: 20px;
+}
+
+.game-tag--pink {
+  display: inline-block;
+  background: #ff7bf8;
+  margin-right: 10px;
+  color: #0A0F24;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: left;
+  height: 20px;
 }
