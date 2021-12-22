@@ -12,6 +12,7 @@ body {
   font-family: 'Readex Pro';
   background: #0A0F24;
   color: #FFFFFF;
+  overflow-x: hidden;
 }
 
 a {
@@ -301,4 +302,25 @@ input:focus {
   padding: 10px;
   text-align: left;
   height: 20px;
+}
+
+/* game bg */
+
+.game--bg {
+  position: absolute;
+  opacity: 0.2;
+  transform: scale(3);
+  margin-left: 43.5%;
+}
+
+.game-bg--fade {
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  background: -webkit-linear-gradient(left, 
+              rgba(10, 15, 36.65) 0%,
+              rgba(10, 15, 36, 0) 20%,
+              rgba(10, 15, 36, 0) 80%,
+              rgba(10, 15, 36.65) 100%
+  );
 }
