@@ -40,6 +40,7 @@ input:focus {
 /* nav-button (these will be displayed on all pages) */
 
 .nav-button--selected {
+  position: relative;
   display: inline-block;
   cursor: pointer;
   font-weight: 400;
@@ -48,23 +49,28 @@ input:focus {
   margin: 20px;
   border-bottom: 3px solid #A97BFF;
   padding-bottom: 5px;
+  z-index: 1;
 }
 
 .nav-button--notselected {
+  position: relative;
   display: inline-block;
   cursor: pointer;
   font-weight: 400;
   color: #FFFFFF;
   font-size: 20px;
   margin: 20px;
+  z-index: 1;
 }
 
 .nav-button--arrow {
+  position: relative;
   display: inline-block;
   font-weight: 400;
   color: #FFFFFF;
   font-size: 20px;
   margin: 20px;
+  z-index: 1;
 }
 
 /* home.js [ src/pages/home.js ] */
@@ -215,13 +221,16 @@ input:focus {
 /* ALL games [ src/pages/games/____.js ] */
 
 .game--name {
+  position: relative;
   text-align: center;
   margin-top: 10%;
   font-weight: 700;
   font-size: 75px;
+  z-index: 1;
 }
 
 .game--desc {
+  position: relative;
   text-align: center;
   display: block;
   margin: 0 auto;
@@ -239,6 +248,7 @@ input:focus {
 }
 
 .game-tag--dot {
+  position: relative;
   display: inline-block;
   background: #0A0F24;
   margin-right: 5px;
@@ -250,6 +260,7 @@ input:focus {
 /* tag variations */
 
 .game-tag--yellow {
+  position: relative;
   display: inline-block;
   background: #FDFF7B;
   margin-right: 10px;
@@ -261,6 +272,7 @@ input:focus {
 }
 
 .game-tag--red {
+  position: relative;
   display: inline-block;
   background: #FF7B7B;
   margin-right: 10px;
@@ -272,6 +284,7 @@ input:focus {
 }
 
 .game-tag--green {
+  position: relative;
   display: inline-block;
   background: #91ff7b;
   margin-right: 10px;
@@ -283,6 +296,7 @@ input:focus {
 }
 
 .game-tag--blue {
+  position: relative;
   display: inline-block;
   background: #7bebff;
   margin-right: 10px;
@@ -294,6 +308,7 @@ input:focus {
 }
 
 .game-tag--pink {
+  position: relative;
   display: inline-block;
   background: #ff7bf8;
   margin-right: 10px;
@@ -323,4 +338,130 @@ input:focus {
               rgba(10, 15, 36, 0) 80%,
               rgba(10, 15, 36.65) 100%
   );
+}
+
+/* client.js [ src/components/client.js ] */
+
+.client--wrapper {
+  text-align: center;
+}
+
+.client-tab {
+  position: relative;
+  display: inline-block;
+  background: #262B3B9D;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 20px;
+  margin: 10px;
+  height: 200px;
+}
+
+.client-tab--image {
+  opacity: 0.2;
+}
+
+.client-tab--name {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 40px;
+  margin-top: -210px;
+}
+
+.client-tab--desc {
+  position: relative;
+  font-weight: 700;
+  max-width: 25ch;
+  font-size: 20px;
+  color: #A97BFF;
+}
+
+/* client tags */
+
+.client-tag--wrapper {
+  text-align: center;
+  margin: 10px;
+}
+
+.client-tag--dot {
+  display: inline-block;
+  background: #0A0F24;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* [client] tag variations */
+
+.client-tag--yellow {
+  position: relative;
+  display: inline-block;
+  background: #FDFF7B;
+  margin-right: 10px;
+  color: #0A0F24;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: left;
+  height: 20px;
+}
+
+.client-tag--red {
+  position: relative;
+  display: inline-block;
+  background: #FF7B7B;
+  margin-right: 10px;
+  color: #0A0F24;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: left;
+  height: 20px;
+}
+
+.client-tag--green {
+  position: relative;
+  position: relative;
+  display: inline-block;
+  background: #91ff7b;
+  margin-right: 10px;
+  color: #0A0F24;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: left;
+  height: 20px;
+}
+
+.client-tag--blue {
+  position: relative;
+  display: inline-block;
+  background: #7bebff;
+  margin-right: 10px;
+  color: #0A0F24;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: left;
+  height: 20px;
+}
+
+.client-tag--pink {
+  position: relative;
+  display: inline-block;
+  background: #ff7bf8;
+  margin-right: 10px;
+  color: #0A0F24;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: left;
+  height: 20px;
+}
+
+/* client link */
+
+.game-tab--click {
+  position: relative;
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 20px;
+  color: #FF7B7B;
 }
