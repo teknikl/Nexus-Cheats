@@ -21,6 +21,7 @@ a {
 }
 
 input {
+  position: relative;
   display: inline-block;
   font-family: 'Readex Pro';
   color: #5F5F5F;
@@ -73,9 +74,20 @@ input:focus {
   z-index: 1;
 }
 
+/* home.js / browse.js [ src/pages/home.js / src/pages/browse.js ] */ 
+
+.bg {
+  position: absolute;
+  background-image: url(./images/page_images/bg.png);
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+}
+
 /* home.js [ src/pages/home.js ] */
 
 .heading {
+  position: relative;
   font-weight: 700;
   color: #FFFFFF;
   font-size: 100px;
@@ -84,6 +96,7 @@ input:focus {
 }
 
 .heading-desc {
+  position: relative;
   font-weight: 400;
   color: #A97BFF;
   font-size: 20px;
@@ -91,7 +104,8 @@ input:focus {
 }
 
 .browse-link {
-  font-weight: 400;
+  position: relative;
+  font-weight: 700;
   cursor: pointer;
   color: #FFFFFF;
   font-size: 20px;
@@ -102,6 +116,7 @@ input:focus {
 /* browse.js [ src/pages/browse.js ] */
 
 .browse-title {
+  position: relative;
   font-weight: 700;
   color: #FFFFFF;
   font-size: 75px;
@@ -110,6 +125,7 @@ input:focus {
 }
 
 .browse-title--desc {
+  position: relative;
   font-weight: 400;
   color: #A97BFF;
   font-size: 20px;
@@ -117,6 +133,7 @@ input:focus {
 }
 
 .filter {
+  position: relative;
   display: inline-block;
   background-image: url(./images/page_images/filter.png);
   background-repeat: no-repeat;
@@ -132,6 +149,7 @@ input:focus {
 }
 
 .atoz {
+  position: relative;
   display: inline-block;
   cursor: pointer;
   background: #A97BFF;
@@ -150,6 +168,7 @@ input:focus {
 }
 
 .go-button {
+  position: relative;
   display: inline-block;
   cursor: pointer;
   background: #A97BFF;
@@ -163,6 +182,7 @@ input:focus {
 }
 
 .go-button-RENDER {
+  position: relative;
   display: inline-block;
   cursor: pointer;
   background: #A97BFF;
@@ -182,6 +202,7 @@ input:focus {
 /* Search error */
 
 .searchError {
+  position: relative;
   text-align: center;
   font-size: 20px;
   font-weight: 700;
@@ -202,6 +223,7 @@ input:focus {
 }
 
 .gametile {
+  position: relative;
   display: inline-block;
   background: #25293B;
   cursor: pointer;
@@ -213,6 +235,7 @@ input:focus {
 }
 
 .gametile--name {
+  position: relative;
   font-weight: 700;
   font-size: 35px;
   margin-top: 3px;
