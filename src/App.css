@@ -74,6 +74,13 @@ input:focus {
   z-index: 1;
 }
 
+.footer {
+  position: relative;
+  background: #171724;
+  width: 100%;
+  height: 150px;
+}
+
 /* home.js / browse.js [ src/pages/home.js / src/pages/browse.js ] */ 
 
 .bg {
@@ -86,13 +93,38 @@ input:focus {
 
 /* home.js [ src/pages/home.js ] */
 
+.heading--wrapper {
+  margin-top: 25%;
+  margin-left: 5%;
+}
+
 .heading {
+  display: inline-block;
   position: relative;
   font-weight: 700;
   color: #FFFFFF;
   font-size: 100px;
-  margin-top: 25%;
-  margin-left: 5%;
+}
+
+.heading--type {
+  display: inline-block;
+  background: #E0E0E0;
+  opacity: 0.5;
+  width: 50px;
+  height: 100px;
+  animation: heading--type 1s infinite;
+}
+
+@keyframes heading--type {
+  0% {
+    opacity: 0;
+  } 49% {
+    opacity: 0; 
+  } 50% {
+    opacity: 0.5
+  } 100% {
+    opacity: 0.5;
+  }
 }
 
 .heading-desc {
@@ -111,6 +143,11 @@ input:focus {
   font-size: 20px;
   margin-left: 5.5%;
   margin-top: 5px;
+  margin-bottom: 215px;
+}
+
+.browse-link:hover {
+  text-decoration: underline;
 }
 
 /* browse.js [ src/pages/browse.js ] */
