@@ -145,13 +145,17 @@ input:focus {
 
 /* browse.js [ src/pages/browse.js ] */
 
+.browse-title--wrapper {
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
 .browse-title {
   position: relative;
+  display: inline-block;
   font-weight: 700;
   color: #FFFFFF;
   font-size: 75px;
-  margin-top: 10%;
-  margin-left: 5%;
 }
 
 .browse-title--desc {
