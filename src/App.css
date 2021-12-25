@@ -41,6 +41,7 @@ input:focus {
 /* footers will display on the home page [ src/components/footer.js ] */
 
 .footer {
+  position: relative;
   background: #090D1B;
   width: 100%;
   padding: 10px;
