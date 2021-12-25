@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Footer from '../components/footer.js';
 import '../App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           </div>
             <div className='heading-desc'>An index of (cheat)hacked clients, for any game.</div>
             <div className='browse-link'><Link to='/Nexus/Browse'>Start browsing supported titles ❯</Link></div>
+        <Footer></Footer>
     </body>
   );
 }

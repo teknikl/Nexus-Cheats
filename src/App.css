@@ -38,6 +38,39 @@ input:focus {
   outline: 2px solid #A97BFF;
 }
 
+/* footers will display on the home page [ src/components/footer.js ] */
+
+.footer {
+  background: #090D1B;
+  width: 100%;
+  height: 25px;
+  padding: 10px;
+}
+
+.footer--text {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 20px;
+  margin-right: 7px;
+}
+
+.footer--text-bold {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 20px;
+  margin-right: 7px;
+}
+
+.footer--link {
+  display: inline-block;
+  margin-right: 7px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 15px;
+  color: #A97BFF;
+  text-decoration: underline;
+}
+
 /* nav-button (these will be displayed on all pages) */
 
 .nav-button--selected {
