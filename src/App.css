@@ -61,7 +61,12 @@ input:focus {
   color: #FFFFFF;
   font-size: 20px;
   margin: 20px;
+  padding-bottom: 5px;
   z-index: 1;
+}
+
+.nav-button--notselected:hover {
+  border-bottom: 3px solid #A97BFF86;
 }
 
 .nav-button--arrow {
@@ -182,6 +187,10 @@ input:focus {
   height: 50px;
 }
 
+.filter:hover {
+  background-color: #9862FC;
+}
+
 .atoz {
   position: relative;
   display: inline-block;
@@ -195,6 +204,10 @@ input:focus {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 4px;
+}
+
+.atoz:hover {
+  background: #9862FC;
 }
 
 .atoz-invis {
@@ -215,6 +228,10 @@ input:focus {
   border-radius: 4px;
 }
 
+.go-button:hover {
+  background: #9862FC;
+}
+
 .go-button-RENDER {
   position: relative;
   display: inline-block;
@@ -227,6 +244,10 @@ input:focus {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 4px;
+}
+
+.go-button-RENDER:hover {
+  background: #9862FC;
 }
 
 .go-button-invis {
@@ -266,6 +287,10 @@ input:focus {
   margin: 20px;
   width: 250px;
   height: 430px;
+}
+
+.gametile:hover {
+  background: #373B47;
 }
 
 .gametile--name {
@@ -414,6 +439,10 @@ input:focus {
   height: 200px;
 }
 
+.client-tab:hover {
+  background: #343A4D9D;
+}
+
 .client-tab--image {
   opacity: 0.2;
 }
@@ -511,14 +540,4 @@ input:focus {
   padding: 10px;
   text-align: left;
   height: 20px;
-}
-
-/* client link */
-
-.game-tab--click {
-  position: relative;
-  text-decoration: underline;
-  font-weight: 700;
-  font-size: 20px;
-  color: #FF7B7B;
 }

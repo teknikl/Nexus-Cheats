@@ -7,7 +7,7 @@ import '../../App.css'
 function App() {
 
   let clients = [
-    { link: 'https://wallhax.com', game: 'csgo', src: 'wallhax.png', name: 'Wallhax', desc: 'Features include our Deadly Bone Aimbot, 3D ESP, Mouse Driven Menu and more..', colour_a: 'yellow', dot_a: 'dot', tag_a: 'ESP', colour_b: 'red', dot_b: 'dot', tag_b: 'AIMBOT', colour_c: 'green', dot_c: 'dot', tag_c: 'PAID' },
+    { link: 'https://wallhax.com/hacks/csgo/', game: 'csgo', src: 'wallhax.png', name: 'Wallhax', desc: 'Features include our Deadly Bone Aimbot, 3D ESP, Mouse Driven Menu and more..', colour_a: 'yellow', dot_a: 'dot', tag_a: 'ESP', colour_b: 'red', dot_b: 'dot', tag_b: 'AIMBOT', colour_c: 'green', dot_c: 'dot', tag_c: 'PAID' },
     { link: 'https://onetap.com', game: 'csgo', src: 'onetap.png', name: 'Onetap', desc: 'Hundreds of features such as Aimbot, Wallhack, and Anti-Cheat Protection.', colour_a: 'yellow', dot_a: 'dot', tag_a: 'ESP', colour_b: 'red', dot_b: 'dot', tag_b: 'AIMBOT', colour_c: 'green', dot_c: 'dot', tag_c: 'PAID' },
   ];
 

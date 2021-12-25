@@ -12,7 +12,6 @@ class Client extends React.Component {
          <div className='client-tag--wrapper'>
             <div className={`client-tag--${this.props.colour_a}`}><div className={`client-tag--${this.props.dot_a}`}></div>{this.props.tag_a}</div><div className={`client-tag--${this.props.colour_b}`}><div className={`client-tag--${this.props.dot_b}`}></div>{this.props.tag_b}</div><div className={`client-tag--${this.props.colour_c}`}><div className={`client-tag--${this.props.dot_c}`}></div>{this.props.tag_c}</div>
          </div>
-         <div className='game-tab--click'>CHECK IT OUT</div>
       </div>
       </a>
     }
