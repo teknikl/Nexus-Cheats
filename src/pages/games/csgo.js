@@ -4,24 +4,119 @@ import Tag from '../../components/tag.js';
 import Client from '../../components/client.js';
 import '../../App.css'
 
+let clients = [
+  { link: 'https://wallhax.com/hacks/csgo/', game: 'csgo', src: 'wallhax.png', name: 'Wallhax', desc: 'Features include our Deadly Bone Aimbot, 3D ESP, Mouse Driven Menu and more..', colour_a: 'yellow', dot_a: 'dot', tag_a: 'ESP', colour_b: 'red', dot_b: 'dot', tag_b: 'AIMBOT', colour_c: 'green', dot_c: 'dot', tag_c: 'PAID' },
+  { link: 'https://onetap.com', game: 'csgo', src: 'onetap.png', name: 'Onetap', desc: 'Hundreds of features such as Aimbot, Wallhack, and Anti-Cheat Protection.', colour_a: 'yellow', dot_a: 'dot', tag_a: 'ESP', colour_b: 'red', dot_b: 'dot', tag_b: 'AIMBOT', colour_c: 'green', dot_c: 'dot', tag_c: 'PAID' },
+];
+
+let tags = [
+  { name: 'FPS', colour: 'yellow'},
+  { name: 'PvP', colour: 'green'},
+  { name: 'Popular', colour: 'red'},
+  { name: 'Valve', colour: 'blue'},
+];
+
 function App() {
 
-  let clients = [
-    { link: 'https://wallhax.com/hacks/csgo/', game: 'csgo', src: 'wallhax.png', name: 'Wallhax', desc: 'Features include our Deadly Bone Aimbot, 3D ESP, Mouse Driven Menu and more..', colour_a: 'yellow', dot_a: 'dot', tag_a: 'ESP', colour_b: 'red', dot_b: 'dot', tag_b: 'AIMBOT', colour_c: 'green', dot_c: 'dot', tag_c: 'PAID' },
-    { link: 'https://onetap.com', game: 'csgo', src: 'onetap.png', name: 'Onetap', desc: 'Hundreds of features such as Aimbot, Wallhack, and Anti-Cheat Protection.', colour_a: 'yellow', dot_a: 'dot', tag_a: 'ESP', colour_b: 'red', dot_b: 'dot', tag_b: 'AIMBOT', colour_c: 'green', dot_c: 'dot', tag_c: 'PAID' },
-  ];
+    /* All states & Search Code IMPORTED FROM [ src/pages/browse.js ] */
 
-  let tags = [
-    { name: 'FPS', colour: 'yellow'},
-    { name: 'PvP', colour: 'green'},
-    { name: 'Popular', colour: 'red'},
-    { name: 'Valve', colour: 'blue'},
-  ];
+  // Handles the search data
+  const [search, setSearch] =  React.useState ({
+    search: '',
+  });
+
+  // Search Error meesage
+  const [searchVis, setSearchVis] = React.useState ({
+    searchVis: '',
+  });
+
+  // Sets the vis of the search button
+  const [vis, setVis] = React.useState ({
+    vis: '',
+  });
+
+  // Sets vis of the filter
+  const [filter, setFilter] = React.useState ({
+    filter: '',
+  });
+
+  // Sets the visivility of the filter options
 
   // Calls when page first renders
   useEffect(() => {
     document.title = `Nexus | CSGO` /* <- MANUAL INPUT REQUIRED */
+    setVis('go-button-invis');
+    setSearchVis('searchErrorInvis');
+    setFilter('atoz-invis');
   }, [])
+
+  // Handles the click of the search button (onClick)
+  const clickGo = () => {
+    clients = [
+      { link: 'https://wallhax.com/hacks/csgo/', game: 'csgo', src: 'wallhax.png', name: 'Wallhax', desc: 'Features include our Deadly Bone Aimbot, 3D ESP, Mouse Driven Menu and more..', colour_a: 'yellow', dot_a: 'dot', tag_a: 'ESP', colour_b: 'red', dot_b: 'dot', tag_b: 'AIMBOT', colour_c: 'green', dot_c: 'dot', tag_c: 'PAID' },
+      { link: 'https://onetap.com', game: 'csgo', src: 'onetap.png', name: 'Onetap', desc: 'Hundreds of features such as Aimbot, Wallhack, and Anti-Cheat Protection.', colour_a: 'yellow', dot_a: 'dot', tag_a: 'ESP', colour_b: 'red', dot_b: 'dot', tag_b: 'AIMBOT', colour_c: 'green', dot_c: 'dot', tag_c: 'PAID' },
+    ]
+    clients = clients.filter(client => client.name.toLowerCase().includes(search.toLowerCase()));
+    // Forces the page to re-render (updates map)
+    setVis('go-button-RENDER');
+    // Checks if the returned array is empty
+    if (clients.length === 0) {
+      setSearchVis('searchError');
+    } else {
+      setSearchVis('searchErrorInvis');
+    }
+  }
+
+  // Handles the click of the filter button (onClick)
+  const setFilterToggle = () => {
+    if (filter === 'atoz-invis') {
+      setFilter('atoz');
+    } else {
+      setFilter('atoz-invis');
+    }
+  }
+
+  // Handles the a-to-z filter
+  const filteratoz = () => {
+    clients = clients.sort((a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0));
+    setFilter('atoz-invis');
+  }
+
+  // Handles when enter is pressed while the search field is selected (onKeyDown)
+  const _handleEnter = (e) => {
+    const name = e.target.value;
+    if (e.key === 'Enter' && name.length > 1) {
+      clients = [
+        { link: 'https://wallhax.com/hacks/csgo/', game: 'csgo', src: 'wallhax.png', name: 'Wallhax', desc: 'Features include our Deadly Bone Aimbot, 3D ESP, Mouse Driven Menu and more..', colour_a: 'yellow', dot_a: 'dot', tag_a: 'ESP', colour_b: 'red', dot_b: 'dot', tag_b: 'AIMBOT', colour_c: 'green', dot_c: 'dot', tag_c: 'PAID' },
+        { link: 'https://onetap.com', game: 'csgo', src: 'onetap.png', name: 'Onetap', desc: 'Hundreds of features such as Aimbot, Wallhack, and Anti-Cheat Protection.', colour_a: 'yellow', dot_a: 'dot', tag_a: 'ESP', colour_b: 'red', dot_b: 'dot', tag_b: 'AIMBOT', colour_c: 'green', dot_c: 'dot', tag_c: 'PAID' },
+      ]
+      clients = clients.filter(client => client.name.toLowerCase().includes(search.toLowerCase()));
+      // Forces the page to re-render (updates map)
+      setVis('go-button-RENDER');
+      if (clients.length === 0) {
+        setSearchVis('searchError');
+      } else {
+        setSearchVis('searchErrorInvis');
+      }
+    }
+  }
+
+  // Show and hide the search button (onChange)
+  const searchChange = (e) => {
+    const name = e.target.value;
+    setSearch(e.target.value)
+    if (name.length < 1) {
+      setSearchVis('searchErrorInvis');
+      clients = [
+        { link: 'https://wallhax.com/hacks/csgo/', game: 'csgo', src: 'wallhax.png', name: 'Wallhax', desc: 'Features include our Deadly Bone Aimbot, 3D ESP, Mouse Driven Menu and more..', colour_a: 'yellow', dot_a: 'dot', tag_a: 'ESP', colour_b: 'red', dot_b: 'dot', tag_b: 'AIMBOT', colour_c: 'green', dot_c: 'dot', tag_c: 'PAID' },
+        { link: 'https://onetap.com', game: 'csgo', src: 'onetap.png', name: 'Onetap', desc: 'Hundreds of features such as Aimbot, Wallhack, and Anti-Cheat Protection.', colour_a: 'yellow', dot_a: 'dot', tag_a: 'ESP', colour_b: 'red', dot_b: 'dot', tag_b: 'AIMBOT', colour_c: 'green', dot_c: 'dot', tag_c: 'PAID' },
+      ]
+    } else if (name.length < 2) {
+      setVis('go-button-invis')
+    } else {
+      setVis('go-button')
+    }
+  }
 
   const data = {
     name: 'CSGO',
@@ -49,7 +144,17 @@ function App() {
             )
           })}
         </div>
-        <div className='client--wrapper'>
+        <input style={{
+          display: 'block',
+          margin: '10px auto',
+        }} name='name' placeholder='Search' type='text' onKeyDown={_handleEnter} onChange={searchChange}></input>
+        <div className='button--wrapper'>
+          <div onClick={setFilterToggle} className='filter'></div><div onClick={filteratoz} className={filter}>Sort by: A - Z</div><div onClick={clickGo} className={vis}>Go ❯</div>
+        </div>
+        <div className={searchVis}>Whoops! We couldn't find any clients that matched your search, did you enter the name correctly?</div>
+        <div style={{
+          marginTop: '30px',
+        }} className='client--wrapper'>
           {clients.map((client) => {
             return (
             <Client

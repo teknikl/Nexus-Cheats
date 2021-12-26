@@ -574,3 +574,9 @@ input:focus {
   text-align: left;
   height: 20px;
 }
+
+/* button wrapper */
+
+.button--wrapper {
+  text-align: center;
+}
