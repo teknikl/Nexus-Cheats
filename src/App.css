@@ -519,6 +519,7 @@ input:focus {
   display: inline-block;
   background: #FDFF7B;
   margin-right: 10px;
+  margin-top: 10px;
   color: #0A0F24;
   border-radius: 4px;
   padding: 10px;
@@ -531,6 +532,7 @@ input:focus {
   display: inline-block;
   background: #FF7B7B;
   margin-right: 10px;
+  margin-top: 10px;
   color: #0A0F24;
   border-radius: 4px;
   padding: 10px;
@@ -544,6 +546,7 @@ input:focus {
   display: inline-block;
   background: #91ff7b;
   margin-right: 10px;
+  margin-top: 10px;
   color: #0A0F24;
   border-radius: 4px;
   padding: 10px;
@@ -556,6 +559,7 @@ input:focus {
   display: inline-block;
   background: #7bebff;
   margin-right: 10px;
+  margin-top: 10px;
   color: #0A0F24;
   border-radius: 4px;
   padding: 10px;
@@ -568,6 +572,7 @@ input:focus {
   display: inline-block;
   background: #ff7bf8;
   margin-right: 10px;
+  margin-top: 10px;
   color: #0A0F24;
   border-radius: 4px;
   padding: 10px;
