@@ -818,6 +818,7 @@ input:focus {
 
 .section-desc {
   position: relative;
+  margin-top: 20px;
   font-size: 17px;
   font-weight: 700;
   color: #A97BFF;
@@ -825,7 +826,7 @@ input:focus {
 
 .section-name {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 20px;
   color: #FFFFFF;
 }
@@ -864,7 +865,7 @@ input:focus {
   position: relative;
   text-align: center;
   margin: 0px auto;
-  background: #25293BDA;
+  background: #25293B44;
   padding: 20px;
   border-radius: 4px;
   width: 400px;
@@ -918,4 +919,39 @@ input:focus {
 
 .user--action---button---continue:hover {
   background: #91FF7B86;
+}
+
+/* change email CSS */
+
+.input--tick {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #91FF7B86;
+  border-radius: 4px;
+  padding: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px auto;
+  margin-left: 20px;
+  cursor: pointer;
+  font-weight: 400;
+  color: #FFFFFF;
+  width: 25px;
+  font-size: 20px;
+}
+
+.input--tick---invis {
+  display: none;
+}
+
+.input--tick:hover {
+  background: #91FF7B86;
+}
+
+.input {
+  display: inline-block;
+}
+
+.input--invis {
+  display: none;
 }

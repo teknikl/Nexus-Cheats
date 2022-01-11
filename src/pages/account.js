@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { AuthContext, auth } from '../auth/auth.js';
 import { deleteUser } from '@firebase/auth';
 import { useHistory } from 'react-router-dom';
-import { signOut } from '@firebase/auth';
+import { signOut, updateEmail } from '@firebase/auth';
+import DoneIcon from '@mui/icons-material/Done';
 import '../App.css';
 
 function App() {
@@ -12,10 +13,24 @@ function App() {
         verifyVis: '',
     });
 
+    const [inputVis, setInputVis ] = React.useState ({
+        inputVis: '',
+    });
+
+    const [tickVis, setTickVis ] = React.useState ({
+        tickVis: '',
+    });
+
+    const [emailVal, setEmailVal ] = React.useState ({
+        emailVal: '',
+    });
+
   // Calls when page first renders
   useEffect(() => {
     document.title = 'Nexus | Account'
     setVerifyVis('verify---wrapper----invis');
+    setTickVis('input--tick---invis');
+    setInputVis('input--invis');
   }, [])
 
   const history = useHistory();
@@ -49,6 +64,31 @@ function App() {
       })
   };
 
+  const emailVis = () => {
+      if (tickVis === 'input--tick---invis' && inputVis === 'input--invis') {
+        setTickVis('input--tick');
+        setInputVis('input');
+      } else {
+        setTickVis('input--tick---invis');
+        setInputVis('input--invis');
+      }
+  }
+
+  const emailChange = (e) => {
+    setEmailVal(e.target.value);
+  }
+
+  const updateUserEmail = () => {
+    updateEmail(user, emailVal)
+    .then(() => {
+        setTickVis('input--tick---invis');
+        setInputVis('input--invis');
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
+
   return (
     <body>
       <div className='bg'></div>
@@ -65,6 +105,11 @@ function App() {
 
             <div className='section-desc'>Email:</div>
             <div className='section-name'>{user === null ? '' : user.email}</div>
+            <div onClick={emailVis} className='user--action---button'>Change Email</div>
+            <div className={inputVis}><input onChange={emailChange} style={{
+                textTransform: 'none',
+                margin: '10px auto',
+            }} placeholder='New Email'></input></div><div onClick={updateUserEmail} className={tickVis}><DoneIcon></DoneIcon></div>
 
             <div className='section-desc'>Email Verified:</div>
             <div className='section-name'>{user === null ? '' : user.emailVerified.toString()}</div>
