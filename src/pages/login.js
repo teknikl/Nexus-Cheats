@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { signInWithEmailAndPassword, sendPasswordResetEmail } from '@firebase/auth';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useHistory } from 'react-router-dom';
 import { AuthContext, auth } from '../auth/auth.js';
 import '../App.css';
@@ -89,7 +91,7 @@ function App() {
                 textTransform: 'none',
                 marginLeft: '0px',
                 width: '350px',
-            }} type={passVis} placeholder='Password' onChange={updatePass} ></input><div onClick={updateVis} className='password-vis--button'>Show / Hide</div>
+            }} type={passVis} placeholder='Password' onChange={updatePass} ></input><div onClick={updateVis} className='password-vis--button'>{passVis === 'password' ? <VisibilityIcon></VisibilityIcon> : <VisibilityOffIcon></VisibilityOffIcon>}</div>
         </div>
         <div className='log-in--pass--wrapper'>
           <div className='log-in--pass'>Forgot your password?</div><Link to='/Nexus/Log-In/Reset'><div className='log-in--pass---link' onClick={sendPassReset} >Send an email</div></Link>
