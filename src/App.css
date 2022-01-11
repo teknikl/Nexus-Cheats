@@ -853,3 +853,11 @@ input:focus {
   cursor: pointer;
   color: #A97BFF;
 }
+
+.reset--link---help {
+  position: relative;
+  margin: 10px auto;
+  max-width: 40ch;
+  font-size: 12px;
+  color: #FFFFFF;
+}
