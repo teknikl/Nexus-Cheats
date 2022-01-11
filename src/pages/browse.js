@@ -8,15 +8,6 @@ import '../App.css';
 
 let games = [
   { name: 'CS:GO', src: 'CSGO.png', alt: 'CS:GO', link: 'CSGO'},
-  { name: 'Minecraft', src: 'Minecraft.png', alt: 'Minecraft', link: 'Minecraft'},
-  { name: 'Among Us', src: 'Amongus.png', alt: 'Among Us', link: 'AmongUs'},
-  { name: 'Roblox', src: 'Roblox.png', alt: 'Roblox', link: 'Roblox'},
-  { name: "Garry's Mod", src: 'Gmod.png', alt: "Garry's Mod", link: 'Gmod'},
-  { name: 'Overwatch', src: 'Overwatch.png', alt: 'Overwatch', link: 'Overwatch'},
-  { name: 'Fortnite', src: 'Fortnite.png', alt: 'Fortnite', link: 'Fortnite'},
-  { name: 'Warzone', src: 'Warzone.png', alt: 'Warzone', link: 'Warzone'},
-  { name: 'Valorant', src: 'Valorant.png', alt: 'Valorant', link: 'Valorant'},
-  { name: 'Apex Legends', src: 'Apex.png', alt: 'Apex Legends', link: 'ApexLegends'},
 ]
 
 function App() {
@@ -57,15 +48,6 @@ function App() {
   const clickGo = () => {
     games = [
       { name: 'CS:GO', src: 'CSGO.png', alt: 'CS:GO', link: 'CSGO'},
-      { name: 'Minecraft', src: 'Minecraft.png', alt: 'Minecraft', link: 'Minecraft'},
-      { name: 'Among Us', src: 'Amongus.png', alt: 'Among Us', link: 'AmongUs'},
-      { name: 'Roblox', src: 'Roblox.png', alt: 'Roblox', link: 'Roblox'},
-      { name: "Garry's Mod", src: 'Gmod.png', alt: "Garry's Mod", link: 'Gmod'},
-      { name: 'Overwatch', src: 'Overwatch.png', alt: 'Overwatch', link: 'Overwatch'},
-      { name: 'Fortnite', src: 'Fortnite.png', alt: 'Fortnite', link: 'Fortnite'},
-      { name: 'Warzone', src: 'Warzone.png', alt: 'Warzone', link: 'Warzone'},
-      { name: 'Valorant', src: 'Valorant.png', alt: 'Valorant', link: 'Valorant'},
-      { name: 'Apex Legends', src: 'Apex.png', alt: 'Apex Legends', link: 'ApexLegends'},
     ]
     games = games.filter(game => game.name.toLowerCase().includes(search.toLowerCase()));
     // Forces the page to re-render (updates map)
@@ -99,15 +81,6 @@ function App() {
     if (e.key === 'Enter' && name.length > 1) {
       games = [
         { name: 'CS:GO', src: 'CSGO.png', alt: 'CS:GO', link: 'CSGO'},
-        { name: 'Minecraft', src: 'Minecraft.png', alt: 'Minecraft', link: 'Minecraft'},
-        { name: 'Among Us', src: 'Amongus.png', alt: 'Among Us', link: 'AmongUs'},
-        { name: 'Roblox', src: 'Roblox.png', alt: 'Roblox', link: 'Roblox'},
-        { name: "Garry's Mod", src: 'Gmod.png', alt: "Garry's Mod", link: 'Gmod'},
-        { name: 'Overwatch', src: 'Overwatch.png', alt: 'Overwatch', link: 'Overwatch'},
-        { name: 'Fortnite', src: 'Fortnite.png', alt: 'Fortnite', link: 'Fortnite'},
-        { name: 'Warzone', src: 'Warzone.png', alt: 'Warzone', link: 'Warzone'},
-        { name: 'Valorant', src: 'Valorant.png', alt: 'Valorant', link: 'Valorant'},
-        { name: 'Apex Legends', src: 'Apex.png', alt: 'Apex Legends', link: 'ApexLegends'},
       ]
       games = games.filter(game => game.name.toLowerCase().includes(search.toLowerCase()));
       // Forces the page to re-render (updates map)
@@ -128,15 +101,6 @@ function App() {
       setSearchVis('searchErrorInvis');
       games = [
         { name: 'CS:GO', src: 'CSGO.png', alt: 'CS:GO', link: 'CSGO'},
-        { name: 'Minecraft', src: 'Minecraft.png', alt: 'Minecraft', link: 'Minecraft'},
-        { name: 'Among Us', src: 'Amongus.png', alt: 'Among Us', link: 'AmongUs'},
-        { name: 'Roblox', src: 'Roblox.png', alt: 'Roblox', link: 'Roblox'},
-        { name: "Garry's Mod", src: 'Gmod.png', alt: "Garry's Mod", link: 'Gmod'},
-        { name: 'Overwatch', src: 'Overwatch.png', alt: 'Overwatch', link: 'Overwatch'},
-        { name: 'Fortnite', src: 'Fortnite.png', alt: 'Fortnite', link: 'Fortnite'},
-        { name: 'Warzone', src: 'Warzone.png', alt: 'Warzone', link: 'Warzone'},
-        { name: 'Valorant', src: 'Valorant.png', alt: 'Valorant', link: 'Valorant'},
-        { name: 'Apex Legends', src: 'Apex.png', alt: 'Apex Legends', link: 'ApexLegends'},
       ]
     } else if (name.length < 2) {
       setVis('go-button-invis')

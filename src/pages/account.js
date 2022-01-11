@@ -25,12 +25,30 @@ function App() {
         emailVal: '',
     });
 
+    const [errVis, setErrVis ] = React.useState ({
+        errVis: '',
+     });
+
+    const [errVis2, setErrVis2 ] = React.useState ({
+        errVis2: '',
+    });
+
+    const [pageErr, setPageErr ] = React.useState ({
+       pageErr: '',
+    });
+
+    const [pageErr2, setPageErr2 ] = React.useState ({
+        pageErr2: '',
+     });
+
   // Calls when page first renders
   useEffect(() => {
     document.title = 'Nexus | Account'
     setVerifyVis('verify---wrapper----invis');
     setTickVis('input--tick---invis');
     setInputVis('input--invis');
+    setErrVis('user--error---invis');
+    setErrVis2('user--error---invis');
   }, [])
 
   const history = useHistory();
@@ -42,7 +60,8 @@ function App() {
         history.push('/Nexus');
       })
       .catch((err) => {
-        console.log(err);
+        setErrVis2('user--error');
+        setPageErr2(err);
       })
   };
 
@@ -60,7 +79,8 @@ function App() {
         history.push('/Nexus');
       })
       .catch((err) => {
-        console.log(err);
+        setErrVis2('user--error');
+        setPageErr2(err);
       })
   };
 
@@ -85,7 +105,8 @@ function App() {
         setInputVis('input--invis');
       })
       .catch((err) => {
-        console.log(err);
+        setErrVis('user--error');
+        setPageErr(err);
       })
   }
 
@@ -110,6 +131,7 @@ function App() {
                 textTransform: 'none',
                 margin: '10px auto',
             }} placeholder='New Email'></input></div><div onClick={updateUserEmail} className={tickVis}><DoneIcon></DoneIcon></div>
+            <div className={errVis}>{pageErr.toString()}</div>
 
             <div className='section-desc'>Email Verified:</div>
             <div className='section-name'>{user === null ? '' : user.emailVerified.toString()}</div>
@@ -125,6 +147,7 @@ function App() {
 
             <div onClick={logout} className='user--action---button'>Logout</div>
             <div onClick={delaccvis} className='user--action---button'>Delete Account</div>
+            <div className={errVis2}>{pageErr2.toString()}</div>
         </div>
     </body>
   );

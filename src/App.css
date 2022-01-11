@@ -366,7 +366,7 @@ input:focus {
 .gametile {
   position: relative;
   display: inline-block;
-  background: #25293B;
+  background: #25293B44;
   cursor: pointer;
   text-align: center;
   border-radius: 4px;
@@ -377,7 +377,7 @@ input:focus {
 }
 
 .gametile:hover {
-  background: #373B47;
+  background: #25293BA1;
 }
 
 .gametile--name {
@@ -523,7 +523,7 @@ input:focus {
 .client-tab {
   position: relative;
   display: inline-block;
-  background: #262B3B9D;
+  background: #25293B44;
   border-radius: 4px;
   cursor: pointer;
   padding: 20px;
@@ -953,5 +953,16 @@ input:focus {
 }
 
 .input--invis {
+  display: none;
+}
+
+.user--error {
+  position: relative;
+  margin: 10px;
+  font-size: 20px;
+  color: #E48181;
+}
+
+.user--error---invis {
   display: none;
 }
