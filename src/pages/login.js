@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { signInWithEmailAndPassword } from '@firebase/auth';
+import { signInWithEmailAndPassword, sendPasswordResetEmail } from '@firebase/auth';
 import { useHistory } from 'react-router-dom';
 import { AuthContext, auth } from '../auth/auth.js';
 import '../App.css';
@@ -68,7 +68,7 @@ function App() {
   }
 
   const sendPassReset = () => {
-    console.log('reset');
+    sendPasswordResetEmail(auth, email);
   };
 
   return (

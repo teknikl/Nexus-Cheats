@@ -17,9 +17,6 @@ function App() {
             <div className='reset--title'>Email Sent</div>
             <div className='reset--desc'>A password reset email has been sent to your account. Please check your email account and click the link provided to reset your password.</div>
             <div className='reset--link---text'>Thanks,</div><Link to='/Nexus/Log-In'><div className='reset--link'>take me to login</div></Link>
-            <div className='reset---wrapper----sep'>
-             <div className='reset--link---text'>Didn't recieve an email?</div><div className='reset--link'>resend email</div>
-            </div>
         </div>
     </body>
   );

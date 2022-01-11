@@ -62,6 +62,7 @@ function App() {
             updateUser(email);
           })
           .catch((err) => {
+              setFormErrVis('main-form--error');
               setFormerr(err);
           })
   }
