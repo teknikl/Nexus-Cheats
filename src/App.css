@@ -113,6 +113,120 @@ input:focus {
   z-index: 1;
 }
 
+/* Sign up and log in related CSS */
+
+.buttons--wrapper {
+  margin-top: -70px;
+  text-align: right;
+}
+
+.log-in--button {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #A97BFF86;
+  border-radius: 4px;
+  padding: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.log-in--button---invis {
+  display: none;
+}
+
+.log-in--button:hover {
+  background: #A97BFF86;
+}
+
+/* forgot password CSS */
+
+.log-in--pass--wrapper {
+  text-align: center;
+}
+
+.log-in--pass {
+  position: relative;
+  display: inline-block;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+
+.log-in--pass---link {
+  position: relative;
+  display: inline-block;
+  font-size: 17px;
+  margin-left: 5px;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #A97BFF;
+}
+
+/* Rest of buttons */
+
+.sign-up--button {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #A97BFF86;
+  border-radius: 4px;
+  padding: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.sign-up--button---invis {
+  display: none;
+}
+
+.sign-up--button:hover {
+  background: #A97BFF86;
+}
+
+/* user display */
+
+.user--email {
+  display: inline-block;
+  font-size: 20px;
+  color: #FFFFFF;
+  margin: 10px;
+}
+
+.user--email---invis {
+  display: none;
+}
+
+.user--email---logout {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #A97BFF86;
+  border-radius: 4px;
+  padding: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.user--email---logout----invis {
+  display: none;
+}
+
+.user--email---logout:hover {
+  background: #A97BFF86;
+}
+
 /* home.js / browse.js [ src/pages/home.js / src/pages/browse.js ] */ 
 
 .bg {
@@ -211,7 +325,7 @@ input:focus {
   background-image: url(./images/page_images/filter.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #A97BFF;
+  border: 2px solid #A97BFF86;
   margin-bottom: -28px;
   margin-right: 20px;
   margin-left: 25px;
@@ -223,14 +337,14 @@ input:focus {
 }
 
 .filter:hover {
-  background-color: #9862FC;
+  background-color: #A97BFF86;
 }
 
 .atoz {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  background: #A97BFF;
+  border: 2px solid #A97BFF86;
   font-size: 20px;
   font-weight: 700;
   padding-top: 10px;
@@ -242,7 +356,7 @@ input:focus {
 }
 
 .atoz:hover {
-  background: #9862FC;
+  background: #A97BFF86;
 }
 
 .atoz-invis {
@@ -253,7 +367,7 @@ input:focus {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  background: #A97BFF;
+  border: 2px solid #A97BFF86;
   font-size: 30px;
   font-weight: 700;
   padding-top: 10px;
@@ -264,14 +378,14 @@ input:focus {
 }
 
 .go-button:hover {
-  background: #9862FC;
+  background: #A97BFF86;
 }
 
 .go-button-RENDER {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  background: #A97BFF;
+  border: 2px solid #A97BFF86;
   font-size: 30px;
   font-weight: 700;
   padding-top: 10px;
@@ -282,7 +396,7 @@ input:focus {
 }
 
 .go-button-RENDER:hover {
-  background: #9862FC;
+  background: #A97BFF86;
 }
 
 .go-button-invis {
@@ -592,4 +706,154 @@ input:focus {
 
 .button--wrapper {
   text-align: center;
+}
+
+/* sign-up & log-in [ src/pages/signup.js + src/pages/login.js ] */
+
+.form-heading {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-top: 5%;
+  font-weight: 700;
+  font-size: 75px;
+  color: #FFFFFF;
+}
+
+.form-heading--desc {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  color: #A97BFF;
+}
+
+.form-input--wrapper---a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-input--wrapper---b {
+  display: block;
+  text-align: center;
+}
+
+.password-vis--button {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 20px;
+  color: #FFFFFF;
+  border: 2px solid #A97BFF86;
+  border-radius: 4px;
+}
+
+.password-vis--button:hover {
+  background: #A97BFF86;
+}
+
+.form-confirm--button {
+  position: relative;
+  text-align: center;
+  margin: 10px auto;
+  width: 200px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 10px;
+  color: #FFFFFF;
+  border: 2px solid #A97BFF86;
+  border-radius: 4px;
+}
+
+.form-confirm--button:hover {
+  background: #A97BFF86;
+}
+
+/* All form errors */
+
+.main-form--error {
+  text-align: center;
+  position: relative;
+  margin: 10px;
+  font-size: 20px;
+  color: #E48181;
+}
+
+.main-form--error---invis {
+  display: none;
+}
+
+/* Links */
+
+.form-other--wrapper {
+  margin-top: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.form-other--text {
+  position: relative;
+  display: inline-block;
+  color: #FFFFFF;
+  font-size: 17px;
+}
+
+.form-other--link {
+  position: relative;
+  display: inline-block;
+  color: #A97BFF;
+  text-decoration: underline;
+  margin-left: 5px;
+  font-size: 17px;
+}
+
+/* Reset.js CSS [ src/pages/reset.js ] */
+
+.reset---wrapper {
+  text-align: center;
+}
+
+.reset--title {
+  position: relative;
+  font-size: 75px;
+  margin-top: 100px;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.reset--desc {
+  position: relative;
+  display: block;
+  margin: 10px auto;
+  font-size: 20px;
+  max-width: 30ch;
+  color: #A97BFF;
+  font-weight: 700;
+}
+
+.reset--link---text {
+  position: relative;
+  display: inline-block;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+
+.reset--link {
+  position: relative;
+  display: inline-block;
+  font-size: 17px;
+  margin-left: 5px;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #A97BFF;
+}
+
+.reset---wrapper----sep {
+  margin-top: 10px;
 }
