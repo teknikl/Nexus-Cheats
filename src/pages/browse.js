@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Gametile from '../components/gametile.js';
-import { signOut } from '@firebase/auth';
-import { AuthContext, auth } from '../auth/auth.js';
+import { AuthContext } from '../auth/auth.js';
 import { useHistory } from 'react-router-dom';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import '../App.css';
 
 let games = [
@@ -148,12 +148,8 @@ function App() {
   const history = useHistory();
   const { user } = React.useContext(AuthContext);
 
-  const logout = () => {
-    signOut(auth).then(() => {
-      history.push('/Nexus/Log-In')
-    }).catch((err) => {
-      console.log(err);
-    });
+  const userRedirect = () => {
+    history.push('/Nexus/Account');
   }
 
   return (
@@ -161,7 +157,7 @@ function App() {
       <div className='bg'></div>
         <div className='nav-button--notselected'><Link to='/Nexus'>Home</Link></div><div className='nav-button--selected'><Link to='/Nexus/Browse'>Browse</Link></div>
         <div className='buttons--wrapper'>
-          <div className={user === null ? 'user--email---invis' : 'user--email'}>{user === null ? '' : user.email}</div><div className={user === null ? 'user--email---logout----invis' : 'user--email---logout'} onClick={logout} >Logout</div><Link to='/Nexus/Log-In'><div className={user === null ? 'log-in--button' : 'log-in--button---invis'}>Log In</div></Link><Link to='/Nexus/Sign-Up'><div className={user === null ? 'sign-up--button' : 'sign-up--button---invis'}>Sign Up</div></Link>
+          <div className='account-icon--wrapper'>{user === null ? '' : <AccountCircleIcon onClick={userRedirect} sx={{ fontSize: '40px' }}></AccountCircleIcon>}</div><Link to='/Nexus/Log-In'><div className={user === null ? 'log-in--button' : 'log-in--button---invis'}>Log In</div></Link><Link to='/Nexus/Sign-Up'><div className={user === null ? 'sign-up--button' : 'sign-up--button---invis'}>Sign Up</div></Link>
         </div>
         <div className='browse-title--wrapper'>
           <div className='browse-title'>Let's get started...</div><div className='heading--type'></div>
