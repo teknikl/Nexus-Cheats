@@ -39,39 +39,6 @@ input:focus {
   outline: 2px solid #A97BFF;
 }
 
-/* footers will display on the home page [ src/components/footer.js ] */
-
-.footer {
-  position: relative;
-  background: #090D1B;
-  width: 100%;
-  padding: 10px;
-}
-
-.footer--text {
-  display: inline-block;
-  font-weight: 400;
-  font-size: 20px;
-  margin-right: 7px;
-}
-
-.footer--text-bold {
-  display: inline-block;
-  font-weight: 700;
-  font-size: 20px;
-  margin-right: 7px;
-}
-
-.footer--link {
-  display: inline-block;
-  margin-right: 7px;
-  cursor: pointer;
-  font-weight: 400;
-  font-size: 15px;
-  color: #A97BFF;
-  text-decoration: underline;
-}
-
 /* nav-button (these will be displayed on all pages) */
 
 .nav-button--selected {
@@ -191,42 +158,6 @@ input:focus {
   background: #A97BFF86;
 }
 
-/* user display */
-
-.user--email {
-  display: inline-block;
-  font-size: 20px;
-  color: #FFFFFF;
-  margin: 10px;
-}
-
-.user--email---invis {
-  display: none;
-}
-
-.user--email---logout {
-  position: relative;
-  display: inline-block;
-  border: 2px solid #A97BFF86;
-  border-radius: 4px;
-  padding: 7px;
-  padding-left: 10px;
-  padding-right: 10px;
-  cursor: pointer;
-  font-weight: 400;
-  color: #FFFFFF;
-  font-size: 20px;
-  margin: 10px;
-}
-
-.user--email---logout----invis {
-  display: none;
-}
-
-.user--email---logout:hover {
-  background: #A97BFF86;
-}
-
 /* home.js / browse.js [ src/pages/home.js / src/pages/browse.js ] */ 
 
 .bg {
@@ -294,6 +225,12 @@ input:focus {
 
 .browse-link:hover {
   text-decoration: underline;
+}
+
+.account-icon--wrapper {
+  position: relative;
+  cursor: pointer;
+  margin: 10px;
 }
 
 /* browse.js [ src/pages/browse.js ] */
@@ -863,4 +800,122 @@ input:focus {
   max-width: 40ch;
   font-size: 12px;
   color: #FFFFFF;
+}
+
+/* account.js CSS [ src/pages/account.js ] */
+
+.account--wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.account-title {
+  font-weight: 700;
+  margin-top: 75px;
+  color: #FFFFFF;
+  font-size: 75px;
+}
+
+.section-desc {
+  position: relative;
+  font-size: 17px;
+  font-weight: 700;
+  color: #A97BFF;
+}
+
+.section-name {
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.user--action---button {
+  position: relative;
+  border: 2px solid #A97BFF86;
+  border-radius: 4px;
+  padding: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px auto;
+  cursor: pointer;
+  font-weight: 400;
+  color: #FFFFFF;
+  width: 200px;
+  font-size: 20px;
+}
+
+.user--action---button:hover {
+  background: #A97BFF86;
+}
+
+/* Verify action box */
+
+.verify---wrapper {
+  position: relative;
+  margin: 20px;
+}
+
+.verify---wrapper----invis {
+  display: none;
+}
+
+.verify--box {
+  position: relative;
+  text-align: center;
+  margin: 0px auto;
+  background: #25293BDA;
+  padding: 20px;
+  border-radius: 4px;
+  width: 400px;
+}
+
+.verify--box---title {
+  font-weight: 700;
+  font-size: 30px;
+  color: #FFFFFF;
+}
+
+.verify--box---warning {
+  font-size: 20px;
+  margin: 10px;
+  color: #FA7373;
+}
+
+.user--action---button---cancel {
+  position: relative;
+  border: 2px solid #FF7B7B86;
+  border-radius: 4px;
+  padding: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px auto;
+  cursor: pointer;
+  font-weight: 400;
+  color: #FFFFFF;
+  width: 200px;
+  font-size: 20px;
+}
+
+.user--action---button---cancel:hover {
+  background: #FF7B7B86;
+}
+
+.user--action---button---continue {
+  position: relative;
+  border: 2px solid #91FF7B86;
+  border-radius: 4px;
+  padding: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px auto;
+  cursor: pointer;
+  font-weight: 400;
+  color: #FFFFFF;
+  width: 200px;
+  font-size: 20px;
+}
+
+.user--action---button---continue:hover {
+  background: #91FF7B86;
 }

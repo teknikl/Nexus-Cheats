@@ -8,6 +8,7 @@ import browse from './pages/browse.js';
 import signup from './pages/signup.js';
 import login from './pages/login.js';
 import reset from './pages/reset.js';
+import account from './pages/account.js';
 import ScrollToTop from './components/ScrollToTop';
 // Games
 import csgo from './pages/games/csgo.js';
@@ -32,6 +33,7 @@ const App = () => {
                         <Route exact path='/Nexus/Browse' component={browse} />
                         <Route exact path='/Nexus/Sign-Up' component={signup} />
                         <Route exact path='/Nexus/Log-In' component={login} />
+                        <Route exact path='/Nexus/Account' component={account} />
                         <Route exact path='/Nexus/Log-In/Reset' component={reset} />
                         {/* Games */}
                     <Route exact path='/Nexus/Browse/CSGO' component={csgo} />

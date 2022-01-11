@@ -56,12 +56,13 @@ function App() {
 
   const history = useHistory();
   const { updateUser } = React.useContext(AuthContext);
+  const { user } = React.useContext(AuthContext);
 
   const Register = () => {
-      createUserWithEmailAndPassword(auth, email, pass)
+      createUserWithEmailAndPassword(auth, email, pass, user)
           .then(() => {
             history.push('/Nexus');
-            updateUser(email);
+            updateUser(user);
           })
           .catch((err) => {
               setFormErrVis('main-form--error');

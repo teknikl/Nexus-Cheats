@@ -56,12 +56,13 @@ function App() {
 
   const history = useHistory();
   const { updateUser } = React.useContext(AuthContext);
+  const { user } = React.useContext(AuthContext);
 
   const SignIn = () => {
-        signInWithEmailAndPassword(auth, email, pass)
+        signInWithEmailAndPassword(auth, email, pass, user)
           .then(() => {
             history.push('/Nexus');
-            updateUser(email);
+            updateUser(user);
           })
           .catch((err) => {
               setFormErrVis('main-form--error');
