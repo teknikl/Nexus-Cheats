@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext, auth } from '../auth/auth.js';
 import { deleteUser } from '@firebase/auth';
 import { useHistory } from 'react-router-dom';
-import { signOut, updateEmail } from '@firebase/auth';
+import { signOut, updateEmail, updateProfile } from '@firebase/auth';
 import DoneIcon from '@mui/icons-material/Done';
 import CloseIcon from '@mui/icons-material/Close';
 import Bg from '../components/background.js';
@@ -51,6 +51,31 @@ function App() {
         pageErr2: '',
      });
 
+    // Username states
+    const [username, setUsername ] = React.useState({
+      username: '',
+    });
+
+    const [inputVis2, setInputVis2 ] = React.useState ({
+      inputVis2: '',
+    });
+
+    const [tickVis2, setTickVis2 ] = React.useState ({
+      tickVis2: '',
+    });
+
+    const [crossVis2, setCrossVis2 ] = React.useState ({
+      crossVis2: '',
+    });
+
+    const [pageErr3, setPageErr3 ] = React.useState ({
+      pageErr3: '',
+    });
+
+    const [errVis3, setErrVis3 ] = React.useState ({
+      errVis3: '',
+    });
+
   // Calls when page first renders
   useEffect(() => {
     document.title = 'Nexus | Account'
@@ -60,6 +85,11 @@ function App() {
     setInputVis('input--invis');
     setErrVis('user--error---invis');
     setErrVis2('user--error---invis');
+    setTickVis2('input--tick---invis');
+    setCrossVis2('input--cross---invis');
+    setInputVis2('input--invis');
+    setErrVis3('user--error---invis');
+    setErrVis3('user--error---invis');
     setBg(`bg${Math.floor(Math.random() * 4) + 1}`);
   }, [])
 
@@ -108,8 +138,43 @@ function App() {
       }
   }
 
+  const userVis = () => {
+    if (tickVis2 === 'input--tick---invis' && inputVis2 === 'input--invis') {
+      setTickVis2('input--tick');
+      setCrossVis2('input--cross');
+      setInputVis2('input');
+    } else {
+      setTickVis2('input--tick---invis');
+      setCrossVis2('input--cross---invis');
+      setInputVis2('input--invis');
+    }
+  }
+
+  const updateUsername = () => {
+    updateProfile(user, {
+      displayName: username
+    }).then(() => {
+      setTickVis2('input--tick---invis');
+      setCrossVis2('input--cross---invis');
+      setInputVis2('input--invis');
+    }).catch((err) => {
+      setErrVis3('user--error');
+      setPageErr3(err);
+    });
+  }
+
+  const closeUsername = () => {
+    setTickVis2('input--tick---invis');
+    setCrossVis2('input--cross---invis');
+    setInputVis2('input--invis');
+  }
+
   const emailChange = (e) => {
     setEmailVal(e.target.value);
+  }
+
+  const usernameChange = (e) => {
+    setUsername(e.target.value);
   }
 
   const updateUserEmail = () => {
@@ -144,6 +209,15 @@ function App() {
         </div>
         <div className='account--wrapper'>
             <div className='account-title'>Account</div>
+
+            <div className='section-desc'>Username:</div>
+            <div className='section-name'>{user === null ? '' : user.displayName}</div>
+            <div onClick={userVis} className='user--action---button'>{user.displayName === null ? 'Add Username' : 'Update Username'}</div>
+            <div className={inputVis2}><input onChange={usernameChange} style={{
+                textTransform: 'none',
+                margin: '10px auto',
+            }} placeholder='New Username'></input></div><div onClick={closeUsername} className={crossVis2}><CloseIcon></CloseIcon></div><div onClick={updateUsername} className={tickVis2}><DoneIcon></DoneIcon></div>
+            <div className={errVis3}>{pageErr3.toString()}</div>
 
             <div className='section-desc'>Email:</div>
             <div className='section-name'>{user === null ? '' : user.email}</div>
