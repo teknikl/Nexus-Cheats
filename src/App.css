@@ -29,7 +29,8 @@ input {
   font-size: 20px;
   padding: 20px;
   border-radius: 4px;
-  border: 2px solid #B3B3B3;
+  outline: 2px solid #A97BFFA2;
+  border: none;
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 5.5%;
@@ -940,12 +941,37 @@ input:focus {
   font-size: 20px;
 }
 
+.input--cross {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #FF7B7B86;
+  border-radius: 4px;
+  padding: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px auto;
+  margin-left: 20px;
+  cursor: pointer;
+  font-weight: 400;
+  color: #FFFFFF;
+  width: 25px;
+  font-size: 20px;
+}
+
 .input--tick---invis {
+  display: none;
+}
+
+.input--cross---invis {
   display: none;
 }
 
 .input--tick:hover {
   background: #91FF7B86;
+}
+
+.input--cross:hover {
+  background: #FF7B7B86;
 }
 
 .input {

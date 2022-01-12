@@ -5,6 +5,7 @@ import { deleteUser } from '@firebase/auth';
 import { useHistory } from 'react-router-dom';
 import { signOut, updateEmail } from '@firebase/auth';
 import DoneIcon from '@mui/icons-material/Done';
+import CloseIcon from '@mui/icons-material/Close';
 import '../App.css';
 
 function App() {
@@ -20,6 +21,10 @@ function App() {
     const [tickVis, setTickVis ] = React.useState ({
         tickVis: '',
     });
+
+    const [crossVis, setCrossVis ] = React.useState ({
+      crossVis: '',
+  });
 
     const [emailVal, setEmailVal ] = React.useState ({
         emailVal: '',
@@ -46,6 +51,7 @@ function App() {
     document.title = 'Nexus | Account'
     setVerifyVis('verify---wrapper----invis');
     setTickVis('input--tick---invis');
+    setCrossVis('input--cross---invis');
     setInputVis('input--invis');
     setErrVis('user--error---invis');
     setErrVis2('user--error---invis');
@@ -87,9 +93,11 @@ function App() {
   const emailVis = () => {
       if (tickVis === 'input--tick---invis' && inputVis === 'input--invis') {
         setTickVis('input--tick');
+        setCrossVis('input--cross');
         setInputVis('input');
       } else {
         setTickVis('input--tick---invis');
+        setCrossVis('input--cross---invis');
         setInputVis('input--invis');
       }
   }
@@ -102,12 +110,19 @@ function App() {
     updateEmail(user, emailVal)
     .then(() => {
         setTickVis('input--tick---invis');
+        setCrossVis('input--cross---invis');
         setInputVis('input--invis');
       })
       .catch((err) => {
         setErrVis('user--error');
         setPageErr(err);
       })
+  }
+
+  const closeEmail = () => {
+    setTickVis('input--tick---invis');
+    setCrossVis('input--cross---invis');
+    setInputVis('input--invis');
   }
 
   return (
@@ -130,7 +145,7 @@ function App() {
             <div className={inputVis}><input onChange={emailChange} style={{
                 textTransform: 'none',
                 margin: '10px auto',
-            }} placeholder='New Email'></input></div><div onClick={updateUserEmail} className={tickVis}><DoneIcon></DoneIcon></div>
+            }} placeholder='New Email'></input></div><div onClick={closeEmail} className={crossVis}><CloseIcon></CloseIcon></div><div onClick={updateUserEmail} className={tickVis}><DoneIcon></DoneIcon></div>
             <div className={errVis}>{pageErr.toString()}</div>
 
             <div className='section-desc'>Email Verified:</div>
