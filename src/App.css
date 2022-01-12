@@ -300,6 +300,24 @@ input:focus {
   margin-left: 5.5%;
 }
 
+.source {
+  position: relative;
+  display: inline-block;
+  font-size: 10px;
+  margin-left: 5.5%;
+  color: #FFFFFF;
+}
+
+.source--link {
+  position: relative;
+  display: inline-block;
+  font-size: 10px;
+  margin-left: 5px;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #E0E0E0;
+}
+
 .browse-link {
   position: relative;
   font-weight: 700;
