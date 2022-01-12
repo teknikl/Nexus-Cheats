@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Nexus/static/css/main.8eaea82d.css",
-    "main.js": "/Nexus/static/js/main.5063a73b.js",
+    "main.css": "/Nexus/static/css/main.56d7ce51.css",
+    "main.js": "/Nexus/static/js/main.92004183.js",
     "static/js/787.966b0261.chunk.js": "/Nexus/static/js/787.966b0261.chunk.js",
     "static/media/bg.png": "/Nexus/static/media/bg.8ff641053079ce954bff.png",
     "static/media/wallhax.png": "/Nexus/static/media/wallhax.780266570a43d5ef485f.png",
@@ -9,12 +9,12 @@
     "static/media/CSGO.png": "/Nexus/static/media/CSGO.94d87d1fe5c3eb47889c.png",
     "static/media/infin.png": "/Nexus/static/media/infin.02b208ac959a7ea02ab4.png",
     "index.html": "/Nexus/index.html",
-    "main.8eaea82d.css.map": "/Nexus/static/css/main.8eaea82d.css.map",
-    "main.5063a73b.js.map": "/Nexus/static/js/main.5063a73b.js.map",
+    "main.56d7ce51.css.map": "/Nexus/static/css/main.56d7ce51.css.map",
+    "main.92004183.js.map": "/Nexus/static/js/main.92004183.js.map",
     "787.966b0261.chunk.js.map": "/Nexus/static/js/787.966b0261.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8eaea82d.css",
-    "static/js/main.5063a73b.js"
+    "static/css/main.56d7ce51.css",
+    "static/js/main.92004183.js"
   ]
 }
