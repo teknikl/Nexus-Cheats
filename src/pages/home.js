@@ -56,8 +56,8 @@ function App() {
             </div>
           </div>
             <div className='heading-desc'>An index of (cheat)hacked clients, for any game.</div>
-            <div className='source'>This page is open source. Check it out<a href='https://github.com/ArchieMourad/Nexus'><div className='source--link'>here</div></a>.</div>
             <div className='browse-link'><Link to='/Nexus/Browse'>Start browsing supported titles ❯</Link></div>
+            <div className='source'>This page is open source. Check it out<a href='https://github.com/ArchieMourad/Nexus'><div className='source--link'>here</div></a>.</div>
     </body>
   );
 }
