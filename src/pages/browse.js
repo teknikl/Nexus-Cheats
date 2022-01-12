@@ -4,6 +4,7 @@ import Gametile from '../components/gametile.js';
 import { AuthContext } from '../auth/auth.js';
 import { useHistory } from 'react-router-dom';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import Bg from '../components/background.js';
 import '../App.css';
 
 let games = [
@@ -12,7 +13,11 @@ let games = [
 
 function App() {
 
-  /* All states */
+  const num = Math.floor(Math.random() * 4) + 1;
+
+  // All states
+
+  const [bg, setBg] = React.useState(`bg${num}`);
 
   // Handles the search data
   const [search, setSearch] =  React.useState ({
@@ -104,6 +109,8 @@ function App() {
       ]
     } else if (name.length < 2) {
       setVis('go-button-invis')
+    } else if (name === 'xqcL') {
+      setBg('bg5');
     } else {
       setVis('go-button')
     }
@@ -118,7 +125,7 @@ function App() {
 
   return (
     <body>
-      <div className='bg'></div>
+      <Bg img={bg}></Bg>
         <div className='nav-button--notselected'><Link to='/Nexus'>Home</Link></div><div className='nav-button--selected'><Link to='/Nexus/Browse'>Browse</Link></div>
         <div className='buttons--wrapper'>
           <div className='account-icon--wrapper'>{user === null ? '' : <AccountCircleIcon onClick={userRedirect} sx={{ fontSize: '40px' }}></AccountCircleIcon>}</div><Link to='/Nexus/Log-In'><div className={user === null ? 'log-in--button' : 'log-in--button---invis'}>Log In</div></Link><Link to='/Nexus/Sign-Up'><div className={user === null ? 'sign-up--button' : 'sign-up--button---invis'}>Sign Up</div></Link>

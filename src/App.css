@@ -159,11 +159,13 @@ input:focus {
   background: #A97BFF86;
 }
 
-/* home.js / browse.js [ src/pages/home.js / src/pages/browse.js ] */ 
+/* background */ 
 
 .bg {
   position: absolute;
-  background-image: url(./images/page_images/bg.png);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  animation: load 0.4s;
   opacity: 0.2;
   width: 100%;
   height: 100%;
@@ -172,7 +174,7 @@ input:focus {
 /* home.js [ src/pages/home.js ] */
 
 .heading--wrapper {
-  margin-top: 25%;
+  margin-top: 20%;
   margin-left: 5%;
 }
 
@@ -184,6 +186,74 @@ input:focus {
   font-size: 100px;
 }
 
+/* Addon text and anims */
+
+.heading--addon---1 {
+  position: relative;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-left: 10px;
+  margin-top: -10px;
+  font-size: 25px;
+  animation: addon1 1s;
+}
+
+@keyframes addon1 {
+  0% { margin-left: 0px;} 
+  30% { margin-left: 10px; }
+  100% { margin-left: 10px; }
+}
+
+.heading--addon---2 {
+  position: relative;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-left: 10px;
+  margin-top: -10px;
+  font-size: 25px;
+  animation: addon2 1s;
+}
+
+@keyframes addon2 {
+  0% { margin-left: 0px;} 
+  30% { margin-left: 10px; }
+  100% { margin-left: 10px; }
+}
+
+.heading--addon---3 {
+  position: relative;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-left: 10px;
+  margin-top: -10px;
+  font-size: 25px;
+  animation: addon3 1s;
+}
+
+@keyframes addon3 {
+  0% { margin-left: 0px;} 
+  30% { margin-left: 10px; }
+  100% { margin-left: 10px; }
+}
+
+.heading--addon---4 {
+  position: relative;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-left: 10px;
+  margin-top: -10px;
+  font-size: 25px;
+  animation: addon4 1s;
+}
+
+@keyframes addon4 {
+  0% { margin-left: 0px;} 
+  30% { margin-left: 10px; }
+  100% { margin-left: 10px; }
+}
+
+/* heading type css and anim */
+
 .heading--type {
   display: inline-block;
   background: #E0E0E0;
@@ -191,6 +261,22 @@ input:focus {
   width: 50px;
   height: 100px;
   animation: heading--type 1s infinite;
+}
+
+.next--arrow---wrapper {
+  margin-top: -100px;
+  text-align: right;
+}
+
+.next--arrow---wrapper:hover {
+  margin-right: 25px;
+}
+
+.next--arrow {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #FFFFFF;
 }
 
 @keyframes heading--type {
@@ -210,6 +296,7 @@ input:focus {
   font-weight: 400;
   color: #A97BFF;
   font-size: 20px;
+  margin-top: 40px;
   margin-left: 5.5%;
 }
 

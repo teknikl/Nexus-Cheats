@@ -1,17 +1,25 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Bg from '../components/background.js';
 import '../App.css';
 
 function App() {
 
+  const num = Math.floor(Math.random() * 4) + 1;
+
+  // All states
+
+  const [bg, setBg] = React.useState(`bg${num}`);
+
   // Calls when page first renders
   useEffect(() => {
     document.title = 'Nexus | Email Sent'
+    setBg(`bg${Math.floor(Math.random() * 4) + 1}`);
   }, [])
 
   return (
     <body>
-      <div className='bg'></div>
+      <Bg img={bg}></Bg>
         <div className='nav-button--notselected'><Link to='/Nexus'>Home</Link></div><div className='nav-button--notselected'><Link to='/Nexus/Browse'>Browse</Link></div>❯<div className='nav-button--notselected'><Link to='/Nexus/Log-In'>Log In</Link></div>/<div className='nav-button--selected'><Link to='/Nexus/Log-In/Reset'>Reset Password</Link></div>
         <div className='reset---wrapper'>
             <div className='reset--title'>Email Sent</div>

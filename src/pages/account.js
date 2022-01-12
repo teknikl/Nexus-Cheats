@@ -6,9 +6,16 @@ import { useHistory } from 'react-router-dom';
 import { signOut, updateEmail } from '@firebase/auth';
 import DoneIcon from '@mui/icons-material/Done';
 import CloseIcon from '@mui/icons-material/Close';
+import Bg from '../components/background.js';
 import '../App.css';
 
 function App() {
+
+  const num = Math.floor(Math.random() * 4) + 1;
+
+  // All states
+
+    const [bg, setBg] = React.useState(`bg${num}`);
 
     const [verifyVis, setVerifyVis ] = React.useState ({
         verifyVis: '',
@@ -104,6 +111,9 @@ function App() {
 
   const emailChange = (e) => {
     setEmailVal(e.target.value);
+    if (e.target.value === 'xqcL') {
+      setBg('bg5');
+    }
   }
 
   const updateUserEmail = () => {
@@ -127,7 +137,7 @@ function App() {
 
   return (
     <body>
-      <div className='bg'></div>
+      <Bg img={bg}></Bg>
         <div className='nav-button--notselected'><Link to='/Nexus'>Home</Link></div><div className='nav-button--notselected'><Link to='/Nexus/Browse'>Browse</Link></div>❯<div className='nav-button--selected'><Link to='/Nexus/Account'>Account</Link></div>
         <div className={verifyVis}>
             <div className='verify--box'>

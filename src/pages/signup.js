@@ -5,11 +5,17 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useHistory } from 'react-router-dom';
 import { AuthContext, auth } from '../auth/auth.js';
+import Bg from '../components/background.js';
 import '../App.css';
 
 function App() {
 
+  const num = Math.floor(Math.random() * 4) + 1;
+
   // All states
+
+  const [bg, setBg] = React.useState(`bg${num}`);
+
   const [passVis, setPassVis] = React.useState ({
     passVis: '',
   });
@@ -47,10 +53,16 @@ function App() {
 
   // Updates
   const updateEmail = (e) => {
+    if (e.target.value === 'xqcL') {
+      setBg('bg5');
+    }
     setEmail(e.target.value);
   }
 
   const updatePass = (e) => {
+    if (e.target.value === 'xqcL') {
+      setBg('bg5');
+    }
     setPass(e.target.value);
   }
 
@@ -72,7 +84,7 @@ function App() {
 
   return (
     <body>
-      <div className='bg'></div>
+      <Bg img={bg}></Bg>
         <div className='nav-button--notselected'><Link to='/Nexus'>Home</Link></div><div className='nav-button--notselected'><Link to='/Nexus/Browse'>Browse</Link></div>❯<div className='nav-button--selected'><Link to='/Nexus/Sign-Up'>Sign Up</Link></div>
         <div className='form-heading'>Sign Up</div>
         <div className='form-heading--desc'>Register an account for archiemourad.github.io/Nexus.</div>
