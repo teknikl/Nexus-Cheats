@@ -11,11 +11,9 @@ import '../App.css';
 
 function App() {
 
-  const num = Math.floor(Math.random() * 4) + 1;
-
   // All states
 
-    const [bg, setBg] = React.useState(`bg${num}`);
+    const [bg, setBg] = React.useState(`bg${Math.floor(Math.random() * 4) + 1}`);
 
     const [verifyVis, setVerifyVis ] = React.useState ({
         verifyVis: '',
@@ -62,6 +60,7 @@ function App() {
     setInputVis('input--invis');
     setErrVis('user--error---invis');
     setErrVis2('user--error---invis');
+    setBg(`bg${Math.floor(Math.random() * 4) + 1}`);
   }, [])
 
   const history = useHistory();
@@ -111,9 +110,6 @@ function App() {
 
   const emailChange = (e) => {
     setEmailVal(e.target.value);
-    if (e.target.value === 'xqcL') {
-      setBg('bg5');
-    }
   }
 
   const updateUserEmail = () => {

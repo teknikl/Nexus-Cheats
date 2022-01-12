@@ -5,11 +5,9 @@ import '../App.css';
 
 function App() {
 
-  const num = Math.floor(Math.random() * 4) + 1;
-
   // All states
 
-  const [bg, setBg] = React.useState(`bg${num}`);
+  const [bg, setBg] = React.useState(`bg${Math.floor(Math.random() * 4) + 1}`);
 
   // Calls when page first renders
   useEffect(() => {

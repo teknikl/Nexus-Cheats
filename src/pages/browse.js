@@ -13,11 +13,9 @@ let games = [
 
 function App() {
 
-  const num = Math.floor(Math.random() * 4) + 1;
-
   // All states
 
-  const [bg, setBg] = React.useState(`bg${num}`);
+  const [bg, setBg] = React.useState(`bg${Math.floor(Math.random() * 4) + 1}`);
 
   // Handles the search data
   const [search, setSearch] =  React.useState ({
@@ -47,6 +45,7 @@ function App() {
     setVis('go-button-invis');
     setSearchVis('searchErrorInvis');
     setFilter('atoz-invis');
+    setBg(`bg${Math.floor(Math.random() * 4) + 1}`);
   }, [])
 
   // Handles the click of the search button (onClick)
@@ -109,8 +108,6 @@ function App() {
       ]
     } else if (name.length < 2) {
       setVis('go-button-invis')
-    } else if (name === 'xqcL') {
-      setBg('bg5');
     } else {
       setVis('go-button')
     }

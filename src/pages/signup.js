@@ -10,11 +10,9 @@ import '../App.css';
 
 function App() {
 
-  const num = Math.floor(Math.random() * 4) + 1;
-
   // All states
 
-  const [bg, setBg] = React.useState(`bg${num}`);
+  const [bg, setBg] = React.useState(`bg${Math.floor(Math.random() * 4) + 1}`);
 
   const [passVis, setPassVis] = React.useState ({
     passVis: '',
@@ -41,6 +39,7 @@ function App() {
     document.title = 'Nexus | Sign Up'
     setPassVis('password');
     setFormErrVis('main-form--error---invis');
+    setBg(`bg${Math.floor(Math.random() * 4) + 1}`);
   }, [])
 
   const updateVis = () => {
@@ -53,16 +52,10 @@ function App() {
 
   // Updates
   const updateEmail = (e) => {
-    if (e.target.value === 'xqcL') {
-      setBg('bg5');
-    }
     setEmail(e.target.value);
   }
 
   const updatePass = (e) => {
-    if (e.target.value === 'xqcL') {
-      setBg('bg5');
-    }
     setPass(e.target.value);
   }
 
