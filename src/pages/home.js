@@ -16,7 +16,7 @@ function App() {
 
   // Calls when page first renders
   useEffect(() => {
-    document.title = "Nexus | Home";
+    document.title = "Nexus / Home";
   }, []);
 
   const history = useHistory();

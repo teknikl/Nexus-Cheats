@@ -610,6 +610,8 @@ input:focus {
 .game--bg {
   position: absolute;
   opacity: 0.2;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
   transform: scale(3);
   margin-left: 43.5%;
 }

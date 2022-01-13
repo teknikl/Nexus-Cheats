@@ -29,10 +29,10 @@ let clients = [
 ];
 
 let tags = [
-  { name: "FPS", colour: "yellow" },
-  { name: "PvP", colour: "green" },
-  { name: "Popular", colour: "red" },
-  { name: "Valve", colour: "blue" },
+  { name: "FPS", colour: "green" },
+  { name: "PvP", colour: "yellow" },
+  { name: "Popular", colour: "blue" },
+  { name: "Riot Games", colour: "red" },
 ];
 
 function App() {
@@ -62,7 +62,7 @@ function App() {
 
   // Calls when page first renders
   useEffect(() => {
-    document.title = `Nexus | CSGO`; /* <- MANUAL INPUT REQUIRED */
+    document.title = `Nexus // Valorant`; /* <- MANUAL INPUT REQUIRED */
     setVis("go-button-invis");
     setSearchVis("searchErrorInvis");
     setFilter("atoz-invis");

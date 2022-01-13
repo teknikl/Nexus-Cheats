@@ -35,7 +35,7 @@ function App() {
 
   // Calls when page first renders
   useEffect(() => {
-    document.title = "Nexus | Sign Up";
+    document.title = "Nexus // Sign Up";
     setPassVis("password");
     setFormErrVis("main-form--error---invis");
     setBg(`bg${Math.floor(Math.random() * 4) + 1}`);

@@ -94,7 +94,7 @@ function App() {
 
   // Calls when page first renders
   useEffect(() => {
-    document.title = `Nexus | CSGO`; /* <- MANUAL INPUT REQUIRED */
+    document.title = `Nexus // CSGO`; /* <- MANUAL INPUT REQUIRED */
     setVis("go-button-invis");
     setSearchVis("searchErrorInvis");
     setFilter("atoz-invis");

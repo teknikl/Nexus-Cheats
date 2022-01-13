@@ -48,7 +48,7 @@ function App() {
 
   // Calls when page first renders
   useEffect(() => {
-    document.title = "Nexus | Browse";
+    document.title = "Nexus / Browse";
     setVis("go-button-invis");
     setSearchVis("searchErrorInvis");
     setFilter("atoz-invis");

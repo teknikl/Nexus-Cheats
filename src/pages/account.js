@@ -77,7 +77,7 @@ function App() {
 
   // Calls when page first renders
   useEffect(() => {
-    document.title = "Nexus | Account";
+    document.title = "Nexus / Account";
     setVerifyVis("verify---wrapper----invis");
     setTickVis("input--tick---invis");
     setCrossVis("input--cross---invis");

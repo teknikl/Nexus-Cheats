@@ -10,7 +10,7 @@ function App() {
 
   // Calls when page first renders
   useEffect(() => {
-    document.title = "Nexus | Email Sent";
+    document.title = "Nexus // Email Sent";
     setBg(`bg${Math.floor(Math.random() * 4) + 1}`);
   }, []);
 
