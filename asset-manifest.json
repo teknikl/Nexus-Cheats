@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Nexus/static/css/main.24ef62ab.css",
+    "main.css": "/Nexus/static/css/main.39d6daa9.css",
     "main.js": "/Nexus/static/js/main.3874deae.js",
     "static/js/787.966b0261.chunk.js": "/Nexus/static/js/787.966b0261.chunk.js",
     "static/media/bg4.png": "/Nexus/static/media/bg4.6701d468fb636cf668f8.png",
@@ -12,12 +12,12 @@
     "static/media/CSGO.png": "/Nexus/static/media/CSGO.94d87d1fe5c3eb47889c.png",
     "static/media/infin.png": "/Nexus/static/media/infin.02b208ac959a7ea02ab4.png",
     "index.html": "/Nexus/index.html",
-    "main.24ef62ab.css.map": "/Nexus/static/css/main.24ef62ab.css.map",
+    "main.39d6daa9.css.map": "/Nexus/static/css/main.39d6daa9.css.map",
     "main.3874deae.js.map": "/Nexus/static/js/main.3874deae.js.map",
     "787.966b0261.chunk.js.map": "/Nexus/static/js/787.966b0261.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.24ef62ab.css",
+    "static/css/main.39d6daa9.css",
     "static/js/main.3874deae.js"
   ]
 }
