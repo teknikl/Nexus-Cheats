@@ -1,35 +1,35 @@
 /* imports */
 
 /* Readex Pro [Bold 700] */
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@700&display=swap");
 
 /* Readex Pro [Regular 400] */
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
 
 /* general */
 
 body {
-  font-family: 'Readex Pro';
-  background: #0A0F24;
-  color: #FFFFFF;
+  font-family: "Readex Pro";
+  background: #0a0f24;
+  color: #ffffff;
   overflow-x: hidden;
 }
 
 a {
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
 }
 
 input {
   position: relative;
   display: inline-block;
-  font-family: 'Readex Pro';
-  color: #5F5F5F;
+  font-family: "Readex Pro";
+  color: #5f5f5f;
   text-transform: uppercase;
   font-size: 20px;
   padding: 20px;
   border-radius: 4px;
-  outline: 2px solid #A97BFFA2;
+  outline: 2px solid #a97bffa2;
   border: none;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -37,7 +37,7 @@ input {
 }
 
 input:focus {
-  outline: 2px solid #A97BFF;
+  outline: 2px solid #a97bff;
 }
 
 /* nav-button (these will be displayed on all pages) */
@@ -47,10 +47,10 @@ input:focus {
   display: inline-block;
   cursor: pointer;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 20px;
   margin: 20px;
-  border-bottom: 3px solid #A97BFF;
+  border-bottom: 3px solid #a97bff;
   padding-bottom: 5px;
   z-index: 1;
 }
@@ -60,7 +60,7 @@ input:focus {
   display: inline-block;
   cursor: pointer;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 20px;
   margin: 20px;
   padding-bottom: 5px;
@@ -68,14 +68,14 @@ input:focus {
 }
 
 .nav-button--notselected:hover {
-  border-bottom: 3px solid #A97BFF86;
+  border-bottom: 3px solid #a97bff86;
 }
 
 .nav-button--arrow {
   position: relative;
   display: inline-block;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 20px;
   margin: 20px;
   z-index: 1;
@@ -91,14 +91,14 @@ input:focus {
 .log-in--button {
   position: relative;
   display: inline-block;
-  border: 2px solid #A97BFF86;
+  border: 2px solid #a97bff86;
   border-radius: 4px;
   padding: 7px;
   padding-left: 10px;
   padding-right: 10px;
   cursor: pointer;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 20px;
   margin: 10px;
 }
@@ -108,7 +108,7 @@ input:focus {
 }
 
 .log-in--button:hover {
-  background: #A97BFF86;
+  background: #a97bff86;
 }
 
 /* forgot password CSS */
@@ -121,7 +121,7 @@ input:focus {
   position: relative;
   display: inline-block;
   font-size: 17px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .log-in--pass---link {
@@ -131,7 +131,7 @@ input:focus {
   margin-left: 5px;
   text-decoration: underline;
   cursor: pointer;
-  color: #A97BFF;
+  color: #a97bff;
 }
 
 /* Rest of buttons */
@@ -139,14 +139,14 @@ input:focus {
 .sign-up--button {
   position: relative;
   display: inline-block;
-  border: 2px solid #A97BFF86;
+  border: 2px solid #a97bff86;
   border-radius: 4px;
   padding: 7px;
   padding-left: 10px;
   padding-right: 10px;
   cursor: pointer;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 20px;
   margin: 10px;
 }
@@ -156,10 +156,10 @@ input:focus {
 }
 
 .sign-up--button:hover {
-  background: #A97BFF86;
+  background: #a97bff86;
 }
 
-/* background */ 
+/* background */
 
 .bg {
   position: absolute;
@@ -181,7 +181,7 @@ input:focus {
   display: inline-block;
   position: relative;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 100px;
 }
 
@@ -190,7 +190,7 @@ input:focus {
 .heading--addon---1 {
   position: relative;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-left: 10px;
   margin-top: -10px;
   font-size: 25px;
@@ -198,15 +198,21 @@ input:focus {
 }
 
 @keyframes addon1 {
-  0% { margin-left: 0px;} 
-  30% { margin-left: 10px; }
-  100% { margin-left: 10px; }
+  0% {
+    margin-left: 0px;
+  }
+  30% {
+    margin-left: 10px;
+  }
+  100% {
+    margin-left: 10px;
+  }
 }
 
 .heading--addon---2 {
   position: relative;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-left: 10px;
   margin-top: -10px;
   font-size: 25px;
@@ -214,15 +220,21 @@ input:focus {
 }
 
 @keyframes addon2 {
-  0% { margin-left: 0px;} 
-  30% { margin-left: 10px; }
-  100% { margin-left: 10px; }
+  0% {
+    margin-left: 0px;
+  }
+  30% {
+    margin-left: 10px;
+  }
+  100% {
+    margin-left: 10px;
+  }
 }
 
 .heading--addon---3 {
   position: relative;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-left: 10px;
   margin-top: -10px;
   font-size: 25px;
@@ -230,15 +242,21 @@ input:focus {
 }
 
 @keyframes addon3 {
-  0% { margin-left: 0px;} 
-  30% { margin-left: 10px; }
-  100% { margin-left: 10px; }
+  0% {
+    margin-left: 0px;
+  }
+  30% {
+    margin-left: 10px;
+  }
+  100% {
+    margin-left: 10px;
+  }
 }
 
 .heading--addon---4 {
   position: relative;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-left: 10px;
   margin-top: -10px;
   font-size: 25px;
@@ -246,16 +264,22 @@ input:focus {
 }
 
 @keyframes addon4 {
-  0% { margin-left: 0px;} 
-  30% { margin-left: 10px; }
-  100% { margin-left: 10px; }
+  0% {
+    margin-left: 0px;
+  }
+  30% {
+    margin-left: 10px;
+  }
+  100% {
+    margin-left: 10px;
+  }
 }
 
 /* heading type css and anim */
 
 .heading--type {
   display: inline-block;
-  background: #E0E0E0;
+  background: #e0e0e0;
   opacity: 0.5;
   width: 50px;
   height: 100px;
@@ -275,17 +299,20 @@ input:focus {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 @keyframes heading--type {
   0% {
     opacity: 0;
-  } 49% {
-    opacity: 0; 
-  } 50% {
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
     opacity: 0.5;
-  } 100% {
+  }
+  100% {
     opacity: 0.5;
   }
 }
@@ -293,7 +320,7 @@ input:focus {
 .heading-desc {
   position: relative;
   font-weight: 400;
-  color: #A97BFF;
+  color: #a97bff;
   font-size: 20px;
   margin-top: 40px;
   margin-left: 5.5%;
@@ -304,7 +331,7 @@ input:focus {
   display: inline-block;
   font-size: 10px;
   margin-left: 5.5%;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .source--link {
@@ -314,14 +341,14 @@ input:focus {
   margin-left: 5px;
   cursor: pointer;
   text-decoration: underline;
-  color: #E0E0E0;
+  color: #e0e0e0;
 }
 
 .browse-link {
   position: relative;
   font-weight: 700;
   cursor: pointer;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 20px;
   margin-left: 5.5%;
   margin-top: 5px;
@@ -349,14 +376,14 @@ input:focus {
   position: relative;
   display: inline-block;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 75px;
 }
 
 .browse-title--desc {
   position: relative;
   font-weight: 400;
-  color: #A97BFF;
+  color: #a97bff;
   font-size: 20px;
   margin-left: 5.5%;
 }
@@ -367,7 +394,7 @@ input:focus {
   background-image: url(./images/page_images/filter.png);
   background-repeat: no-repeat;
   background-position: center;
-  border: 2px solid #A97BFF86;
+  border: 2px solid #a97bff86;
   margin-bottom: -28px;
   margin-right: 20px;
   margin-left: 25px;
@@ -379,14 +406,14 @@ input:focus {
 }
 
 .filter:hover {
-  background-color: #A97BFF86;
+  background-color: #a97bff86;
 }
 
 .atoz {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  border: 2px solid #A97BFF86;
+  border: 2px solid #a97bff86;
   font-size: 20px;
   font-weight: 700;
   padding-top: 10px;
@@ -398,7 +425,7 @@ input:focus {
 }
 
 .atoz:hover {
-  background: #A97BFF86;
+  background: #a97bff86;
 }
 
 .atoz-invis {
@@ -409,7 +436,7 @@ input:focus {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  border: 2px solid #A97BFF86;
+  border: 2px solid #a97bff86;
   font-size: 30px;
   font-weight: 700;
   padding-top: 10px;
@@ -420,14 +447,14 @@ input:focus {
 }
 
 .go-button:hover {
-  background: #A97BFF86;
+  background: #a97bff86;
 }
 
 .go-button-RENDER {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  border: 2px solid #A97BFF86;
+  border: 2px solid #a97bff86;
   font-size: 30px;
   font-weight: 700;
   padding-top: 10px;
@@ -438,7 +465,7 @@ input:focus {
 }
 
 .go-button-RENDER:hover {
-  background: #A97BFF86;
+  background: #a97bff86;
 }
 
 .go-button-invis {
@@ -453,15 +480,13 @@ input:focus {
   font-size: 20px;
   font-weight: 700;
   margin-top: 50px;
-}  
+}
 
 .searchErrorInvis {
   display: none;
 }
 
-
 /* gametile.js [ src/components/gametile.js ] */
-
 
 .game-tile--wrapper {
   display: block;
@@ -471,7 +496,7 @@ input:focus {
 .gametile {
   position: relative;
   display: inline-block;
-  background: #25293B44;
+  background: #25293b44;
   cursor: pointer;
   text-align: center;
   border-radius: 4px;
@@ -482,7 +507,7 @@ input:focus {
 }
 
 .gametile:hover {
-  background: #25293BA1;
+  background: #25293ba1;
 }
 
 .gametile--name {
@@ -508,7 +533,7 @@ input:focus {
   text-align: center;
   display: block;
   margin: 0 auto;
-  color: #A97BFF;
+  color: #a97bff;
   max-width: 30ch;
   font-weight: 700;
   font-size: 20px;
@@ -524,7 +549,7 @@ input:focus {
 .game-tag--dot {
   position: relative;
   display: inline-block;
-  background: #0A0F24;
+  background: #0a0f24;
   margin-right: 5px;
   width: 10px;
   height: 10px;
@@ -536,10 +561,10 @@ input:focus {
 .game-tag--yellow {
   position: relative;
   display: inline-block;
-  background: #FDFF7B;
+  background: #fdff7b;
   margin-bottom: 10px;
   margin-right: 10px;
-  color: #0A0F24;
+  color: #0a0f24;
   border-radius: 4px;
   padding: 10px;
   text-align: left;
@@ -549,10 +574,10 @@ input:focus {
 .game-tag--red {
   position: relative;
   display: inline-block;
-  background: #FF7B7B;
+  background: #ff7b7b;
   margin-bottom: 10px;
   margin-right: 10px;
-  color: #0A0F24;
+  color: #0a0f24;
   border-radius: 4px;
   padding: 10px;
   text-align: left;
@@ -565,7 +590,7 @@ input:focus {
   background: #91ff7b;
   margin-bottom: 10px;
   margin-right: 10px;
-  color: #0A0F24;
+  color: #0a0f24;
   border-radius: 4px;
   padding: 10px;
   text-align: left;
@@ -578,7 +603,7 @@ input:focus {
   background: #7bebff;
   margin-bottom: 10px;
   margin-right: 10px;
-  color: #0A0F24;
+  color: #0a0f24;
   border-radius: 4px;
   padding: 10px;
   text-align: left;
@@ -591,7 +616,7 @@ input:focus {
   background: #ff7bf8;
   margin-bottom: 10px;
   margin-right: 10px;
-  color: #0A0F24;
+  color: #0a0f24;
   border-radius: 4px;
   padding: 10px;
   text-align: left;
@@ -610,12 +635,13 @@ input:focus {
 .game-bg--fade {
   height: 100%;
   width: 100%;
-  position:absolute;
-  background: -webkit-linear-gradient(left, 
-              rgba(10, 15, 36.65) 0%,
-              rgba(10, 15, 36, 0) 20%,
-              rgba(10, 15, 36, 0) 80%,
-              rgba(10, 15, 36.65) 100%
+  position: absolute;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(10, 15, 36.65) 0%,
+    rgba(10, 15, 36, 0) 20%,
+    rgba(10, 15, 36, 0) 80%,
+    rgba(10, 15, 36.65) 100%
   );
 }
 
@@ -628,7 +654,7 @@ input:focus {
 .client-tab {
   position: relative;
   display: inline-block;
-  background: #25293B44;
+  background: #25293b44;
   border-radius: 4px;
   cursor: pointer;
   padding: 20px;
@@ -637,7 +663,7 @@ input:focus {
 }
 
 .client-tab:hover {
-  background: #343A4D9D;
+  background: #343a4d9d;
 }
 
 .client-tab--image {
@@ -657,7 +683,7 @@ input:focus {
   font-weight: 700;
   max-width: 25ch;
   font-size: 20px;
-  color: #A97BFF;
+  color: #a97bff;
 }
 
 /* client tags */
@@ -669,7 +695,7 @@ input:focus {
 
 .client-tag--dot {
   display: inline-block;
-  background: #0A0F24;
+  background: #0a0f24;
   margin-right: 5px;
   width: 10px;
   height: 10px;
@@ -681,10 +707,10 @@ input:focus {
 .client-tag--yellow {
   position: relative;
   display: inline-block;
-  background: #FDFF7B;
+  background: #fdff7b;
   margin-right: 10px;
   margin-top: 10px;
-  color: #0A0F24;
+  color: #0a0f24;
   border-radius: 4px;
   padding: 10px;
   text-align: left;
@@ -694,10 +720,10 @@ input:focus {
 .client-tag--red {
   position: relative;
   display: inline-block;
-  background: #FF7B7B;
+  background: #ff7b7b;
   margin-right: 10px;
   margin-top: 10px;
-  color: #0A0F24;
+  color: #0a0f24;
   border-radius: 4px;
   padding: 10px;
   text-align: left;
@@ -711,7 +737,7 @@ input:focus {
   background: #91ff7b;
   margin-right: 10px;
   margin-top: 10px;
-  color: #0A0F24;
+  color: #0a0f24;
   border-radius: 4px;
   padding: 10px;
   text-align: left;
@@ -724,7 +750,7 @@ input:focus {
   background: #7bebff;
   margin-right: 10px;
   margin-top: 10px;
-  color: #0A0F24;
+  color: #0a0f24;
   border-radius: 4px;
   padding: 10px;
   text-align: left;
@@ -737,7 +763,7 @@ input:focus {
   background: #ff7bf8;
   margin-right: 10px;
   margin-top: 10px;
-  color: #0A0F24;
+  color: #0a0f24;
   border-radius: 4px;
   padding: 10px;
   text-align: left;
@@ -759,7 +785,7 @@ input:focus {
   margin-top: 5%;
   font-weight: 700;
   font-size: 75px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .form-heading--desc {
@@ -768,7 +794,7 @@ input:focus {
   text-align: center;
   margin-top: 10px;
   font-size: 20px;
-  color: #A97BFF;
+  color: #a97bff;
 }
 
 .form-input--wrapper---a {
@@ -793,13 +819,13 @@ input:focus {
   padding-right: 10px;
   padding-top: 10px;
   padding-bottom: 5px;
-  color: #FFFFFF;
-  border: 2px solid #A97BFF86;
+  color: #ffffff;
+  border: 2px solid #a97bff86;
   border-radius: 4px;
 }
 
 .password-vis--button:hover {
-  background: #A97BFF86;
+  background: #a97bff86;
 }
 
 .form-confirm--button {
@@ -811,13 +837,13 @@ input:focus {
   font-weight: 700;
   font-size: 20px;
   padding: 10px;
-  color: #FFFFFF;
-  border: 2px solid #A97BFF86;
+  color: #ffffff;
+  border: 2px solid #a97bff86;
   border-radius: 4px;
 }
 
 .form-confirm--button:hover {
-  background: #A97BFF86;
+  background: #a97bff86;
 }
 
 /* All form errors */
@@ -827,7 +853,7 @@ input:focus {
   position: relative;
   margin: 10px;
   font-size: 20px;
-  color: #E48181;
+  color: #e48181;
 }
 
 .main-form--error---invis {
@@ -845,14 +871,14 @@ input:focus {
 .form-other--text {
   position: relative;
   display: inline-block;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 17px;
 }
 
 .form-other--link {
   position: relative;
   display: inline-block;
-  color: #A97BFF;
+  color: #a97bff;
   text-decoration: underline;
   margin-left: 5px;
   font-size: 17px;
@@ -868,7 +894,7 @@ input:focus {
   position: relative;
   font-size: 75px;
   margin-top: 100px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 700;
 }
 
@@ -878,7 +904,7 @@ input:focus {
   margin: 10px auto;
   font-size: 20px;
   max-width: 30ch;
-  color: #A97BFF;
+  color: #a97bff;
   font-weight: 700;
 }
 
@@ -886,7 +912,7 @@ input:focus {
   position: relative;
   display: inline-block;
   font-size: 17px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .reset--link {
@@ -896,7 +922,7 @@ input:focus {
   margin-left: 5px;
   text-decoration: underline;
   cursor: pointer;
-  color: #A97BFF;
+  color: #a97bff;
 }
 
 .reset--link---help {
@@ -904,7 +930,7 @@ input:focus {
   margin: 10px auto;
   max-width: 40ch;
   font-size: 12px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 /* account.js CSS [ src/pages/account.js ] */
@@ -917,7 +943,7 @@ input:focus {
 .account-title {
   font-weight: 700;
   margin-top: 75px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 75px;
 }
 
@@ -926,19 +952,19 @@ input:focus {
   margin-top: 20px;
   font-size: 17px;
   font-weight: 700;
-  color: #A97BFF;
+  color: #a97bff;
 }
 
 .section-name {
   position: relative;
   margin-bottom: 10px;
   font-size: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .user--action---button {
   position: relative;
-  border: 2px solid #A97BFF86;
+  border: 2px solid #a97bff86;
   border-radius: 4px;
   padding: 7px;
   padding-left: 10px;
@@ -946,13 +972,13 @@ input:focus {
   margin: 10px auto;
   cursor: pointer;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 200px;
   font-size: 20px;
 }
 
 .user--action---button:hover {
-  background: #A97BFF86;
+  background: #a97bff86;
 }
 
 /* Verify action box */
@@ -970,7 +996,7 @@ input:focus {
   position: relative;
   text-align: center;
   margin: 0px auto;
-  background: #25293B44;
+  background: #25293b44;
   padding: 20px;
   border-radius: 4px;
   width: 400px;
@@ -979,18 +1005,18 @@ input:focus {
 .verify--box---title {
   font-weight: 700;
   font-size: 30px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .verify--box---warning {
   font-size: 20px;
   margin: 10px;
-  color: #FA7373;
+  color: #fa7373;
 }
 
 .user--action---button---cancel {
   position: relative;
-  border: 2px solid #FF7B7B86;
+  border: 2px solid #ff7b7b86;
   border-radius: 4px;
   padding: 7px;
   padding-left: 10px;
@@ -998,18 +1024,18 @@ input:focus {
   margin: 10px auto;
   cursor: pointer;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 200px;
   font-size: 20px;
 }
 
 .user--action---button---cancel:hover {
-  background: #FF7B7B86;
+  background: #ff7b7b86;
 }
 
 .user--action---button---continue {
   position: relative;
-  border: 2px solid #91FF7B86;
+  border: 2px solid #91ff7b86;
   border-radius: 4px;
   padding: 7px;
   padding-left: 10px;
@@ -1017,13 +1043,13 @@ input:focus {
   margin: 10px auto;
   cursor: pointer;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 200px;
   font-size: 20px;
 }
 
 .user--action---button---continue:hover {
-  background: #91FF7B86;
+  background: #91ff7b86;
 }
 
 /* change email CSS */
@@ -1031,7 +1057,7 @@ input:focus {
 .input--tick {
   position: relative;
   display: inline-block;
-  border: 2px solid #91FF7B86;
+  border: 2px solid #91ff7b86;
   border-radius: 4px;
   padding: 7px;
   padding-left: 10px;
@@ -1040,7 +1066,7 @@ input:focus {
   margin-left: 20px;
   cursor: pointer;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 25px;
   font-size: 20px;
 }
@@ -1048,7 +1074,7 @@ input:focus {
 .input--cross {
   position: relative;
   display: inline-block;
-  border: 2px solid #FF7B7B86;
+  border: 2px solid #ff7b7b86;
   border-radius: 4px;
   padding: 7px;
   padding-left: 10px;
@@ -1057,7 +1083,7 @@ input:focus {
   margin-left: 20px;
   cursor: pointer;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 25px;
   font-size: 20px;
 }
@@ -1071,11 +1097,11 @@ input:focus {
 }
 
 .input--tick:hover {
-  background: #91FF7B86;
+  background: #91ff7b86;
 }
 
 .input--cross:hover {
-  background: #FF7B7B86;
+  background: #ff7b7b86;
 }
 
 .input {
@@ -1090,7 +1116,7 @@ input:focus {
   position: relative;
   margin: 10px;
   font-size: 20px;
-  color: #E48181;
+  color: #e48181;
 }
 
 .user--error---invis {
