@@ -233,7 +233,11 @@ function App() {
           {user === null ? "" : user.displayName}
         </div>
         <div onClick={userVis} className="user--action---button">
-          {user.displayName === null ? "Add Username" : "Update Username"}
+          {user === null
+            ? ""
+            : user.displayName === null
+            ? "Add Username"
+            : "Update Username"}
         </div>
         <div className={inputVis2}>
           <input
