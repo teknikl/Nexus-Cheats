@@ -7,6 +7,7 @@ import Client from "../../components/client.js";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SearchIcon from "@mui/icons-material/Search";
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
+import AddIcon from "@mui/icons-material/Add";
 import "../../App.css";
 
 let clients = [
@@ -90,7 +91,13 @@ function App() {
     filter: "",
   });
 
-  // Sets the visivility of the filter options
+  /* ALL TAGS VIS */
+
+  const [yTag, setYTag] = React.useState("client-tag--yellow---invis");
+  const [rTag, setRTag] = React.useState("client-tag--red---invis");
+  const [g1Tag, setG1Tag] = React.useState("client-tag--green---invis");
+  const [g2Tag, setG2Tag] = React.useState("client-tag--green---invis");
+  const [g3Tag, setG3Tag] = React.useState("client-tag--green---invis");
 
   // Calls when page first renders
   useEffect(() => {
@@ -312,6 +319,671 @@ function App() {
     }
   };
 
+  const showTags = () => {
+    if (
+      yTag === "client-tag--yellow---invis" &&
+      rTag === "client-tag--red---invis" &&
+      g1Tag === "client-tag--green---invis" &&
+      g2Tag === "client-tag--green---invis" &&
+      g3Tag === "client-tag--green---invis"
+    ) {
+      setYTag("client-tag--yellow");
+      setRTag("client-tag--red");
+      setG1Tag("client-tag--green");
+      setG2Tag("client-tag--green");
+      setG3Tag("client-tag--green");
+    } else {
+      setYTag("client-tag--yellow---invis");
+      setRTag("client-tag--red---invis");
+      setG1Tag("client-tag--green---invis");
+      setG2Tag("client-tag--green---invis");
+      setG3Tag("client-tag--green---invis");
+      clients = [
+        {
+          link: "https://wallhax.com/hacks/csgo/",
+          game: "csgo",
+          src: "wallhax.png",
+          name: "Wallhax",
+          desc: "Features include our Deadly Bone Aimbot, 3D ESP, Mouse Driven Menu and more...",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://onetap.com",
+          game: "csgo",
+          src: "onetap.png",
+          name: "Onetap",
+          desc: "Hundreds of features such as Aimbot, Wallhack, and Anti-Cheat Protection.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://project-infinity.cloud/",
+          game: "csgo",
+          src: "infin.png",
+          name: "Infinity",
+          desc: "With our free CSGO Hack you will easy rank up to Global Elite. Our CS:GO hack is undetected.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "FREE & PAID",
+        },
+      ];
+      setSearchVis("searchErrorInvis");
+    }
+  };
+
+  /* tag clicks */
+
+  const ESP = () => {
+    if (rTag === "client-tag--red") {
+      setRTag("client-tag--red---invis");
+      setG1Tag("client-tag--green---invis");
+      setG2Tag("client-tag--green---invis");
+      setG3Tag("client-tag--green---invis");
+      clients = [
+        {
+          link: "https://wallhax.com/hacks/csgo/",
+          game: "csgo",
+          src: "wallhax.png",
+          name: "Wallhax",
+          desc: "Features include our Deadly Bone Aimbot, 3D ESP, Mouse Driven Menu and more...",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://onetap.com",
+          game: "csgo",
+          src: "onetap.png",
+          name: "Onetap",
+          desc: "Hundreds of features such as Aimbot, Wallhack, and Anti-Cheat Protection.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://project-infinity.cloud/",
+          game: "csgo",
+          src: "infin.png",
+          name: "Infinity",
+          desc: "With our free CSGO Hack you will easy rank up to Global Elite. Our CS:GO hack is undetected.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "FREE & PAID",
+        },
+      ];
+      clients = clients.filter((client) => client.tag_a === "ESP");
+      if (clients.length === 0) {
+        setSearchVis("searchError");
+      } else {
+        setSearchVis("searchErrorInvis");
+      }
+    } else {
+      clients = [
+        {
+          link: "https://wallhax.com/hacks/csgo/",
+          game: "csgo",
+          src: "wallhax.png",
+          name: "Wallhax",
+          desc: "Features include our Deadly Bone Aimbot, 3D ESP, Mouse Driven Menu and more...",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://onetap.com",
+          game: "csgo",
+          src: "onetap.png",
+          name: "Onetap",
+          desc: "Hundreds of features such as Aimbot, Wallhack, and Anti-Cheat Protection.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://project-infinity.cloud/",
+          game: "csgo",
+          src: "infin.png",
+          name: "Infinity",
+          desc: "With our free CSGO Hack you will easy rank up to Global Elite. Our CS:GO hack is undetected.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "FREE & PAID",
+        },
+      ];
+      setYTag("client-tag--yellow---invis");
+      setSearchVis("searchErrorInvis");
+    }
+  };
+
+  const AIMBOT = () => {
+    if (g1Tag === "client-tag--green") {
+      setYTag("client-tag--yellow---invis");
+      setG1Tag("client-tag--green---invis");
+      setG2Tag("client-tag--green---invis");
+      setG3Tag("client-tag--green---invis");
+      clients = [
+        {
+          link: "https://wallhax.com/hacks/csgo/",
+          game: "csgo",
+          src: "wallhax.png",
+          name: "Wallhax",
+          desc: "Features include our Deadly Bone Aimbot, 3D ESP, Mouse Driven Menu and more...",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://onetap.com",
+          game: "csgo",
+          src: "onetap.png",
+          name: "Onetap",
+          desc: "Hundreds of features such as Aimbot, Wallhack, and Anti-Cheat Protection.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://project-infinity.cloud/",
+          game: "csgo",
+          src: "infin.png",
+          name: "Infinity",
+          desc: "With our free CSGO Hack you will easy rank up to Global Elite. Our CS:GO hack is undetected.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "FREE & PAID",
+        },
+      ];
+      clients = clients.filter((client) => client.tag_b === "AIMBOT");
+      if (clients.length === 0) {
+        setSearchVis("searchError");
+      } else {
+        setSearchVis("searchErrorInvis");
+      }
+    } else {
+      clients = [
+        {
+          link: "https://wallhax.com/hacks/csgo/",
+          game: "csgo",
+          src: "wallhax.png",
+          name: "Wallhax",
+          desc: "Features include our Deadly Bone Aimbot, 3D ESP, Mouse Driven Menu and more...",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://onetap.com",
+          game: "csgo",
+          src: "onetap.png",
+          name: "Onetap",
+          desc: "Hundreds of features such as Aimbot, Wallhack, and Anti-Cheat Protection.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://project-infinity.cloud/",
+          game: "csgo",
+          src: "infin.png",
+          name: "Infinity",
+          desc: "With our free CSGO Hack you will easy rank up to Global Elite. Our CS:GO hack is undetected.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "FREE & PAID",
+        },
+      ];
+      setRTag("client-tag--red---invis");
+      setSearchVis("searchErrorInvis");
+    }
+  };
+
+  const FREE = () => {
+    if (g2Tag === "client-tag--green") {
+      setYTag("client-tag--yellow---invis");
+      setRTag("client-tag--red---invis");
+      setG2Tag("client-tag--green---invis");
+      setG3Tag("client-tag--green---invis");
+      clients = [
+        {
+          link: "https://wallhax.com/hacks/csgo/",
+          game: "csgo",
+          src: "wallhax.png",
+          name: "Wallhax",
+          desc: "Features include our Deadly Bone Aimbot, 3D ESP, Mouse Driven Menu and more...",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://onetap.com",
+          game: "csgo",
+          src: "onetap.png",
+          name: "Onetap",
+          desc: "Hundreds of features such as Aimbot, Wallhack, and Anti-Cheat Protection.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://project-infinity.cloud/",
+          game: "csgo",
+          src: "infin.png",
+          name: "Infinity",
+          desc: "With our free CSGO Hack you will easy rank up to Global Elite. Our CS:GO hack is undetected.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "FREE & PAID",
+        },
+      ];
+      clients = clients.filter((client) => client.tag_c === "FREE");
+      if (clients.length === 0) {
+        setSearchVis("searchError");
+      } else {
+        setSearchVis("searchErrorInvis");
+      }
+    } else {
+      clients = [
+        {
+          link: "https://wallhax.com/hacks/csgo/",
+          game: "csgo",
+          src: "wallhax.png",
+          name: "Wallhax",
+          desc: "Features include our Deadly Bone Aimbot, 3D ESP, Mouse Driven Menu and more...",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://onetap.com",
+          game: "csgo",
+          src: "onetap.png",
+          name: "Onetap",
+          desc: "Hundreds of features such as Aimbot, Wallhack, and Anti-Cheat Protection.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://project-infinity.cloud/",
+          game: "csgo",
+          src: "infin.png",
+          name: "Infinity",
+          desc: "With our free CSGO Hack you will easy rank up to Global Elite. Our CS:GO hack is undetected.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "FREE & PAID",
+        },
+      ];
+      setG1Tag("client-tag--green---invis");
+      setSearchVis("searchErrorInvis");
+    }
+  };
+
+  const PAID = () => {
+    if (g3Tag === "client-tag--green") {
+      setYTag("client-tag--yellow---invis");
+      setRTag("client-tag--red---invis");
+      setG1Tag("client-tag--green---invis");
+      setG3Tag("client-tag--green---invis");
+      clients = [
+        {
+          link: "https://wallhax.com/hacks/csgo/",
+          game: "csgo",
+          src: "wallhax.png",
+          name: "Wallhax",
+          desc: "Features include our Deadly Bone Aimbot, 3D ESP, Mouse Driven Menu and more...",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://onetap.com",
+          game: "csgo",
+          src: "onetap.png",
+          name: "Onetap",
+          desc: "Hundreds of features such as Aimbot, Wallhack, and Anti-Cheat Protection.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://project-infinity.cloud/",
+          game: "csgo",
+          src: "infin.png",
+          name: "Infinity",
+          desc: "With our free CSGO Hack you will easy rank up to Global Elite. Our CS:GO hack is undetected.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "FREE & PAID",
+        },
+      ];
+      clients = clients.filter((client) => client.tag_c === "PAID");
+      if (clients.length === 0) {
+        setSearchVis("searchError");
+      } else {
+        setSearchVis("searchErrorInvis");
+      }
+    } else {
+      clients = [
+        {
+          link: "https://wallhax.com/hacks/csgo/",
+          game: "csgo",
+          src: "wallhax.png",
+          name: "Wallhax",
+          desc: "Features include our Deadly Bone Aimbot, 3D ESP, Mouse Driven Menu and more...",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://onetap.com",
+          game: "csgo",
+          src: "onetap.png",
+          name: "Onetap",
+          desc: "Hundreds of features such as Aimbot, Wallhack, and Anti-Cheat Protection.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://project-infinity.cloud/",
+          game: "csgo",
+          src: "infin.png",
+          name: "Infinity",
+          desc: "With our free CSGO Hack you will easy rank up to Global Elite. Our CS:GO hack is undetected.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "FREE & PAID",
+        },
+      ];
+      setG2Tag("client-tag--green---invis");
+      setSearchVis("searchErrorInvis");
+    }
+  };
+
+  const FREEPAID = () => {
+    if (yTag === "client-tag--yellow") {
+      setYTag("client-tag--yellow---invis");
+      setRTag("client-tag--red---invis");
+      setG1Tag("client-tag--green---invis");
+      setG2Tag("client-tag--green---invis");
+      clients = [
+        {
+          link: "https://wallhax.com/hacks/csgo/",
+          game: "csgo",
+          src: "wallhax.png",
+          name: "Wallhax",
+          desc: "Features include our Deadly Bone Aimbot, 3D ESP, Mouse Driven Menu and more...",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://onetap.com",
+          game: "csgo",
+          src: "onetap.png",
+          name: "Onetap",
+          desc: "Hundreds of features such as Aimbot, Wallhack, and Anti-Cheat Protection.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://project-infinity.cloud/",
+          game: "csgo",
+          src: "infin.png",
+          name: "Infinity",
+          desc: "With our free CSGO Hack you will easy rank up to Global Elite. Our CS:GO hack is undetected.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "FREE & PAID",
+        },
+      ];
+      clients = clients.filter((client) => client.tag_c === "FREE & PAID");
+      if (clients.length === 0) {
+        setSearchVis("searchError");
+      } else {
+        setSearchVis("searchErrorInvis");
+      }
+    } else {
+      clients = [
+        {
+          link: "https://wallhax.com/hacks/csgo/",
+          game: "csgo",
+          src: "wallhax.png",
+          name: "Wallhax",
+          desc: "Features include our Deadly Bone Aimbot, 3D ESP, Mouse Driven Menu and more...",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://onetap.com",
+          game: "csgo",
+          src: "onetap.png",
+          name: "Onetap",
+          desc: "Hundreds of features such as Aimbot, Wallhack, and Anti-Cheat Protection.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+        {
+          link: "https://project-infinity.cloud/",
+          game: "csgo",
+          src: "infin.png",
+          name: "Infinity",
+          desc: "With our free CSGO Hack you will easy rank up to Global Elite. Our CS:GO hack is undetected.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "FREE & PAID",
+        },
+      ];
+      setG3Tag("client-tag--green---invis");
+      setSearchVis("searchErrorInvis");
+    }
+  };
+
   const data = {
     name: "CSGO",
     link: "CSGO",
@@ -403,6 +1075,24 @@ function App() {
         </div>
         <div onClick={filteratoz} className={filter}>
           Sort by: A - Z
+        </div>
+        <div onClick={showTags} className="add--button">
+          <AddIcon sx={{ fontSize: "50px", marginBottom: "-17px" }}></AddIcon>
+        </div>
+        <div onClick={ESP} className={yTag}>
+          <div className="client-tag--dot"></div>ESP
+        </div>
+        <div onClick={AIMBOT} className={rTag}>
+          <div className="client-tag--dot"></div>AIMBOT
+        </div>
+        <div onClick={FREE} className={g1Tag}>
+          <div className="client-tag--dot"></div>FREE
+        </div>
+        <div onClick={PAID} className={g2Tag}>
+          <div className="client-tag--dot"></div>PAID
+        </div>
+        <div onClick={FREEPAID} className={g3Tag}>
+          <div className="client-tag--dot"></div>FREE & PAID
         </div>
       </div>
       <div className={searchVis}>

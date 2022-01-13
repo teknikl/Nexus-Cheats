@@ -629,6 +629,22 @@ input:focus {
   );
 }
 
+/* the add button for tags */
+
+.add--button {
+  position: relative;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+  padding-bottom: 14px;
+  border: 2px solid #a97bff86;
+}
+
+.add--button:hover {
+  background: #a97bff86;
+}
+
 /* client.js [ src/components/client.js ] */
 
 .client--wrapper {
@@ -691,6 +707,7 @@ input:focus {
 .client-tag--yellow {
   position: relative;
   display: inline-block;
+  cursor: pointer;
   background: #fdff7b;
   margin-right: 10px;
   margin-top: 10px;
@@ -701,9 +718,14 @@ input:focus {
   height: 20px;
 }
 
+.client-tag--yellow---invis {
+  display: none;
+}
+
 .client-tag--red {
   position: relative;
   display: inline-block;
+  cursor: pointer;
   background: #ff7b7b;
   margin-right: 10px;
   margin-top: 10px;
@@ -714,10 +736,15 @@ input:focus {
   height: 20px;
 }
 
+.client-tag--red---invis {
+  display: none;
+}
+
 .client-tag--green {
   position: relative;
   position: relative;
   display: inline-block;
+  cursor: pointer;
   background: #91ff7b;
   margin-right: 10px;
   margin-top: 10px;
@@ -728,9 +755,14 @@ input:focus {
   height: 20px;
 }
 
+.client-tag--green---invis {
+  display: none;
+}
+
 .client-tag--blue {
   position: relative;
   display: inline-block;
+  cursor: pointer;
   background: #7bebff;
   margin-right: 10px;
   margin-top: 10px;
@@ -741,9 +773,14 @@ input:focus {
   height: 20px;
 }
 
+.client-tag--blue---invis {
+  display: none;
+}
+
 .client-tag--pink {
   position: relative;
   display: inline-block;
+  cursor: pointer;
   background: #ff7bf8;
   margin-right: 10px;
   margin-top: 10px;
@@ -752,6 +789,10 @@ input:focus {
   padding: 10px;
   text-align: left;
   height: 20px;
+}
+
+.client-tag--pink---invis {
+  display: none;
 }
 
 /* button wrapper */

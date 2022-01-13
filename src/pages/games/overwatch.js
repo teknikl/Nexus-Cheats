@@ -7,6 +7,7 @@ import Client from "../../components/client.js";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SearchIcon from "@mui/icons-material/Search";
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
+import AddIcon from "@mui/icons-material/Add";
 import "../../App.css";
 
 let clients = [
@@ -29,9 +30,8 @@ let clients = [
 ];
 
 let tags = [
-  { name: "FPS", colour: "red" },
-  { name: "PvP", colour: "green" },
-  { name: "Popular", colour: "pink" },
+  { name: "FPS", colour: "pink" },
+  { name: "PvP", colour: "red" },
   { name: "Blizzard", colour: "blue" },
 ];
 
@@ -58,7 +58,13 @@ function App() {
     filter: "",
   });
 
-  // Sets the visivility of the filter options
+  /* ALL TAGS VIS */
+
+  const [yTag, setYTag] = React.useState("client-tag--yellow---invis");
+  const [rTag, setRTag] = React.useState("client-tag--red---invis");
+  const [g1Tag, setG1Tag] = React.useState("client-tag--green---invis");
+  const [g2Tag, setG2Tag] = React.useState("client-tag--green---invis");
+  const [g3Tag, setG3Tag] = React.useState("client-tag--green---invis");
 
   // Calls when page first renders
   useEffect(() => {
@@ -184,6 +190,319 @@ function App() {
     }
   };
 
+  const showTags = () => {
+    if (
+      yTag === "client-tag--yellow---invis" &&
+      rTag === "client-tag--red---invis" &&
+      g1Tag === "client-tag--green---invis" &&
+      g2Tag === "client-tag--green---invis" &&
+      g3Tag === "client-tag--green---invis"
+    ) {
+      setYTag("client-tag--yellow");
+      setRTag("client-tag--red");
+      setG1Tag("client-tag--green");
+      setG2Tag("client-tag--green");
+      setG3Tag("client-tag--green");
+    } else {
+      setYTag("client-tag--yellow---invis");
+      setRTag("client-tag--red---invis");
+      setG1Tag("client-tag--green---invis");
+      setG2Tag("client-tag--green---invis");
+      setG3Tag("client-tag--green---invis");
+      clients = [
+        {
+          link: "https://battlelog.co/overwatch-aimbot-hacks/",
+          game: "overwatch",
+          src: "battlelog.png",
+          name: "Battlelog.co",
+          desc: "The industry's very best Overwatch hacks. These hacks include all common features such as ESP and Aimbot.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+      ];
+      setSearchVis("searchErrorInvis");
+    }
+  };
+
+  /* tag clicks */
+
+  const ESP = () => {
+    if (rTag === "client-tag--red") {
+      setRTag("client-tag--red---invis");
+      setG1Tag("client-tag--green---invis");
+      setG2Tag("client-tag--green---invis");
+      setG3Tag("client-tag--green---invis");
+      clients = [
+        {
+          link: "https://battlelog.co/overwatch-aimbot-hacks/",
+          game: "overwatch",
+          src: "battlelog.png",
+          name: "Battlelog.co",
+          desc: "The industry's very best Overwatch hacks. These hacks include all common features such as ESP and Aimbot.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+      ];
+      clients = clients.filter((client) => client.tag_a === "ESP");
+      if (clients.length === 0) {
+        setSearchVis("searchError");
+      } else {
+        setSearchVis("searchErrorInvis");
+      }
+    } else {
+      clients = [
+        {
+          link: "https://battlelog.co/overwatch-aimbot-hacks/",
+          game: "overwatch",
+          src: "battlelog.png",
+          name: "Battlelog.co",
+          desc: "The industry's very best Overwatch hacks. These hacks include all common features such as ESP and Aimbot.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+      ];
+      setYTag("client-tag--yellow---invis");
+      setSearchVis("searchErrorInvis");
+    }
+  };
+
+  const AIMBOT = () => {
+    if (g1Tag === "client-tag--green") {
+      setYTag("client-tag--yellow---invis");
+      setG1Tag("client-tag--green---invis");
+      setG2Tag("client-tag--green---invis");
+      setG3Tag("client-tag--green---invis");
+      clients = [
+        {
+          link: "https://battlelog.co/overwatch-aimbot-hacks/",
+          game: "overwatch",
+          src: "battlelog.png",
+          name: "Battlelog.co",
+          desc: "The industry's very best Overwatch hacks. These hacks include all common features such as ESP and Aimbot.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+      ];
+      clients = clients.filter((client) => client.tag_b === "AIMBOT");
+      if (clients.length === 0) {
+        setSearchVis("searchError");
+      } else {
+        setSearchVis("searchErrorInvis");
+      }
+    } else {
+      clients = [
+        {
+          link: "https://battlelog.co/overwatch-aimbot-hacks/",
+          game: "overwatch",
+          src: "battlelog.png",
+          name: "Battlelog.co",
+          desc: "The industry's very best Overwatch hacks. These hacks include all common features such as ESP and Aimbot.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+      ];
+      setRTag("client-tag--red---invis");
+      setSearchVis("searchErrorInvis");
+    }
+  };
+
+  const FREE = () => {
+    if (g2Tag === "client-tag--green") {
+      setYTag("client-tag--yellow---invis");
+      setRTag("client-tag--red---invis");
+      setG2Tag("client-tag--green---invis");
+      setG3Tag("client-tag--green---invis");
+      clients = [
+        {
+          link: "https://battlelog.co/overwatch-aimbot-hacks/",
+          game: "overwatch",
+          src: "battlelog.png",
+          name: "Battlelog.co",
+          desc: "The industry's very best Overwatch hacks. These hacks include all common features such as ESP and Aimbot.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+      ];
+      clients = clients.filter((client) => client.tag_c === "FREE");
+      if (clients.length === 0) {
+        setSearchVis("searchError");
+      } else {
+        setSearchVis("searchErrorInvis");
+      }
+    } else {
+      clients = [
+        {
+          link: "https://battlelog.co/overwatch-aimbot-hacks/",
+          game: "overwatch",
+          src: "battlelog.png",
+          name: "Battlelog.co",
+          desc: "The industry's very best Overwatch hacks. These hacks include all common features such as ESP and Aimbot.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+      ];
+      setG1Tag("client-tag--green---invis");
+      setSearchVis("searchErrorInvis");
+    }
+  };
+
+  const PAID = () => {
+    if (g3Tag === "client-tag--green") {
+      setYTag("client-tag--yellow---invis");
+      setRTag("client-tag--red---invis");
+      setG1Tag("client-tag--green---invis");
+      setG3Tag("client-tag--green---invis");
+      clients = [
+        {
+          link: "https://battlelog.co/overwatch-aimbot-hacks/",
+          game: "overwatch",
+          src: "battlelog.png",
+          name: "Battlelog.co",
+          desc: "The industry's very best Overwatch hacks. These hacks include all common features such as ESP and Aimbot.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+      ];
+      clients = clients.filter((client) => client.tag_c === "PAID");
+      if (clients.length === 0) {
+        setSearchVis("searchError");
+      } else {
+        setSearchVis("searchErrorInvis");
+      }
+    } else {
+      clients = [
+        {
+          link: "https://battlelog.co/overwatch-aimbot-hacks/",
+          game: "overwatch",
+          src: "battlelog.png",
+          name: "Battlelog.co",
+          desc: "The industry's very best Overwatch hacks. These hacks include all common features such as ESP and Aimbot.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+      ];
+      setG2Tag("client-tag--green---invis");
+      setSearchVis("searchErrorInvis");
+    }
+  };
+
+  const FREEPAID = () => {
+    if (yTag === "client-tag--yellow") {
+      setYTag("client-tag--yellow---invis");
+      setRTag("client-tag--red---invis");
+      setG1Tag("client-tag--green---invis");
+      setG2Tag("client-tag--green---invis");
+      clients = [
+        {
+          link: "https://battlelog.co/overwatch-aimbot-hacks/",
+          game: "overwatch",
+          src: "battlelog.png",
+          name: "Battlelog.co",
+          desc: "The industry's very best Overwatch hacks. These hacks include all common features such as ESP and Aimbot.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+      ];
+      clients = clients.filter((client) => client.tag_c === "FREE & PAID");
+      if (clients.length === 0) {
+        setSearchVis("searchError");
+      } else {
+        setSearchVis("searchErrorInvis");
+      }
+    } else {
+      clients = [
+        {
+          link: "https://battlelog.co/overwatch-aimbot-hacks/",
+          game: "overwatch",
+          src: "battlelog.png",
+          name: "Battlelog.co",
+          desc: "The industry's very best Overwatch hacks. These hacks include all common features such as ESP and Aimbot.",
+          colour_a: "yellow",
+          dot_a: "dot",
+          tag_a: "ESP",
+          colour_b: "red",
+          dot_b: "dot",
+          tag_b: "AIMBOT",
+          colour_c: "green",
+          dot_c: "dot",
+          tag_c: "PAID",
+        },
+      ];
+      setG3Tag("client-tag--green---invis");
+      setSearchVis("searchErrorInvis");
+    }
+  };
+
   const data = {
     name: "Overwatch",
     link: "Overwatch",
@@ -275,6 +594,24 @@ function App() {
         </div>
         <div onClick={filteratoz} className={filter}>
           Sort by: A - Z
+        </div>
+        <div onClick={showTags} className="add--button">
+          <AddIcon sx={{ fontSize: "50px", marginBottom: "-17px" }}></AddIcon>
+        </div>
+        <div onClick={ESP} className={yTag}>
+          <div className="client-tag--dot"></div>ESP
+        </div>
+        <div onClick={AIMBOT} className={rTag}>
+          <div className="client-tag--dot"></div>AIMBOT
+        </div>
+        <div onClick={FREE} className={g1Tag}>
+          <div className="client-tag--dot"></div>FREE
+        </div>
+        <div onClick={PAID} className={g2Tag}>
+          <div className="client-tag--dot"></div>PAID
+        </div>
+        <div onClick={FREEPAID} className={g3Tag}>
+          <div className="client-tag--dot"></div>FREE & PAID
         </div>
       </div>
       <div className={searchVis}>
