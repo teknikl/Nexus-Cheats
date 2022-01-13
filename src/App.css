@@ -426,6 +426,7 @@ input:focus {
   border-radius: 4px;
   cursor: pointer;
   margin: 10px;
+  margin-left: 20px;
   padding-bottom: 14px;
   border: 2px solid #a97bff86;
 }
@@ -440,6 +441,7 @@ input:focus {
   border-radius: 4px;
   cursor: pointer;
   margin: 10px;
+  margin-left: 20px;
   padding-bottom: 14px;
   border: 2px solid #a97bff86;
 }

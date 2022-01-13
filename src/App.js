@@ -12,6 +12,9 @@ import account from "./pages/account.js";
 import ScrollToTop from "./components/ScrollToTop";
 // Games
 import csgo from "./pages/games/csgo.js";
+import valorant from "./pages/games/valorant.js";
+import warzone from "./pages/games/warzone.js";
+import overwatch from "./pages/games/overwatch.js";
 
 const App = () => {
   return (
@@ -27,6 +30,9 @@ const App = () => {
           <Route exact path="/Nexus/Log-In/Reset" component={reset} />
           {/* Games */}
           <Route exact path="/Nexus/Browse/CSGO" component={csgo} />
+          <Route exact path="/Nexus/Browse/Valorant" component={valorant} />
+          <Route exact path="/Nexus/Browse/Warzone" component={warzone} />
+          <Route exact path="/Nexus/Browse/Overwatch" component={overwatch} />
         </Switch>
       </AuthProvider>
     </Router>

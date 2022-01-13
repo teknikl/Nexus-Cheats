@@ -9,7 +9,17 @@ import FilterAltIcon from "@mui/icons-material/FilterAlt";
 import Bg from "../components/background.js";
 import "../App.css";
 
-let games = [{ name: "CS:GO", src: "CSGO.png", alt: "CS:GO", link: "CSGO" }];
+let games = [
+  { name: "CS:GO", src: "CSGO.png", alt: "CS:GO", link: "CSGO" },
+  { name: "Valorant", src: "Valorant.png", alt: "Valorant", link: "Valorant" },
+  { name: "Warzone", src: "Warzone.png", alt: "Warzone", link: "Warzone" },
+  {
+    name: "Overwatch",
+    src: "Overwatch.png",
+    alt: "Overwatch",
+    link: "Overwatch",
+  },
+];
 
 function App() {
   // All states
@@ -47,7 +57,22 @@ function App() {
 
   // Handles the click of the search button (onClick)
   const clickGo = () => {
-    games = [{ name: "CS:GO", src: "CSGO.png", alt: "CS:GO", link: "CSGO" }];
+    games = [
+      { name: "CS:GO", src: "CSGO.png", alt: "CS:GO", link: "CSGO" },
+      {
+        name: "Valorant",
+        src: "Valorant.png",
+        alt: "Valorant",
+        link: "Valorant",
+      },
+      { name: "Warzone", src: "Warzone.png", alt: "Warzone", link: "Warzone" },
+      {
+        name: "Overwatch",
+        src: "Overwatch.png",
+        alt: "Overwatch",
+        link: "Overwatch",
+      },
+    ];
     games = games.filter((game) =>
       game.name.toLowerCase().includes(search.toLowerCase())
     );
@@ -82,7 +107,27 @@ function App() {
   const _handleEnter = (e) => {
     const name = e.target.value;
     if (e.key === "Enter" && name.length > 1) {
-      games = [{ name: "CS:GO", src: "CSGO.png", alt: "CS:GO", link: "CSGO" }];
+      games = [
+        { name: "CS:GO", src: "CSGO.png", alt: "CS:GO", link: "CSGO" },
+        {
+          name: "Valorant",
+          src: "Valorant.png",
+          alt: "Valorant",
+          link: "Valorant",
+        },
+        {
+          name: "Warzone",
+          src: "Warzone.png",
+          alt: "Warzone",
+          link: "Warzone",
+        },
+        {
+          name: "Overwatch",
+          src: "Overwatch.png",
+          alt: "Overwatch",
+          link: "Overwatch",
+        },
+      ];
       games = games.filter((game) =>
         game.name.toLowerCase().includes(search.toLowerCase())
       );
@@ -102,7 +147,27 @@ function App() {
     setSearch(e.target.value);
     if (name.length < 1) {
       setSearchVis("searchErrorInvis");
-      games = [{ name: "CS:GO", src: "CSGO.png", alt: "CS:GO", link: "CSGO" }];
+      games = [
+        { name: "CS:GO", src: "CSGO.png", alt: "CS:GO", link: "CSGO" },
+        {
+          name: "Valorant",
+          src: "Valorant.png",
+          alt: "Valorant",
+          link: "Valorant",
+        },
+        {
+          name: "Warzone",
+          src: "Warzone.png",
+          alt: "Warzone",
+          link: "Warzone",
+        },
+        {
+          name: "Overwatch",
+          src: "Overwatch.png",
+          alt: "Overwatch",
+          link: "Overwatch",
+        },
+      ];
     } else if (name.length < 2) {
       setVis("go-button-invis");
     } else {
