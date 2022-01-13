@@ -386,6 +386,7 @@ input:focus {
   color: #a97bff;
   font-size: 20px;
   margin-left: 5.5%;
+  margin-bottom: 20px;
 }
 
 .filter {
