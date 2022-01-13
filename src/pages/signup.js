@@ -66,6 +66,7 @@ function App() {
     createUserWithEmailAndPassword(auth, email, pass, user)
       .then(() => {
         history.push("/Nexus");
+        window.location.reload();
         updateUser(user);
       })
       .catch((err) => {
