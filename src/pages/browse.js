@@ -4,6 +4,8 @@ import Gametile from "../components/gametile.js";
 import { AuthContext } from "../auth/auth.js";
 import { useHistory } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import SearchIcon from "@mui/icons-material/Search";
+import FilterAltIcon from "@mui/icons-material/FilterAlt";
 import Bg from "../components/background.js";
 import "../App.css";
 
@@ -33,8 +35,6 @@ function App() {
   const [filter, setFilter] = React.useState({
     filter: "",
   });
-
-  // Sets the visivility of the filter options
 
   // Calls when page first renders
   useEffect(() => {
@@ -169,13 +169,22 @@ function App() {
         type="text"
         onKeyDown={_handleEnter}
         onChange={searchChange}
+        style={{
+          marginTop: "0",
+        }}
       ></input>
-      <div onClick={setFilterToggle} className="filter"></div>
+      <div onClick={clickGo} className={vis}>
+        <SearchIcon
+          sx={{ fontSize: "50px", marginBottom: "-17px" }}
+        ></SearchIcon>
+      </div>
+      <div onClick={setFilterToggle} className="filter">
+        <FilterAltIcon
+          sx={{ fontSize: "50px", marginBottom: "-17px" }}
+        ></FilterAltIcon>
+      </div>
       <div onClick={filteratoz} className={filter}>
         Sort by: A - Z
-      </div>
-      <div onClick={clickGo} className={vis}>
-        Go ❯
       </div>
       <div className={searchVis}>
         Whoops! We couldn't find any games that matched your search, did you

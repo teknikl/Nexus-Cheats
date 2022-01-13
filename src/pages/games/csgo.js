@@ -5,6 +5,8 @@ import { AuthContext } from "../../auth/auth.js";
 import { useHistory } from "react-router-dom";
 import Client from "../../components/client.js";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import SearchIcon from "@mui/icons-material/Search";
+import FilterAltIcon from "@mui/icons-material/FilterAlt";
 import "../../App.css";
 
 let clients = [
@@ -389,12 +391,18 @@ function App() {
         onChange={searchChange}
       ></input>
       <div className="button--wrapper">
-        <div onClick={setFilterToggle} className="filter"></div>
+        <div onClick={clickGo} className={vis}>
+          <SearchIcon
+            sx={{ fontSize: "50px", marginBottom: "-17px" }}
+          ></SearchIcon>
+        </div>
+        <div onClick={setFilterToggle} className="filter">
+          <FilterAltIcon
+            sx={{ fontSize: "50px", marginBottom: "-17px" }}
+          ></FilterAltIcon>
+        </div>
         <div onClick={filteratoz} className={filter}>
           Sort by: A - Z
-        </div>
-        <div onClick={clickGo} className={vis}>
-          Go ❯
         </div>
       </div>
       <div className={searchVis}>

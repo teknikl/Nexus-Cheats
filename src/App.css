@@ -391,22 +391,15 @@ input:focus {
 .filter {
   position: relative;
   display: inline-block;
-  background-image: url(./images/page_images/filter.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  border: 2px solid #a97bff86;
-  margin-bottom: -28px;
-  margin-right: 20px;
-  margin-left: 25px;
   border-radius: 4px;
   cursor: pointer;
-  padding: 10px;
-  width: 50px;
-  height: 50px;
+  margin: 10px;
+  padding-bottom: 14px;
+  border: 2px solid #a97bff86;
 }
 
 .filter:hover {
-  background-color: #a97bff86;
+  background: #a97bff86;
 }
 
 .atoz {
@@ -414,14 +407,8 @@ input:focus {
   display: inline-block;
   cursor: pointer;
   border: 2px solid #a97bff86;
-  font-size: 20px;
-  font-weight: 700;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-right: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
   border-radius: 4px;
+  padding: 10px;
 }
 
 .atoz:hover {
@@ -435,15 +422,11 @@ input:focus {
 .go-button {
   position: relative;
   display: inline-block;
-  cursor: pointer;
-  border: 2px solid #a97bff86;
-  font-size: 30px;
-  font-weight: 700;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
   border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+  padding-bottom: 14px;
+  border: 2px solid #a97bff86;
 }
 
 .go-button:hover {
@@ -453,15 +436,11 @@ input:focus {
 .go-button-RENDER {
   position: relative;
   display: inline-block;
-  cursor: pointer;
-  border: 2px solid #a97bff86;
-  font-size: 30px;
-  font-weight: 700;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
   border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+  padding-bottom: 14px;
+  border: 2px solid #a97bff86;
 }
 
 .go-button-RENDER:hover {
