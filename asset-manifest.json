@@ -1,23 +1,28 @@
 {
   "files": {
-    "main.css": "/Nexus/static/css/main.39d6daa9.css",
-    "main.js": "/Nexus/static/js/main.3874deae.js",
+    "main.css": "/Nexus/static/css/main.8323766f.css",
+    "main.js": "/Nexus/static/js/main.97b43bd8.js",
     "static/js/787.966b0261.chunk.js": "/Nexus/static/js/787.966b0261.chunk.js",
     "static/media/bg4.png": "/Nexus/static/media/bg4.6701d468fb636cf668f8.png",
     "static/media/bg2.png": "/Nexus/static/media/bg2.61bae8633e1865440765.png",
     "static/media/bg1.png": "/Nexus/static/media/bg1.8ff641053079ce954bff.png",
     "static/media/bg3.png": "/Nexus/static/media/bg3.821f3b7cecbb254e87a8.png",
+    "static/media/Warzone.png": "/Nexus/static/media/Warzone.716bbb079fc1f8f7a314.png",
     "static/media/wallhax.png": "/Nexus/static/media/wallhax.780266570a43d5ef485f.png",
     "static/media/onetap.png": "/Nexus/static/media/onetap.cd9cad81b63512c6ab3d.png",
+    "static/media/Overwatch.png": "/Nexus/static/media/Overwatch.d2ec939fba8992e2b6a5.png",
+    "static/media/Valorant.png": "/Nexus/static/media/Valorant.80650d4f3b34830764e5.png",
+    "static/media/battlelog.png": "/Nexus/static/media/battlelog.8b30cdf02dde09a7c7bb.png",
     "static/media/CSGO.png": "/Nexus/static/media/CSGO.94d87d1fe5c3eb47889c.png",
+    "static/media/lavi.png": "/Nexus/static/media/lavi.600aab6d3619d47cb4ed.png",
     "static/media/infin.png": "/Nexus/static/media/infin.02b208ac959a7ea02ab4.png",
     "index.html": "/Nexus/index.html",
-    "main.39d6daa9.css.map": "/Nexus/static/css/main.39d6daa9.css.map",
-    "main.3874deae.js.map": "/Nexus/static/js/main.3874deae.js.map",
+    "main.8323766f.css.map": "/Nexus/static/css/main.8323766f.css.map",
+    "main.97b43bd8.js.map": "/Nexus/static/js/main.97b43bd8.js.map",
     "787.966b0261.chunk.js.map": "/Nexus/static/js/787.966b0261.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.39d6daa9.css",
-    "static/js/main.3874deae.js"
+    "static/css/main.8323766f.css",
+    "static/js/main.97b43bd8.js"
   ]
 }
