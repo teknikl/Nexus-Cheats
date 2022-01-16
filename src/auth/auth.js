@@ -21,6 +21,8 @@ export const useAuth = () => {
 };
 
 export default function AuthProvider({ children }) {
+  const [loading, setLoading] = React.useState(true);
+
   const [currentUser, setCurrentUser] = React.useState({
     currentUser: null,
   });
@@ -28,6 +30,7 @@ export default function AuthProvider({ children }) {
   React.useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
+      setLoading(false);
     });
     return () => {
       unsubscribe();
@@ -40,7 +43,7 @@ export default function AuthProvider({ children }) {
 
   return (
     <AuthContext.Provider value={{ user: currentUser, updateUser }}>
-      {children}
+      {loading === true ? <p>Loading...</p> : children}
     </AuthContext.Provider>
   );
 }
