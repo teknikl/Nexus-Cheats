@@ -27,24 +27,16 @@ function App() {
   const [bg, setBg] = React.useState(`bg${Math.floor(Math.random() * 4) + 1}`);
 
   // Handles the search data
-  const [search, setSearch] = React.useState({
-    search: "",
-  });
+  const [search, setSearch] = React.useState("");
 
   // Search Error meesage
-  const [searchVis, setSearchVis] = React.useState({
-    searchVis: "",
-  });
+  const [searchVis, setSearchVis] = React.useState("");
 
   // Sets the vis of the search button
-  const [vis, setVis] = React.useState({
-    vis: "",
-  });
+  const [vis, setVis] = React.useState("");
 
   // Sets vis of the filter
-  const [filter, setFilter] = React.useState({
-    filter: "",
-  });
+  const [filter, setFilter] = React.useState("");
 
   // Calls when page first renders
   useEffect(() => {

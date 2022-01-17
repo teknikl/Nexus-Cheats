@@ -40,24 +40,16 @@ function App() {
   /* All states & Search Code IMPORTED FROM [ src/pages/browse.js ] */
 
   // Handles the search data
-  const [search, setSearch] = React.useState({
-    search: "",
-  });
+  const [search, setSearch] = React.useState("");
 
   // Search Error meesage
-  const [searchVis, setSearchVis] = React.useState({
-    searchVis: "",
-  });
+  const [searchVis, setSearchVis] = React.useState("");
 
   // Sets the vis of the search button
-  const [vis, setVis] = React.useState({
-    vis: "",
-  });
+  const [vis, setVis] = React.useState("");
 
   // Sets vis of the filter
-  const [filter, setFilter] = React.useState({
-    filter: "",
-  });
+  const [filter, setFilter] = React.useState("");
 
   /* ALL TAGS VIS */
 

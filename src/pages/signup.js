@@ -13,25 +13,15 @@ function App() {
 
   const [bg, setBg] = React.useState(`bg${Math.floor(Math.random() * 4) + 1}`);
 
-  const [passVis, setPassVis] = React.useState({
-    passVis: "",
-  });
+  const [passVis, setPassVis] = React.useState("");
 
-  const [email, setEmail] = React.useState({
-    email: "",
-  });
+  const [email, setEmail] = React.useState("");
 
-  const [pass, setPass] = React.useState({
-    pass: "",
-  });
+  const [pass, setPass] = React.useState("");
 
-  const [formErrVis, setFormErrVis] = React.useState({
-    formErrVis: "",
-  });
+  const [formErrVis, setFormErrVis] = React.useState("");
 
-  const [formerr, setFormerr] = React.useState({
-    formerr: "",
-  });
+  const [formerr, setFormerr] = React.useState("");
 
   // Calls when page first renders
   useEffect(() => {

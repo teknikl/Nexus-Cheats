@@ -6,6 +6,20 @@
 /* Readex Pro [Regular 400] */
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
 
+/* page load */
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* general */
 
 body {

@@ -14,66 +14,36 @@ function App() {
 
   const [bg, setBg] = React.useState(`bg${Math.floor(Math.random() * 4) + 1}`);
 
-  const [verifyVis, setVerifyVis] = React.useState({
-    verifyVis: "",
-  });
+  const [verifyVis, setVerifyVis] = React.useState("");
 
-  const [inputVis, setInputVis] = React.useState({
-    inputVis: "",
-  });
+  const [inputVis, setInputVis] = React.useState("");
 
-  const [tickVis, setTickVis] = React.useState({
-    tickVis: "",
-  });
+  const [tickVis, setTickVis] = React.useState("");
 
-  const [crossVis, setCrossVis] = React.useState({
-    crossVis: "",
-  });
+  const [crossVis, setCrossVis] = React.useState("");
 
-  const [emailVal, setEmailVal] = React.useState({
-    emailVal: "",
-  });
+  const [emailVal, setEmailVal] = React.useState("");
 
-  const [errVis, setErrVis] = React.useState({
-    errVis: "",
-  });
+  const [errVis, setErrVis] = React.useState("");
 
-  const [errVis2, setErrVis2] = React.useState({
-    errVis2: "",
-  });
+  const [errVis2, setErrVis2] = React.useState("");
 
-  const [pageErr, setPageErr] = React.useState({
-    pageErr: "",
-  });
+  const [pageErr, setPageErr] = React.useState("");
 
-  const [pageErr2, setPageErr2] = React.useState({
-    pageErr2: "",
-  });
+  const [pageErr2, setPageErr2] = React.useState("");
 
   // Username states
-  const [username, setUsername] = React.useState({
-    username: "",
-  });
+  const [username, setUsername] = React.useState("");
 
-  const [inputVis2, setInputVis2] = React.useState({
-    inputVis2: "",
-  });
+  const [inputVis2, setInputVis2] = React.useState("");
 
-  const [tickVis2, setTickVis2] = React.useState({
-    tickVis2: "",
-  });
+  const [tickVis2, setTickVis2] = React.useState("");
 
-  const [crossVis2, setCrossVis2] = React.useState({
-    crossVis2: "",
-  });
+  const [crossVis2, setCrossVis2] = React.useState("");
 
-  const [pageErr3, setPageErr3] = React.useState({
-    pageErr3: "",
-  });
+  const [pageErr3, setPageErr3] = React.useState("");
 
-  const [errVis3, setErrVis3] = React.useState({
-    errVis3: "",
-  });
+  const [errVis3, setErrVis3] = React.useState("");
 
   // Calls when page first renders
   useEffect(() => {

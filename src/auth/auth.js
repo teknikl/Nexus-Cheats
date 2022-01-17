@@ -1,6 +1,8 @@
 import React from "react";
 import { initializeApp } from "@firebase/app";
 import { getAuth, onAuthStateChanged } from "@firebase/auth";
+import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
+import "../App.css";
 
 const firebaseApp = initializeApp({
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -43,7 +45,19 @@ export default function AuthProvider({ children }) {
 
   return (
     <AuthContext.Provider value={{ user: currentUser, updateUser }}>
-      {loading === true ? <p>Loading...</p> : children}
+      {loading === true ? (
+        <HourglassBottomIcon
+          sx={{
+            fontSize: "50px",
+            display: "block",
+            margin: "0 auto",
+            marginTop: "22.5%",
+            animation: "loading 1s infinite",
+          }}
+        ></HourglassBottomIcon>
+      ) : (
+        children
+      )}
     </AuthContext.Provider>
   );
 }
