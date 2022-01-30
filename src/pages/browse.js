@@ -215,7 +215,6 @@ function App() {
       </div>
       <div className="browse-title--wrapper">
         <div className="browse-title">Let's get started...</div>
-        <div className="heading--type"></div>
       </div>
       <div className="browse-title--desc">
         First, help us figure out which games you would like to find cheats for:

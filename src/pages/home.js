@@ -83,7 +83,6 @@ function App() {
       </div>
       <div className="heading--wrapper">
         <div className="heading">Nexus</div>
-        <div className="heading--type"></div>
         <div className={addonAnim}>
           {bg === "bg1"
             ? "// Counter Strike : Global Offensive"
