@@ -43,7 +43,7 @@ function App() {
   };
 
   return (
-    <body>
+    <React.Fragment>
       <Bg img={bg}></Bg>
       <div className="nav-button--selected">
         <Link to="/Nexus">Home</Link>
@@ -113,7 +113,7 @@ function App() {
         </a>
         .
       </div>
-    </body>
+    </React.Fragment>
   );
 }
 
