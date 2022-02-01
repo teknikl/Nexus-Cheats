@@ -22,6 +22,7 @@ const App = () => {
       <AuthProvider>
         <ScrollToTop />
         <Switch>
+          <Route exact path="/" component={home} />
           <Route exact path="/Nexus" component={home} />
           <Route exact path="/Nexus/Browse" component={browse} />
           <Route exact path="/Nexus/Sign-Up" component={signup} />
