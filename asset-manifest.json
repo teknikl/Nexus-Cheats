@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "./static/css/main.1bf437ff.css",
-    "main.js": "./static/js/main.0ce121cd.js",
-    "static/js/787.966b0261.chunk.js": "./static/js/787.966b0261.chunk.js",
-    "static/media/bg4.png": "./static/media/bg4.6701d468fb636cf668f8.png",
-    "static/media/bg2.png": "./static/media/bg2.61bae8633e1865440765.png",
-    "static/media/bg1.png": "./static/media/bg1.8ff641053079ce954bff.png",
-    "static/media/bg3.png": "./static/media/bg3.821f3b7cecbb254e87a8.png",
-    "static/media/Warzone.png": "./static/media/Warzone.716bbb079fc1f8f7a314.png",
-    "static/media/wallhax.png": "./static/media/wallhax.780266570a43d5ef485f.png",
-    "static/media/onetap.png": "./static/media/onetap.cd9cad81b63512c6ab3d.png",
-    "static/media/Overwatch.png": "./static/media/Overwatch.d2ec939fba8992e2b6a5.png",
-    "static/media/Valorant.png": "./static/media/Valorant.80650d4f3b34830764e5.png",
-    "static/media/battlelog.png": "./static/media/battlelog.8b30cdf02dde09a7c7bb.png",
-    "static/media/CSGO.png": "./static/media/CSGO.94d87d1fe5c3eb47889c.png",
-    "static/media/lavi.png": "./static/media/lavi.600aab6d3619d47cb4ed.png",
-    "static/media/infin.png": "./static/media/infin.02b208ac959a7ea02ab4.png",
-    "index.html": "./index.html",
-    "main.1bf437ff.css.map": "./static/css/main.1bf437ff.css.map",
-    "main.0ce121cd.js.map": "./static/js/main.0ce121cd.js.map",
-    "787.966b0261.chunk.js.map": "./static/js/787.966b0261.chunk.js.map"
+    "main.css": "/saleemameen.github.io/static/css/main.1bf437ff.css",
+    "main.js": "/saleemameen.github.io/static/js/main.6bc45e2f.js",
+    "static/js/787.966b0261.chunk.js": "/saleemameen.github.io/static/js/787.966b0261.chunk.js",
+    "static/media/bg4.png": "/saleemameen.github.io/static/media/bg4.6701d468fb636cf668f8.png",
+    "static/media/bg2.png": "/saleemameen.github.io/static/media/bg2.61bae8633e1865440765.png",
+    "static/media/bg1.png": "/saleemameen.github.io/static/media/bg1.8ff641053079ce954bff.png",
+    "static/media/bg3.png": "/saleemameen.github.io/static/media/bg3.821f3b7cecbb254e87a8.png",
+    "static/media/Warzone.png": "/saleemameen.github.io/static/media/Warzone.716bbb079fc1f8f7a314.png",
+    "static/media/wallhax.png": "/saleemameen.github.io/static/media/wallhax.780266570a43d5ef485f.png",
+    "static/media/onetap.png": "/saleemameen.github.io/static/media/onetap.cd9cad81b63512c6ab3d.png",
+    "static/media/Overwatch.png": "/saleemameen.github.io/static/media/Overwatch.d2ec939fba8992e2b6a5.png",
+    "static/media/Valorant.png": "/saleemameen.github.io/static/media/Valorant.80650d4f3b34830764e5.png",
+    "static/media/battlelog.png": "/saleemameen.github.io/static/media/battlelog.8b30cdf02dde09a7c7bb.png",
+    "static/media/CSGO.png": "/saleemameen.github.io/static/media/CSGO.94d87d1fe5c3eb47889c.png",
+    "static/media/lavi.png": "/saleemameen.github.io/static/media/lavi.600aab6d3619d47cb4ed.png",
+    "static/media/infin.png": "/saleemameen.github.io/static/media/infin.02b208ac959a7ea02ab4.png",
+    "index.html": "/saleemameen.github.io/index.html",
+    "main.1bf437ff.css.map": "/saleemameen.github.io/static/css/main.1bf437ff.css.map",
+    "main.6bc45e2f.js.map": "/saleemameen.github.io/static/js/main.6bc45e2f.js.map",
+    "787.966b0261.chunk.js.map": "/saleemameen.github.io/static/js/787.966b0261.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1bf437ff.css",
-    "static/js/main.0ce121cd.js"
+    "static/js/main.6bc45e2f.js"
   ]
 }
