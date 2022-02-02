@@ -11,20 +11,13 @@ import "../App.css";
 
 let games = [
   { name: "CS:GO", src: "CSGO.png", alt: "CS:GO", link: "CSGO" },
-  { name: "Valorant", src: "Valorant.png", alt: "Valorant", link: "Valorant" },
-  { name: "Warzone", src: "Warzone.png", alt: "Warzone", link: "Warzone" },
-  {
-    name: "Overwatch",
-    src: "Overwatch.png",
-    alt: "Overwatch",
-    link: "Overwatch",
-  },
+  { name: "Garry's Mod", src: "GMOD.png", alt: "Gmod", link: "Gmod" },
 ];
 
 function App() {
   // All states
 
-  const [bg, setBg] = React.useState(`bg${Math.floor(Math.random() * 4) + 1}`);
+  const [bg, setBg] = React.useState(`bg${Math.floor(Math.random() * 2) + 1}`);
 
   // Handles the search data
   const [search, setSearch] = React.useState("");
@@ -44,26 +37,14 @@ function App() {
     setVis("go-button-invis");
     setSearchVis("searchErrorInvis");
     setFilter("atoz-invis");
-    setBg(`bg${Math.floor(Math.random() * 4) + 1}`);
+    setBg(`bg${Math.floor(Math.random() * 2) + 1}`);
   }, []);
 
   // Handles the click of the search button (onClick)
   const clickGo = () => {
     games = [
       { name: "CS:GO", src: "CSGO.png", alt: "CS:GO", link: "CSGO" },
-      {
-        name: "Valorant",
-        src: "Valorant.png",
-        alt: "Valorant",
-        link: "Valorant",
-      },
-      { name: "Warzone", src: "Warzone.png", alt: "Warzone", link: "Warzone" },
-      {
-        name: "Overwatch",
-        src: "Overwatch.png",
-        alt: "Overwatch",
-        link: "Overwatch",
-      },
+      { name: "Garry's Mod", src: "GMOD.png", alt: "Gmod", link: "Gmod" },
     ];
     games = games.filter((game) =>
       game.name.toLowerCase().includes(search.toLowerCase())
@@ -101,24 +82,7 @@ function App() {
     if (e.key === "Enter" && name.length > 1) {
       games = [
         { name: "CS:GO", src: "CSGO.png", alt: "CS:GO", link: "CSGO" },
-        {
-          name: "Valorant",
-          src: "Valorant.png",
-          alt: "Valorant",
-          link: "Valorant",
-        },
-        {
-          name: "Warzone",
-          src: "Warzone.png",
-          alt: "Warzone",
-          link: "Warzone",
-        },
-        {
-          name: "Overwatch",
-          src: "Overwatch.png",
-          alt: "Overwatch",
-          link: "Overwatch",
-        },
+        { name: "Garry's Mod", src: "GMOD.png", alt: "Gmod", link: "Gmod" },
       ];
       games = games.filter((game) =>
         game.name.toLowerCase().includes(search.toLowerCase())
@@ -141,24 +105,7 @@ function App() {
       setSearchVis("searchErrorInvis");
       games = [
         { name: "CS:GO", src: "CSGO.png", alt: "CS:GO", link: "CSGO" },
-        {
-          name: "Valorant",
-          src: "Valorant.png",
-          alt: "Valorant",
-          link: "Valorant",
-        },
-        {
-          name: "Warzone",
-          src: "Warzone.png",
-          alt: "Warzone",
-          link: "Warzone",
-        },
-        {
-          name: "Overwatch",
-          src: "Overwatch.png",
-          alt: "Overwatch",
-          link: "Overwatch",
-        },
+        { name: "Garry's Mod", src: "GMOD.png", alt: "Gmod", link: "Gmod" },
       ];
     } else if (name.length < 2) {
       setVis("go-button-invis");
@@ -171,17 +118,17 @@ function App() {
   const { user } = React.useContext(AuthContext);
 
   const userRedirect = () => {
-    history.push("/Nexus/Account");
+    history.push("/Account");
   };
 
   return (
     <body>
       <Bg img={bg}></Bg>
       <div className="nav-button--notselected">
-        <Link to="/Nexus">Home</Link>
+        <Link to="/">Home</Link>
       </div>
       <div className="nav-button--selected">
-        <Link to="/Nexus/Browse">Browse</Link>
+        <Link to="//Browse">Browse</Link>
       </div>
       <div className="buttons--wrapper">
         <div className="account-icon--wrapper">
@@ -194,7 +141,7 @@ function App() {
             ></AccountCircleIcon>
           )}
         </div>
-        <Link to="/Nexus/Log-In">
+        <Link to="/Log-In">
           <div
             className={
               user === null ? "log-in--button" : "log-in--button---invis"
@@ -203,7 +150,7 @@ function App() {
             Log In
           </div>
         </Link>
-        <Link to="/Nexus/Sign-Up">
+        <Link to="/Sign-Up">
           <div
             className={
               user === null ? "sign-up--button" : "sign-up--button---invis"
@@ -217,7 +164,8 @@ function App() {
         <div className="browse-title">Let's get started...</div>
       </div>
       <div className="browse-title--desc">
-        First, help us figure out which games you would like to find cheats for:
+        First, help us figure out which games you would like to find commands
+        for:
       </div>
       <input
         name="name"

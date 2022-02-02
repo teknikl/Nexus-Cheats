@@ -8,7 +8,7 @@ import Bg from "../components/background.js";
 import "../App.css";
 
 function App() {
-  const num = Math.floor(Math.random() * 4) + 1;
+  const num = Math.floor(Math.random() * 2) + 1;
 
   // All states
   const [bg, setBg] = React.useState(`bg${num}`);
@@ -23,19 +23,13 @@ function App() {
   const { user } = React.useContext(AuthContext);
 
   const userRedirect = () => {
-    history.push("/Nexus/Account");
+    history.push("/Account");
   };
 
   const nextBg = () => {
     if (bg === "bg1") {
       setBg("bg2");
       setAddonAnim("heading--addon---2");
-    } else if (bg === "bg2") {
-      setBg("bg3");
-      setAddonAnim("heading--addon---3");
-    } else if (bg === "bg3") {
-      setBg("bg4");
-      setAddonAnim("heading--addon---4");
     } else {
       setBg("bg1");
       setAddonAnim("heading--addon---1");
@@ -46,10 +40,10 @@ function App() {
     <React.Fragment>
       <Bg img={bg}></Bg>
       <div className="nav-button--selected">
-        <Link to="/Nexus">Home</Link>
+        <Link to="/">Home</Link>
       </div>
       <div className="nav-button--notselected">
-        <Link to="/Nexus/Browse">Browse</Link>
+        <Link to="/Browse">Browse</Link>
       </div>
       <div className="buttons--wrapper">
         <div className="account-icon--wrapper">
@@ -62,7 +56,7 @@ function App() {
             ></AccountCircleIcon>
           )}
         </div>
-        <Link to="/Nexus/Log-In">
+        <Link to="/Log-In">
           <div
             className={
               user === null ? "log-in--button" : "log-in--button---invis"
@@ -71,7 +65,7 @@ function App() {
             Log In
           </div>
         </Link>
-        <Link to="/Nexus/Sign-Up">
+        <Link to="/Sign-Up">
           <div
             className={
               user === null ? "sign-up--button" : "sign-up--button---invis"
@@ -84,13 +78,7 @@ function App() {
       <div className="heading--wrapper">
         <div className="heading">Nexus</div>
         <div className={addonAnim}>
-          {bg === "bg1"
-            ? "// Counter Strike : Global Offensive"
-            : bg === "bg2"
-            ? "// Valorant"
-            : bg === "bg3"
-            ? "// Warzone"
-            : "// Overwatch"}
+          {bg === "bg1" ? "Counter Strike : Global Offensive" : "Garry's Mod"}
         </div>
         <div className="next--arrow---wrapper">
           <div onClick={nextBg} className="next--arrow">
@@ -100,11 +88,9 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="heading-desc">
-        An index of (cheat)hacked clients, for any game.
-      </div>
+      <div className="heading-desc">An index of commands for any game.</div>
       <div className="browse-link">
-        <Link to="/Nexus/Browse">Start browsing supported titles ❯</Link>
+        <Link to="/Browse">Start browsing supported titles ❯</Link>
       </div>
       <div className="source">
         This page is open source. Check it out

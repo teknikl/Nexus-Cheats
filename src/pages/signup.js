@@ -11,7 +11,7 @@ import "../App.css";
 function App() {
   // All states
 
-  const [bg, setBg] = React.useState(`bg${Math.floor(Math.random() * 4) + 1}`);
+  const [bg, setBg] = React.useState(`bg${Math.floor(Math.random() * 2) + 1}`);
 
   const [passVis, setPassVis] = React.useState("");
 
@@ -28,7 +28,7 @@ function App() {
     document.title = "Nexus // Sign Up";
     setPassVis("password");
     setFormErrVis("main-form--error---invis");
-    setBg(`bg${Math.floor(Math.random() * 4) + 1}`);
+    setBg(`bg${Math.floor(Math.random() * 2) + 1}`);
   }, []);
 
   const updateVis = () => {
@@ -55,7 +55,7 @@ function App() {
   const Register = () => {
     createUserWithEmailAndPassword(auth, email, pass, user)
       .then(() => {
-        history.push("/Nexus");
+        history.push("/");
         window.location.reload();
         updateUser(user);
       })
@@ -69,18 +69,18 @@ function App() {
     <body>
       <Bg img={bg}></Bg>
       <div className="nav-button--notselected">
-        <Link to="/Nexus">Home</Link>
+        <Link to="/">Home</Link>
       </div>
       <div className="nav-button--notselected">
-        <Link to="/Nexus/Browse">Browse</Link>
+        <Link to="/Browse">Browse</Link>
       </div>
       ❯
       <div className="nav-button--selected">
-        <Link to="/Nexus/Sign-Up">Sign Up</Link>
+        <Link to="/Sign-Up">Sign Up</Link>
       </div>
       <div className="form-heading">Sign Up</div>
       <div className="form-heading--desc">
-        Register an account for archiemourad.github.io/Nexus.
+        Register an account for nexus-cheats.com
       </div>
       <div className="form-input--wrapper---a">
         <input
@@ -118,7 +118,7 @@ function App() {
       </div>
       <div className="form-other--wrapper">
         <div className="form-other--text">Already registered?</div>
-        <Link to="/Nexus/Log-In">
+        <Link to="/Log-In">
           <div className="form-other--link">Login</div>
         </Link>
       </div>

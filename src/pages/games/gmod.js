@@ -7,15 +7,15 @@ import "../../App.css";
 
 function App() {
   const data = {
-    name: "CSGO",
-    link: "CSGO",
-    src: "CSGO.png",
-    desc: "Counter-Strike: Global Offensive (CS:GO) is a multiplayer first-person shooter developed by Valve.",
+    name: "Garry's Mod",
+    link: "Gmod",
+    src: "GMOD.png",
+    desc: "Garry's Mod is a physics-based sandbox game that, in its base game mode, has no set objectives.",
   };
 
   // Calls when page first renders
   useEffect(() => {
-    document.title = "Nexus // CS:GO"; // MANUAL CHANGE
+    document.title = "Nexus // Gmod"; // MANUAL CHANGE
   }, []);
 
   const history = useHistory();

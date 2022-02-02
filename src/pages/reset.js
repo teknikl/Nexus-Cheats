@@ -6,30 +6,30 @@ import "../App.css";
 function App() {
   // All states
 
-  const [bg, setBg] = React.useState(`bg${Math.floor(Math.random() * 4) + 1}`);
+  const [bg, setBg] = React.useState(`bg${Math.floor(Math.random() * 2) + 1}`);
 
   // Calls when page first renders
   useEffect(() => {
     document.title = "Nexus // Email Sent";
-    setBg(`bg${Math.floor(Math.random() * 4) + 1}`);
+    setBg(`bg${Math.floor(Math.random() * 2) + 1}`);
   }, []);
 
   return (
     <body>
       <Bg img={bg}></Bg>
       <div className="nav-button--notselected">
-        <Link to="/Nexus">Home</Link>
+        <Link to="/">Home</Link>
       </div>
       <div className="nav-button--notselected">
-        <Link to="/Nexus/Browse">Browse</Link>
+        <Link to="/Browse">Browse</Link>
       </div>
       ❯
       <div className="nav-button--notselected">
-        <Link to="/Nexus/Log-In">Log In</Link>
+        <Link to="/Log-In">Log In</Link>
       </div>
       /
       <div className="nav-button--selected">
-        <Link to="/Nexus/Log-In/Reset">Reset Password</Link>
+        <Link to="/Log-In/Reset">Reset Password</Link>
       </div>
       <div className="reset---wrapper">
         <div className="reset--title">Email Sent</div>
@@ -38,7 +38,7 @@ function App() {
           your email account and click the link provided to reset your password.
         </div>
         <div className="reset--link---text">Thanks,</div>
-        <Link to="/Nexus/Log-In">
+        <Link to="/Log-In">
           <div className="reset--link">take me to login</div>
         </Link>
         <div className="reset--link---help">

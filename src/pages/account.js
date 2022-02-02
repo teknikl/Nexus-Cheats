@@ -12,7 +12,7 @@ import "../App.css";
 function App() {
   // All states
 
-  const [bg, setBg] = React.useState(`bg${Math.floor(Math.random() * 4) + 1}`);
+  const [bg, setBg] = React.useState(`bg${Math.floor(Math.random() * 2) + 1}`);
 
   const [verifyVis, setVerifyVis] = React.useState("");
 
@@ -59,7 +59,7 @@ function App() {
     setInputVis2("input--invis");
     setErrVis3("user--error---invis");
     setErrVis3("user--error---invis");
-    setBg(`bg${Math.floor(Math.random() * 4) + 1}`);
+    setBg(`bg${Math.floor(Math.random() * 2) + 1}`);
   }, []);
 
   const history = useHistory();
@@ -68,7 +68,7 @@ function App() {
   const logout = () => {
     signOut(auth)
       .then(() => {
-        history.push("/Nexus");
+        history.push("/");
       })
       .catch((err) => {
         setErrVis2("user--error");
@@ -87,7 +87,7 @@ function App() {
   const delacc = () => {
     deleteUser(user)
       .then(() => {
-        history.push("/Nexus");
+        history.push("/");
       })
       .catch((err) => {
         setErrVis2("user--error");
@@ -171,14 +171,14 @@ function App() {
     <body>
       <Bg img={bg}></Bg>
       <div className="nav-button--notselected">
-        <Link to="/Nexus">Home</Link>
+        <Link to="/">Home</Link>
       </div>
       <div className="nav-button--notselected">
-        <Link to="/Nexus/Browse">Browse</Link>
+        <Link to="/Browse">Browse</Link>
       </div>
       ❯
       <div className="nav-button--selected">
-        <Link to="/Nexus/Account">Account</Link>
+        <Link to="/Account">Account</Link>
       </div>
       <div className={verifyVis}>
         <div className="verify--box">

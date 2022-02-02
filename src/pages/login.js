@@ -14,7 +14,7 @@ import "../App.css";
 function App() {
   // All states
 
-  const [bg, setBg] = React.useState(`bg${Math.floor(Math.random() * 4) + 1}`);
+  const [bg, setBg] = React.useState(`bg${Math.floor(Math.random() * 2) + 1}`);
 
   const [passVis, setPassVis] = React.useState("");
 
@@ -31,7 +31,7 @@ function App() {
     document.title = "Nexus // Log In";
     setPassVis("password");
     setFormErrVis("main-form--error---invis");
-    setBg(`bg${Math.floor(Math.random() * 4) + 1}`);
+    setBg(`bg${Math.floor(Math.random() * 2) + 1}`);
   }, []);
 
   const updateVis = () => {
@@ -58,7 +58,7 @@ function App() {
   const SignIn = () => {
     signInWithEmailAndPassword(auth, email, pass, user)
       .then(() => {
-        history.push("/Nexus");
+        history.push("/");
         window.location.reload();
         updateUser(user);
       })
@@ -76,18 +76,18 @@ function App() {
     <body>
       <Bg img={bg}></Bg>
       <div className="nav-button--notselected">
-        <Link to="/Nexus">Home</Link>
+        <Link to="/">Home</Link>
       </div>
       <div className="nav-button--notselected">
-        <Link to="/Nexus/Browse">Browse</Link>
+        <Link to="/Browse">Browse</Link>
       </div>
       ❯
       <div className="nav-button--selected">
-        <Link to="/Nexus/Log-In">Log In</Link>
+        <Link to="/Log-In">Log In</Link>
       </div>
       <div className="form-heading">Log In</div>
       <div className="form-heading--desc">
-        Log In to an existing account on archiemourad.github.io/Nexus.
+        Log In to an existing account on nexus-cheats.com
       </div>
       <div className="form-input--wrapper---a">
         <input
@@ -121,7 +121,7 @@ function App() {
       </div>
       <div className="log-in--pass--wrapper">
         <div className="log-in--pass">Forgot your password?</div>
-        <Link to="/Nexus/Log-In/Reset">
+        <Link to="/Log-In/Reset">
           <div className="log-in--pass---link" onClick={sendPassReset}>
             Send an email
           </div>
@@ -133,7 +133,7 @@ function App() {
       </div>
       <div className="form-other--wrapper">
         <div className="form-other--text">Don't have an account?</div>
-        <Link to="/Nexus/Sign-Up">
+        <Link to="/Sign-Up">
           <div className="form-other--link">Register</div>
         </Link>
       </div>
