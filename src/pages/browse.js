@@ -164,8 +164,7 @@ function App() {
         <div className="browse-title">Let's get started...</div>
       </div>
       <div className="browse-title--desc">
-        First, help us figure out which games you would like to find commands
-        for:
+        First, help us find which game you're looking for:
       </div>
       <input
         name="name"

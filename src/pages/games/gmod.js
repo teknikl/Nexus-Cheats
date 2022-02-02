@@ -3,6 +3,7 @@ import { AuthContext } from "../../auth/auth.js";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import Bg from "../../components/background.js";
 import "../../App.css";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     link: "Gmod",
     src: "GMOD.png",
     desc: "Garry's Mod is a physics-based sandbox game that, in its base game mode, has no set objectives.",
+    bg: "bg2",
   };
 
   // Calls when page first renders
@@ -27,6 +29,7 @@ function App() {
 
   return (
     <body>
+      <Bg img={data.bg}></Bg>
       <div className="nav-button--notselected">
         <Link to="/">Home</Link>
       </div>

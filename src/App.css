@@ -6,6 +6,9 @@
 /* Rubik [Regular 400] */
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
+/* Source Code Pro [Regular 400] */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
 /* page load */
 
 @keyframes loading {
@@ -177,6 +180,7 @@ input:focus {
 
 .bg {
   position: absolute;
+  background-repeat: repeat;
   filter: blur(8px);
   -webkit-filter: blur(8px);
   opacity: 0.2;
@@ -459,10 +463,85 @@ input:focus {
   text-align: center;
   display: block;
   margin: 0 auto;
-  color: #a97bff;
+  color: #b59fdf;
   max-width: 30ch;
   font-weight: 700;
   font-size: 20px;
+}
+
+/* sections */
+
+.section---wrapper {
+  display: block;
+  text-align: center;
+  margin: 20px;
+}
+
+.section--num {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.section {
+  position: relative;
+  display: inline-block;
+  color: #a97bff;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.section--expand {
+  position: relative;
+  display: inline-block;
+  border: 3px solid #a97bff;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 4px;
+  padding-top: 5px;
+}
+
+.section--expand:hover {
+  background: #a97bff86;
+}
+
+/* section wrappers */
+.show {
+  position: relative;
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.step {
+  position: relative;
+  text-align: center;
+  display: block;
+  margin: 10px auto;
+  max-width: 70ch;
+  font-size: 20px;
+}
+
+.img {
+  position: relative;
+  display: block;
+  background-repeat: no-repeat;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.code-block {
+  font-family: "Source Code Pro", monospace;
+  background: #373c44;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 /* button wrapper */

@@ -78,7 +78,7 @@ function App() {
       <div className="heading--wrapper">
         <div className="heading">Nexus</div>
         <div className={addonAnim}>
-          {bg === "bg1" ? "Counter Strike : Global Offensive" : "Garry's Mod"}
+          x {bg === "bg1" ? "Counter Strike : Global Offensive" : "Garry's Mod"}
         </div>
         <div className="next--arrow---wrapper">
           <div onClick={nextBg} className="next--arrow">
@@ -88,7 +88,9 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="heading-desc">An index of commands for any game.</div>
+      <div className="heading-desc">
+        An index of commands, tips 'n' tricks and optimizations for any game.
+      </div>
       <div className="browse-link">
         <Link to="/Browse">Start browsing supported titles ❯</Link>
       </div>
