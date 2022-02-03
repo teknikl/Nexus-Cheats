@@ -27,6 +27,7 @@ function App() {
   const [stepvis_b, setStepvis_b] = React.useState("hide");
   const [stepvis_c, setStepvis_c] = React.useState("hide");
   const [stepvis_d, setStepvis_d] = React.useState("hide");
+  const [stepvis_e, setStepvis_e] = React.useState("hide");
 
   const history = useHistory();
   const { user } = React.useContext(AuthContext);
@@ -64,6 +65,14 @@ function App() {
       setStepvis_d("show");
     } else {
       setStepvis_d("hide");
+    }
+  };
+
+  const expand_e = () => {
+    if (stepvis_e === "hide") {
+      setStepvis_e("show");
+    } else {
+      setStepvis_e("hide");
     }
   };
 
@@ -230,7 +239,7 @@ function App() {
       </div>
       <div className="section---wrapper">
         <div className="section--num">4.⠀</div>
-        <div className="section">Commands</div>
+        <div className="section">Console</div>
         <div className="section--expand" onClick={expand_d}>
           {stepvis_d === "hide" ? (
             <AddIcon></AddIcon>
@@ -239,7 +248,74 @@ function App() {
           )}
         </div>
       </div>
-      <div className={stepvis_d}></div>
+      <div className={stepvis_d}>
+        <div className="step">
+          First, launch Counter Strike : Global Offensive.
+        </div>
+        <IMG game={data.name} img="5" width="1055px" height="619px"></IMG>
+        <div className="step">
+          Then, click the settings icon, and then select the "game" tab.
+        </div>
+        <IMG game={data.name} img="6" width="149px" height="44px"></IMG>
+        <IMG game={data.name} img="7" width="180px" height="86px"></IMG>
+        <div className="step">
+          From there, enable the option that reads "(~) Enable Developer
+          Console".
+        </div>
+        <IMG game={data.name} img="8" width="495px" height="47px"></IMG>
+        <div className="step">
+          Now, when you press the tilda key (~), a console window should appear.
+          The command line will help us configure cs:go.
+        </div>
+        <IMG game={data.name} img="9" width="608px" height="454px"></IMG>
+      </div>
+      <div className="section---wrapper">
+        <div className="section--num">5.⠀</div>
+        <div className="section">Commands</div>
+        <div className="section--expand" onClick={expand_e}>
+          {stepvis_e === "hide" ? (
+            <AddIcon></AddIcon>
+          ) : (
+            <RemoveIcon></RemoveIcon>
+          )}
+        </div>
+      </div>
+      <div className={stepvis_e}>
+        <div className="step">
+          Using the console, let's set up some useful binds.
+        </div>
+        <div className="code-block">sv_cheats 1</div>
+        <div className="step">
+          sv_cheats 1 enables cheat commands to be executed, it requires you to
+          be the server operater.
+        </div>
+        <div className="code-block">bind v "sv_cheats 1; noclip"</div>
+        <div className="step">
+          When pressing v (or the key of your choice), you will enter noclip
+          mode, thus meaning that you can fly around the map, and clip through
+          solid objects. Keep in mind, this only works if you are the server
+          operater. By executing sv_cheats 1, then noclip, there is no need to
+          enable it.
+        </div>
+        <div className="code-block">
+          unbind mwheeldown; unbind mwheelup; bind mwheeldown +jump; bind
+          mwheelup +jump;
+        </div>
+        <div className="step">
+          These commands unbind your scroll down and scroll up function of your
+          mouse with jumping. (Don't worry, the binds are only for CS:GO). With
+          scroll jumping, it allows you to hit precision jumps previously harder
+          with the spacebar. This is useful for bhopping, and even jumping in
+          general.
+        </div>
+        <div className="code-block">sv_showimpacts 1</div>
+        <div className="step">
+          This allows you to see your client and server side bullet impacts. Red
+          boxes are client side impacts, and blue boxes are the server side
+          impact. Requires sv_cheats to be set to 1. Alternatively, you can set
+          sv_showimpacts to 2, only showing client side impacts.
+        </div>
+      </div>
     </body>
   );
 }

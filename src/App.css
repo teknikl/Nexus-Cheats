@@ -542,15 +542,18 @@ input:focus {
   display: block;
   background-repeat: no-repeat;
   margin: 20px auto;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .code-block {
+  display: block;
   font-family: "Source Code Pro", monospace;
   background: #373c44a8;
   border: 2px solid #373c44;
+  max-width: max-content;
+  margin: 10px auto;
   margin-top: 30px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   padding: 10px;
   border-radius: 4px;
 }
