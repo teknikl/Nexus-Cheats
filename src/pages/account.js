@@ -167,6 +167,8 @@ function App() {
     setInputVis("input--invis");
   };
 
+  const arrow = ">";
+
   return (
     <body>
       <Bg img={bg}></Bg>
@@ -176,7 +178,7 @@ function App() {
       <div className="nav-button--notselected">
         <Link to="/Browse">Browse</Link>
       </div>
-      ❯
+      {arrow}
       <div className="nav-button--selected">
         <Link to="/Account">Account</Link>
       </div>

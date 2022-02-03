@@ -179,7 +179,7 @@ input:focus {
 /* background */
 
 .bg {
-  position: absolute;
+  position: fixed;
   background-repeat: repeat;
   filter: blur(8px);
   -webkit-filter: blur(8px);
@@ -511,6 +511,7 @@ input:focus {
 /* section wrappers */
 .show {
   position: relative;
+  text-align: center;
   display: block;
 }
 
@@ -520,10 +521,19 @@ input:focus {
 
 .step {
   position: relative;
-  text-align: center;
-  display: block;
-  margin: 10px auto;
+  display: inline-block;
+  margin: 10px;
   max-width: 70ch;
+  font-size: 20px;
+}
+
+.step--link {
+  position: relative;
+  display: inline-block;
+  text-decoration: underline;
+  margin-left: 7px;
+  color: #a97bff;
+  cursor: pointer;
   font-size: 20px;
 }
 
@@ -537,7 +547,8 @@ input:focus {
 
 .code-block {
   font-family: "Source Code Pro", monospace;
-  background: #373c44;
+  background: #373c44a8;
+  border: 2px solid #373c44;
   margin-top: 30px;
   margin-bottom: 5px;
   padding: 10px;

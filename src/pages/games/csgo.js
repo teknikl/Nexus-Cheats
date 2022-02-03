@@ -26,6 +26,7 @@ function App() {
   const [stepvis_a, setStepvis_a] = React.useState("hide");
   const [stepvis_b, setStepvis_b] = React.useState("hide");
   const [stepvis_c, setStepvis_c] = React.useState("hide");
+  const [stepvis_d, setStepvis_d] = React.useState("hide");
 
   const history = useHistory();
   const { user } = React.useContext(AuthContext);
@@ -58,6 +59,16 @@ function App() {
     }
   };
 
+  const expand_d = () => {
+    if (stepvis_d === "hide") {
+      setStepvis_d("show");
+    } else {
+      setStepvis_d("hide");
+    }
+  };
+
+  const arrow = ">";
+
   return (
     <body>
       <Bg img={data.bg}></Bg>
@@ -67,7 +78,7 @@ function App() {
       <div className="nav-button--notselected">
         <Link to="/Browse">Browse</Link>
       </div>
-      <div className="nav-button--arrow">❯</div>
+      <div className="nav-button--arrow">{arrow}</div>
       <div className="nav-button--selected">
         <Link to={`${data.link}`}>{data.name}</Link>
       </div>
@@ -109,9 +120,9 @@ function App() {
         <div className="section">General</div>
         <div className="section--expand" onClick={expand_a}>
           {stepvis_a === "hide" ? (
-            <RemoveIcon></RemoveIcon>
-          ) : (
             <AddIcon></AddIcon>
+          ) : (
+            <RemoveIcon></RemoveIcon>
           )}
         </div>
       </div>
@@ -137,9 +148,9 @@ function App() {
         <div className="section">Launch Options</div>
         <div className="section--expand" onClick={expand_b}>
           {stepvis_b === "hide" ? (
-            <RemoveIcon></RemoveIcon>
-          ) : (
             <AddIcon></AddIcon>
+          ) : (
+            <RemoveIcon></RemoveIcon>
           )}
         </div>
       </div>
@@ -150,23 +161,24 @@ function App() {
           +fps_max 60".
         </div>
         <div className="step">
+          <div className="code-block">+fps_max number</div>
           If you have a low end pc, or laptop, that has a risk of overheating,
           we reccomend that you set the fps limit at either 60 or 120. Both are
           reasonably high frame rates, that have little impact on the heat of
-          your device. To do this do:
-          <br />
-          <br />
-          <div className="code-block">+fps_max number</div>
-          Replace "number" with your choice of fps.
+          your device. (Replace "number" with your choice of fps).
         </div>
         <div className="step">
           <div className="code-block">+cl_showfps 1</div>
           This allows you to see your fps and monitor your pc's performance
-          activley.
+          activley. This helps to check at what point your pc starts to
+          overheat, and can be a great form of benchmarking for your pc's
+          performance.
         </div>
         <div className="step">
           <div className="code-block">-novid</div>
-          Stops the intro video from automatically playing.
+          Stops the intro video from automatically playing. If you have
+          previously disabled this feature, there is no need for this command to
+          be called again.
         </div>
         <div className="step">
           <div className="code-block">-high</div>
@@ -176,7 +188,20 @@ function App() {
         <div className="step">
           <div className="code-block">-fullscreen</div>
           Launches the game in fullscreen mode. This automatically sets the game
-          as a priority for your system, significantly reducing input latency.
+          as a priority for your machine, significantly reducing input latency.
+          This is reccomended for all systems.
+        </div>
+        <div className="step">
+          <div className="code-block">-nojoy</div>
+          Removes joystick compatibility from the game. It's debated weither
+          this actually increases performance, but It can't hurt.
+        </div>
+        <div className="step">
+          <div className="code-block">+cl_forcepreload 1</div>
+          This is highly reccomend. This command preloads all textures, models,
+          sounds etc, when loading into a match. This may offer reduced fps
+          stutters and drops as there is no need for your machine to render new
+          areas.
         </div>
       </div>
       <div className="section---wrapper">
@@ -184,21 +209,37 @@ function App() {
         <div className="section">Maps</div>
         <div className="section--expand" onClick={expand_c}>
           {stepvis_c === "hide" ? (
-            <RemoveIcon></RemoveIcon>
-          ) : (
             <AddIcon></AddIcon>
+          ) : (
+            <RemoveIcon></RemoveIcon>
           )}
         </div>
       </div>
       <div className={stepvis_c}>
         <div className="step">
-          A map that we, the community, and everyone highly reccomends is crashz
-          and Misterio's config generator. This map provides great configs for
-          fps, and from the pro's. For the presets we reccomend selecting the
-          fps booster.
+          This map is highly commended by us and the cs:go community for being a
+          great config generator. This being, crashz and Misterio's config
+          generator. To download this map, make sure you are logged in, then
+          click "subscribe". You can download it
+          <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1325659427">
+            <div className="step--link">here</div>
+          </a>
+          .
         </div>
         <IMG game={data.name} img="4" width="942px" height="573px"></IMG>
       </div>
+      <div className="section---wrapper">
+        <div className="section--num">4.⠀</div>
+        <div className="section">Commands</div>
+        <div className="section--expand" onClick={expand_d}>
+          {stepvis_d === "hide" ? (
+            <AddIcon></AddIcon>
+          ) : (
+            <RemoveIcon></RemoveIcon>
+          )}
+        </div>
+      </div>
+      <div className={stepvis_d}></div>
     </body>
   );
 }

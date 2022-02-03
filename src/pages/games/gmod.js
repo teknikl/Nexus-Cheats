@@ -27,6 +27,8 @@ function App() {
     history.push("/Account");
   };
 
+  const arrow = ">";
+
   return (
     <body>
       <Bg img={data.bg}></Bg>
@@ -36,7 +38,7 @@ function App() {
       <div className="nav-button--notselected">
         <Link to="/Browse">Browse</Link>
       </div>
-      <div className="nav-button--arrow">❯</div>
+      <div className="nav-button--arrow">{arrow}</div>
       <div className="nav-button--selected">
         <Link to={`${data.link}`}>{data.name}</Link>
       </div>

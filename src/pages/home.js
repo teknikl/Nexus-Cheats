@@ -36,6 +36,8 @@ function App() {
     }
   };
 
+  const arrow = ">";
+
   return (
     <React.Fragment>
       <Bg img={bg}></Bg>
@@ -92,7 +94,7 @@ function App() {
         An index of commands, tips 'n' tricks and optimizations for any game.
       </div>
       <div className="browse-link">
-        <Link to="/Browse">Start browsing supported titles ❯</Link>
+        <Link to="/Browse">Start browsing supported titles {arrow}</Link>
       </div>
       <div className="source">
         This page is open source. Check it out

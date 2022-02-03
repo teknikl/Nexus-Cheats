@@ -14,6 +14,8 @@ function App() {
     setBg(`bg${Math.floor(Math.random() * 2) + 1}`);
   }, []);
 
+  const arrow = ">";
+
   return (
     <body>
       <Bg img={bg}></Bg>
@@ -23,7 +25,7 @@ function App() {
       <div className="nav-button--notselected">
         <Link to="/Browse">Browse</Link>
       </div>
-      ❯
+      {arrow}
       <div className="nav-button--notselected">
         <Link to="/Log-In">Log In</Link>
       </div>
