@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.e63c94d6.css",
-    "main.js": "/static/js/main.e68500fd.js",
+    "main.css": "/static/css/main.7fae1ab8.css",
+    "main.js": "/static/js/main.f36f0876.js",
     "static/js/787.2a36e529.chunk.js": "/static/js/787.2a36e529.chunk.js",
     "static/media/bg1.png": "/static/media/bg1.ce64b2a3bb3d8ec89708.png",
+    "static/media/5.png": "/static/media/5.25ea7e5686aa383f0d43.png",
     "static/media/4.png": "/static/media/4.153fdffe154f11b9d9e1.png",
+    "static/media/9.png": "/static/media/9.35e633fd39df0c0c2589.png",
     "static/media/3.png": "/static/media/3.d85ac6308a1751d30635.png",
     "static/media/bg2.png": "/static/media/bg2.2f7c130e0674ef5c7e7b.png",
     "static/media/2.png": "/static/media/2.aac5d4bced5aac6ed829.png",
     "static/media/CSGO.png": "/static/media/CSGO.94d87d1fe5c3eb47889c.png",
     "static/media/1.png": "/static/media/1.1b7b77a5b82b8bb1172f.png",
     "static/media/GMOD.png": "/static/media/GMOD.eb2d658ee51efe81e1ed.png",
+    "static/media/8.png": "/static/media/8.c648568ebcea54953e0b.png",
+    "static/media/7.png": "/static/media/7.a7525412db98a8b2d97f.png",
     "index.html": "/index.html",
-    "main.e63c94d6.css.map": "/static/css/main.e63c94d6.css.map",
-    "main.e68500fd.js.map": "/static/js/main.e68500fd.js.map",
+    "main.7fae1ab8.css.map": "/static/css/main.7fae1ab8.css.map",
+    "main.f36f0876.js.map": "/static/js/main.f36f0876.js.map",
     "787.2a36e529.chunk.js.map": "/static/js/787.2a36e529.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e63c94d6.css",
-    "static/js/main.e68500fd.js"
+    "static/css/main.7fae1ab8.css",
+    "static/js/main.f36f0876.js"
   ]
 }
