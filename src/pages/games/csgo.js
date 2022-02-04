@@ -7,6 +7,7 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import Bg from "../../components/background.js";
 import IMG from "../../components/img.js";
+import Tab from "../../components/tab.js";
 import "../../App.css";
 
 function App() {
@@ -124,6 +125,17 @@ function App() {
       <div className="game--name">{data.name}</div>
       <div className="game--desc">{data.desc}</div>
 
+      <div className="code-block--wrapper">
+        <Tab colour="red"></Tab>
+        <div className="code-block">Recommended</div>
+
+        <Tab colour="yellow"></Tab>
+        <div className="code-block">Optional</div>
+
+        <Tab colour="green"></Tab>
+        <div className="code-block">Doesn't Matter</div>
+      </div>
+
       <div className="section---wrapper">
         <div className="section--num">1.⠀</div>
         <div className="section">General</div>
@@ -170,43 +182,64 @@ function App() {
           +fps_max 60".
         </div>
         <div className="step">
-          <div className="code-block">+fps_max number</div>
+          <div className="code-block--wrapper">
+            <Tab colour="red"></Tab>
+            <div className="code-block">+fps_max number</div>
+          </div>
           If you have a low end pc, or laptop, that has a risk of overheating,
           we reccomend that you set the fps limit at either 60 or 120. Both are
           reasonably high frame rates, that have little impact on the heat of
           your device. (Replace "number" with your choice of fps).
         </div>
         <div className="step">
-          <div className="code-block">+cl_showfps 1</div>
+          <div className="code-block--wrapper">
+            <Tab colour="red"></Tab>
+            <div className="code-block">+cl_showfps 1</div>
+          </div>
           This allows you to see your fps and monitor your pc's performance
           activley. This helps to check at what point your pc starts to
           overheat, and can be a great form of benchmarking for your pc's
           performance.
         </div>
         <div className="step">
-          <div className="code-block">-novid</div>
+          <div className="code-block--wrapper">
+            <Tab colour="green"></Tab>
+            <div className="code-block">-novid</div>
+          </div>
           Stops the intro video from automatically playing. If you have
           previously disabled this feature, there is no need for this command to
           be called again.
         </div>
         <div className="step">
-          <div className="code-block">-high</div>
+          <div className="code-block--wrapper">
+            <Tab colour="red"></Tab>
+            <div className="code-block">-high</div>
+          </div>
           Makes the game a priority on your system. The is low risk, but if you
           are experiencing blue screens, we reccomend you disable this feature.
         </div>
         <div className="step">
-          <div className="code-block">-fullscreen</div>
+          <div className="code-block--wrapper">
+            <Tab colour="yellow"></Tab>
+            <div className="code-block">-fullscreen</div>
+          </div>
           Launches the game in fullscreen mode. This automatically sets the game
           as a priority for your machine, significantly reducing input latency.
           This is reccomended for all systems.
         </div>
         <div className="step">
-          <div className="code-block">-nojoy</div>
+          <div className="code-block--wrapper">
+            <Tab colour="yellow"></Tab>
+            <div className="code-block">-nojoy</div>
+          </div>
           Removes joystick compatibility from the game. It's debated weither
           this actually increases performance, but It can't hurt.
         </div>
         <div className="step">
-          <div className="code-block">+cl_forcepreload 1</div>
+          <div className="code-block--wrapper">
+            <Tab colour="yellow"></Tab>
+            <div className="code-block">+cl_forcepreload 1</div>
+          </div>
           This is highly reccomend. This command preloads all textures, models,
           sounds etc, when loading into a match. This may offer reduced fps
           stutters and drops as there is no need for your machine to render new
@@ -284,12 +317,19 @@ function App() {
         <div className="step">
           Using the console, let's set up some useful binds.
         </div>
-        <div className="code-block">sv_cheats 1</div>
+        <div className="code-block--wrapper">
+          <Tab colour="yellow"></Tab>
+          <div className="code-block">sv_cheats 1</div>
+        </div>
         <div className="step">
           sv_cheats 1 enables cheat commands to be executed, it requires you to
-          be the server operater.
+          be the server operator.
         </div>
-        <div className="code-block">bind v "sv_cheats 1; noclip"</div>
+        <IMG game={data.name} img="11" width="1105px" height="622px"></IMG>
+        <div className="code-block--wrapper">
+          <Tab colour="red"></Tab>
+          <div className="code-block">bind v "sv_cheats 1; noclip"</div>
+        </div>
         <div className="step">
           When pressing v (or the key of your choice), you will enter noclip
           mode, thus meaning that you can fly around the map, and clip through
@@ -297,9 +337,12 @@ function App() {
           operater. By executing sv_cheats 1, then noclip, there is no need to
           enable it.
         </div>
-        <div className="code-block">
-          unbind mwheeldown; unbind mwheelup; bind mwheeldown +jump; bind
-          mwheelup +jump;
+        <div className="code-block--wrapper">
+          <Tab colour="red"></Tab>
+          <div className="code-block">unbind mwheeldown;</div>
+          <div className="code-block">unbind mwheelup;</div>
+          <div className="code-block">bind mwheeldown +jump;</div>
+          <div className="code-block">bind mwheelup +jump;</div>
         </div>
         <div className="step">
           These commands unbind your scroll down and scroll up function of your
@@ -308,7 +351,11 @@ function App() {
           with the spacebar. This is useful for bhopping, and even jumping in
           general.
         </div>
-        <div className="code-block">sv_showimpacts 1</div>
+        <IMG game={data.name} img="12" width="1105px" height="626px"></IMG>
+        <div className="code-block--wrapper">
+          <Tab colour="green"></Tab>
+          <div className="code-block">sv_showimpacts 1</div>
+        </div>
         <div className="step">
           This allows you to see your client and server side bullet impacts. Red
           boxes are client side impacts, and blue boxes are the server side
