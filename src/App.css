@@ -546,12 +546,14 @@ input:focus {
 }
 
 .code-block--wrapper {
+  position: relative;
   display: block;
   text-align: center;
   margin: 20px;
 }
 
 .code-block {
+  position: relative;
   display: inline-block;
   font-family: "Source Code Pro", monospace;
   background: #373c44a8;
@@ -565,8 +567,13 @@ input:focus {
   border-radius: 4px;
 }
 
+.code-block:hover {
+  background: #373c446b;
+}
+
 /* code tabs */
 .code-tab--red {
+  position: relative;
   display: inline-block;
   background: #ff6868;
   height: 42px;
@@ -576,6 +583,7 @@ input:focus {
 }
 
 .code-tab--yellow {
+  position: relative;
   display: inline-block;
   background: #fcff68;
   height: 42px;
@@ -585,6 +593,7 @@ input:focus {
 }
 
 .code-tab--green {
+  position: relative;
   display: inline-block;
   background: #68ff75;
   height: 42px;
@@ -596,6 +605,7 @@ input:focus {
 /* button wrapper */
 
 .button--wrapper {
+  position: relative;
   text-align: center;
 }
 
