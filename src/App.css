@@ -569,6 +569,7 @@ input:focus {
 
 .code-block:hover {
   background: #373c446b;
+  cursor: default;
 }
 
 /* code tabs */
