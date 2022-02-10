@@ -4,6 +4,7 @@ import { AuthContext } from "../auth/auth.js";
 import { useHistory } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { BrowserView, MobileView } from "react-device-detect";
 import Bg from "../components/background.js";
 import "../App.css";
 
@@ -58,30 +59,59 @@ function App() {
             ></AccountCircleIcon>
           )}
         </div>
-        <Link to="/Log-In">
-          <div
-            className={
-              user === null ? "log-in--button" : "log-in--button---invis"
-            }
-          >
-            Log In
-          </div>
-        </Link>
-        <Link to="/Sign-Up">
-          <div
-            className={
-              user === null ? "sign-up--button" : "sign-up--button---invis"
-            }
-          >
-            Sign Up
-          </div>
-        </Link>
+        <BrowserView>
+          <Link to="/Log-In">
+            <div
+              className={
+                user === null ? "log-in--button" : "log-in--button---invis"
+              }
+            >
+              Log In
+            </div>
+          </Link>
+          <Link to="/Sign-Up">
+            <div
+              className={
+                user === null ? "sign-up--button" : "sign-up--button---invis"
+              }
+            >
+              Sign Up
+            </div>
+          </Link>
+        </BrowserView>
+        <MobileView>
+          <Link to="/Log-In">
+            <div
+              className={
+                user === null ? "log-in--button" : "log-in--button---invis"
+              }
+            >
+              Log In
+            </div>
+          </Link>
+        </MobileView>
       </div>
       <div className="heading--wrapper">
-        <div className="heading">Nexus</div>
-        <div className={addonAnim}>
-          x {bg === "bg1" ? "Counter Strike : Global Offensive" : "Garry's Mod"}
-        </div>
+        <BrowserView>
+          <div className="heading">Nexus</div>
+        </BrowserView>
+        <MobileView>
+          <div className="heading" style={{ fontSize: "75px" }}>
+            Nexus
+          </div>
+        </MobileView>
+        <BrowserView>
+          <div className={addonAnim}>
+            x{" "}
+            {bg === "bg1" ? "Counter Strike : Global Offensive" : "Garry's Mod"}
+          </div>
+        </BrowserView>
+        <MobileView>
+          <div className={addonAnim} style={{ fontSize: "16px" }}>
+            x{" "}
+            {bg === "bg1" ? "Counter Strike : Global Offensive" : "Garry's Mod"}
+          </div>
+        </MobileView>
         <div className="next--arrow---wrapper">
           <div onClick={nextBg} className="next--arrow">
             <ArrowForwardIosIcon
@@ -96,13 +126,28 @@ function App() {
       <div className="browse-link">
         <Link to="/Browse">Start browsing supported titles {arrow}</Link>
       </div>
-      <div className="source">
-        This page is open source. Check it out
-        <a href="https://github.com/ArchieMourad/Nexus">
-          <div className="source--link">here</div>
-        </a>
-        .
-      </div>
+      <BrowserView>
+        <div className="source">
+          Running nexus-cheats.com for desktop.
+          <br />
+          This page is open source. Check it out
+          <a href="https://github.com/ArchieMourad/Nexus">
+            <div className="source--link">here</div>
+          </a>
+          .
+        </div>
+      </BrowserView>
+      <MobileView>
+        <div className="source">
+          Running nexus-cheats.com for mobile.
+          <br />
+          This page is open source. Check it out
+          <a href="https://github.com/ArchieMourad/Nexus">
+            <div className="source--link">here</div>
+          </a>
+          .
+        </div>
+      </MobileView>
     </React.Fragment>
   );
 }

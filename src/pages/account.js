@@ -7,6 +7,7 @@ import { signOut, updateEmail, updateProfile } from "@firebase/auth";
 import DoneIcon from "@mui/icons-material/Done";
 import CloseIcon from "@mui/icons-material/Close";
 import Bg from "../components/background.js";
+import { BrowserView, MobileView } from "react-device-detect";
 import "../App.css";
 
 function App() {
@@ -182,21 +183,40 @@ function App() {
       <div className="nav-button--selected">
         <Link to="/Account">Account</Link>
       </div>
-      <div className={verifyVis}>
-        <div className="verify--box">
-          <div className="verify--box---title">Are you sure?</div>
-          <div className="verify--box---warning">
-            Accounts that are deleted CAN NOT be recovered. Do you want to
-            continue?
-          </div>
-          <div onClick={delaccvis} className="user--action---button---cancel">
-            Cancel
-          </div>
-          <div onClick={delacc} className="user--action---button---continue">
-            Confirm
+      <BrowserView>
+        <div className={verifyVis}>
+          <div className="verify--box">
+            <div className="verify--box---title">Are you sure?</div>
+            <div className="verify--box---warning">
+              Accounts that are deleted CAN NOT be recovered. Do you want to
+              continue?
+            </div>
+            <div onClick={delaccvis} className="user--action---button---cancel">
+              Cancel
+            </div>
+            <div onClick={delacc} className="user--action---button---continue">
+              Confirm
+            </div>
           </div>
         </div>
-      </div>
+      </BrowserView>
+      <MobileView>
+        <div className={verifyVis}>
+          <div className="verify--box" style={{ width: "250px" }}>
+            <div className="verify--box---title">Are you sure?</div>
+            <div className="verify--box---warning">
+              Accounts that are deleted CAN NOT be recovered. Do you want to
+              continue?
+            </div>
+            <div onClick={delaccvis} className="user--action---button---cancel">
+              Cancel
+            </div>
+            <div onClick={delacc} className="user--action---button---continue">
+              Confirm
+            </div>
+          </div>
+        </div>
+      </MobileView>
       <div className="account--wrapper">
         <div className="account-title">Account</div>
 
@@ -212,14 +232,27 @@ function App() {
             : "Update Username"}
         </div>
         <div className={inputVis2}>
-          <input
-            onChange={usernameChange}
-            style={{
-              textTransform: "none",
-              margin: "10px auto",
-            }}
-            placeholder="New Username"
-          ></input>
+          <BrowserView>
+            <input
+              onChange={usernameChange}
+              style={{
+                textTransform: "none",
+                margin: "10px auto",
+              }}
+              placeholder="New Username"
+            ></input>
+          </BrowserView>
+          <MobileView>
+            <input
+              onChange={usernameChange}
+              style={{
+                textTransform: "none",
+                margin: "10px auto",
+                width: "160px",
+              }}
+              placeholder="New Username"
+            ></input>
+          </MobileView>
         </div>
         <div onClick={closeUsername} className={crossVis2}>
           <CloseIcon></CloseIcon>
@@ -235,14 +268,27 @@ function App() {
           Change Email
         </div>
         <div className={inputVis}>
-          <input
-            onChange={emailChange}
-            style={{
-              textTransform: "none",
-              margin: "10px auto",
-            }}
-            placeholder="New Email"
-          ></input>
+          <BrowserView>
+            <input
+              onChange={emailChange}
+              style={{
+                textTransform: "none",
+                margin: "10px auto",
+              }}
+              placeholder="New Email"
+            ></input>
+          </BrowserView>
+          <MobileView>
+            <input
+              onChange={emailChange}
+              style={{
+                textTransform: "none",
+                margin: "10px auto",
+                width: "160px",
+              }}
+              placeholder="New Email"
+            ></input>
+          </MobileView>
         </div>
         <div onClick={closeEmail} className={crossVis}>
           <CloseIcon></CloseIcon>

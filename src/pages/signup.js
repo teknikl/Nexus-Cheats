@@ -6,6 +6,7 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useHistory } from "react-router-dom";
 import { AuthContext, auth } from "../auth/auth.js";
 import Bg from "../components/background.js";
+import { BrowserView, MobileView } from "react-device-detect";
 import "../App.css";
 
 function App() {
@@ -81,39 +82,80 @@ function App() {
         <Link to="/Sign-Up">Sign Up</Link>
       </div>
       <div className="form-heading">Sign Up</div>
-      <div className="form-heading--desc">
-        Register an account for nexus-cheats.com
-      </div>
-      <div className="form-input--wrapper---a">
-        <input
-          style={{
-            textTransform: "none",
-            marginLeft: "0px",
-            width: "350px",
-          }}
-          placeholder="Email"
-          onChange={updateEmail}
-        ></input>
-      </div>
-      <div className="form-input--wrapper---b">
-        <input
-          style={{
-            textTransform: "none",
-            marginLeft: "0px",
-            width: "350px",
-          }}
-          type={passVis}
-          placeholder="Password"
-          onChange={updatePass}
-        ></input>
-        <div onClick={updateVis} className="password-vis--button">
-          {passVis === "password" ? (
-            <VisibilityIcon></VisibilityIcon>
-          ) : (
-            <VisibilityOffIcon></VisibilityOffIcon>
-          )}
+      <BrowserView>
+        <div className="form-heading--desc">
+          Register an account for nexus-cheats.com
         </div>
-      </div>
+      </BrowserView>
+      <MobileView>
+        <div className="form-heading--desc" style={{ fontSize: "18px" }}>
+          Register an account for nexus-cheats.com
+        </div>
+      </MobileView>
+      <BrowserView>
+        <div className="form-input--wrapper---a">
+          <input
+            style={{
+              textTransform: "none",
+              marginLeft: "0px",
+              width: "350px",
+            }}
+            placeholder="Email"
+            onChange={updateEmail}
+          ></input>
+        </div>
+        <div className="form-input--wrapper---b">
+          <input
+            style={{
+              textTransform: "none",
+              marginLeft: "0px",
+              width: "350px",
+            }}
+            type={passVis}
+            placeholder="Password"
+            onChange={updatePass}
+          ></input>
+          <div onClick={updateVis} className="password-vis--button">
+            {passVis === "password" ? (
+              <VisibilityIcon></VisibilityIcon>
+            ) : (
+              <VisibilityOffIcon></VisibilityOffIcon>
+            )}
+          </div>
+        </div>
+      </BrowserView>
+      <MobileView>
+        <div className="form-input--wrapper---a">
+          <input
+            style={{
+              textTransform: "none",
+              marginLeft: "0px",
+              width: "260px",
+            }}
+            placeholder="Email"
+            onChange={updateEmail}
+          ></input>
+        </div>
+        <div className="form-input--wrapper---b">
+          <input
+            style={{
+              textTransform: "none",
+              marginLeft: "0px",
+              width: "260px",
+            }}
+            type={passVis}
+            placeholder="Password"
+            onChange={updatePass}
+          ></input>
+          <div onClick={updateVis} className="password-vis--button">
+            {passVis === "password" ? (
+              <VisibilityIcon></VisibilityIcon>
+            ) : (
+              <VisibilityOffIcon></VisibilityOffIcon>
+            )}
+          </div>
+        </div>
+      </MobileView>
       <div className={formErrVis}>{formerr.toString()}</div>
       <div className="form-confirm--button" onClick={Register}>
         Register

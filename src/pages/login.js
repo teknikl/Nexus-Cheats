@@ -9,6 +9,7 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useHistory } from "react-router-dom";
 import { AuthContext, auth } from "../auth/auth.js";
 import Bg from "../components/background.js";
+import { BrowserView, MobileView } from "react-device-detect";
 import "../App.css";
 
 function App() {
@@ -88,39 +89,82 @@ function App() {
         <Link to="/Log-In">Log In</Link>
       </div>
       <div className="form-heading">Log In</div>
-      <div className="form-heading--desc">
-        Log In to an existing account on nexus-cheats.com
-      </div>
-      <div className="form-input--wrapper---a">
-        <input
-          style={{
-            textTransform: "none",
-            marginLeft: "0px",
-            width: "350px",
-          }}
-          placeholder="Email"
-          onChange={updateEmail}
-        ></input>
-      </div>
-      <div className="form-input--wrapper---b">
-        <input
-          style={{
-            textTransform: "none",
-            marginLeft: "0px",
-            width: "350px",
-          }}
-          type={passVis}
-          placeholder="Password"
-          onChange={updatePass}
-        ></input>
-        <div onClick={updateVis} className="password-vis--button">
-          {passVis === "password" ? (
-            <VisibilityIcon></VisibilityIcon>
-          ) : (
-            <VisibilityOffIcon></VisibilityOffIcon>
-          )}
+      <BrowserView>
+        <div className="form-heading--desc">
+          Log In to an existing account on nexus-cheats.com
         </div>
-      </div>
+      </BrowserView>
+      <MobileView>
+        <div className="form-heading--desc" style={{ fontSize: "19px" }}>
+          Log In to an existing account on nexus-cheats.com
+        </div>
+      </MobileView>
+      <BrowserView>
+        <div className="form-input--wrapper---a">
+          <BrowserView></BrowserView>
+          <input
+            style={{
+              textTransform: "none",
+              marginLeft: "0px",
+              width: "350px",
+            }}
+            placeholder="Email"
+            onChange={updateEmail}
+          ></input>
+        </div>
+        <div className="form-input--wrapper---b">
+          <input
+            style={{
+              textTransform: "none",
+              marginLeft: "0px",
+              width: "350px",
+            }}
+            type={passVis}
+            placeholder="Password"
+            onChange={updatePass}
+          ></input>
+          <div onClick={updateVis} className="password-vis--button">
+            {passVis === "password" ? (
+              <VisibilityIcon></VisibilityIcon>
+            ) : (
+              <VisibilityOffIcon></VisibilityOffIcon>
+            )}
+          </div>
+        </div>
+      </BrowserView>
+      <MobileView>
+        <div className="form-input--wrapper---a">
+          <BrowserView></BrowserView>
+          <input
+            style={{
+              textTransform: "none",
+              marginLeft: "0px",
+              width: "260px",
+            }}
+            placeholder="Email"
+            onChange={updateEmail}
+          ></input>
+        </div>
+        <div className="form-input--wrapper---b">
+          <input
+            style={{
+              textTransform: "none",
+              marginLeft: "0px",
+              width: "260px",
+            }}
+            type={passVis}
+            placeholder="Password"
+            onChange={updatePass}
+          ></input>
+          <div onClick={updateVis} className="password-vis--button">
+            {passVis === "password" ? (
+              <VisibilityIcon></VisibilityIcon>
+            ) : (
+              <VisibilityOffIcon></VisibilityOffIcon>
+            )}
+          </div>
+        </div>
+      </MobileView>
       <div className="log-in--pass--wrapper">
         <div className="log-in--pass">Forgot your password?</div>
         <Link to="/Log-In/Reset">

@@ -7,6 +7,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SearchIcon from "@mui/icons-material/Search";
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
 import Bg from "../components/background.js";
+import { BrowserView, MobileView } from "react-device-detect";
 import "../App.css";
 
 let games = [
@@ -141,27 +142,47 @@ function App() {
             ></AccountCircleIcon>
           )}
         </div>
-        <Link to="/Log-In">
-          <div
-            className={
-              user === null ? "log-in--button" : "log-in--button---invis"
-            }
-          >
-            Log In
-          </div>
-        </Link>
-        <Link to="/Sign-Up">
-          <div
-            className={
-              user === null ? "sign-up--button" : "sign-up--button---invis"
-            }
-          >
-            Sign Up
-          </div>
-        </Link>
+        <BrowserView>
+          <Link to="/Log-In">
+            <div
+              className={
+                user === null ? "log-in--button" : "log-in--button---invis"
+              }
+            >
+              Log In
+            </div>
+          </Link>
+          <Link to="/Sign-Up">
+            <div
+              className={
+                user === null ? "sign-up--button" : "sign-up--button---invis"
+              }
+            >
+              Sign Up
+            </div>
+          </Link>
+        </BrowserView>
+        <MobileView>
+          <Link to="/Log-In">
+            <div
+              className={
+                user === null ? "log-in--button" : "log-in--button---invis"
+              }
+            >
+              Log In
+            </div>
+          </Link>
+        </MobileView>
       </div>
       <div className="browse-title--wrapper">
-        <div className="browse-title">Let's get started...</div>
+        <BrowserView>
+          <div className="browse-title">Let's get started...</div>
+        </BrowserView>
+        <MobileView>
+          <div className="browse-title" style={{ fontSize: "50px" }}>
+            Let's get started...
+          </div>
+        </MobileView>
       </div>
       <div className="browse-title--desc">
         First, help us find which game you're looking for:
@@ -186,9 +207,20 @@ function App() {
           sx={{ fontSize: "50px", marginBottom: "-17px" }}
         ></FilterAltIcon>
       </div>
-      <div onClick={filteratoz} className={filter}>
-        Sort by: A - Z
-      </div>
+      <BrowserView>
+        <div onClick={filteratoz} className={filter}>
+          Sort by: A - Z
+        </div>
+      </BrowserView>
+      <MobileView>
+        <div
+          onClick={filteratoz}
+          style={{ marginLeft: "20px" }}
+          className={filter}
+        >
+          Sort by: A - Z
+        </div>
+      </MobileView>
       <div className={searchVis}>
         Whoops! We couldn't find any games that matched your search, did you
         enter the name correctly?
