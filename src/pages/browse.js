@@ -187,37 +187,59 @@ function App() {
       <div className="browse-title--desc">
         First, help us find which game you're looking for:
       </div>
-      <input
-        name="name"
-        placeholder="Search"
-        type="text"
-        onKeyDown={_handleEnter}
-        onChange={searchChange}
-        style={{
-          marginTop: "0",
-        }}
-      ></input>
-      <div onClick={clickGo} className={vis}>
-        <SearchIcon
-          sx={{ fontSize: "50px", marginBottom: "-17px" }}
-        ></SearchIcon>
-      </div>
-      <div onClick={setFilterToggle} className="filter">
-        <FilterAltIcon
-          sx={{ fontSize: "50px", marginBottom: "-17px" }}
-        ></FilterAltIcon>
-      </div>
       <BrowserView>
+        <input
+          name="name"
+          placeholder="Search"
+          type="text"
+          onKeyDown={_handleEnter}
+          onChange={searchChange}
+          style={{
+            marginTop: "0",
+          }}
+        ></input>
+        <div onClick={clickGo} className={vis}>
+          <SearchIcon
+            sx={{ fontSize: "50px", marginBottom: "-17px" }}
+          ></SearchIcon>
+        </div>
+        <div onClick={setFilterToggle} className="filter">
+          <FilterAltIcon
+            sx={{ fontSize: "50px", marginBottom: "-17px" }}
+          ></FilterAltIcon>
+        </div>
         <div onClick={filteratoz} className={filter}>
           Sort by: A - Z
         </div>
       </BrowserView>
       <MobileView>
+        <input
+          name="name"
+          placeholder="Search"
+          type="text"
+          onKeyDown={_handleEnter}
+          onChange={searchChange}
+          style={{
+            marginTop: "0",
+          }}
+        ></input>
+      </MobileView>
+      <MobileView>
+        <div onClick={clickGo} className={vis}>
+          <SearchIcon
+            sx={{ fontSize: "50px", marginBottom: "-17px" }}
+          ></SearchIcon>
+        </div>
         <div
-          onClick={filteratoz}
+          onClick={setFilterToggle}
+          className="filter"
           style={{ marginLeft: "20px" }}
-          className={filter}
         >
+          <FilterAltIcon
+            sx={{ fontSize: "50px", marginBottom: "-17px" }}
+          ></FilterAltIcon>
+        </div>
+        <div onClick={filteratoz} className={filter}>
           Sort by: A - Z
         </div>
       </MobileView>
