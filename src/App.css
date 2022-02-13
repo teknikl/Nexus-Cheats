@@ -29,7 +29,6 @@ body {
   font-family: "Rubik", sans-serif;
   background: #0a0f24;
   color: #ffffff;
-  overflow-x: hidden;
 }
 
 .footer {
@@ -37,7 +36,6 @@ body {
   display: block;
   padding: 20px;
   background: #0a0f2457;
-  width: 100%;
   margin-top: 40px;
 }
 
