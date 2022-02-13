@@ -8,6 +8,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import Bg from "../../components/background.js";
 import IMG from "../../components/img.js";
 import Tab from "../../components/tab.js";
+import Footer from "../../components/footer.js";
 import { BrowserView, MobileView } from "react-device-detect";
 import "../../App.css";
 
@@ -85,9 +86,6 @@ function App() {
       <Bg img={data.bg}></Bg>
       <div className="nav-button--notselected">
         <Link to="/">Home</Link>
-      </div>
-      <div className="nav-button--notselected">
-        <Link to="/Browse">Browse</Link>
       </div>
       <div className="nav-button--arrow">{arrow}</div>
       <div className="nav-button--selected">
@@ -391,6 +389,7 @@ function App() {
           sv_showimpacts to 2, only showing client side impacts.
         </div>
       </div>
+      <Footer></Footer>
     </body>
   );
 }

@@ -9,6 +9,7 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useHistory } from "react-router-dom";
 import { AuthContext, auth } from "../auth/auth.js";
 import Bg from "../components/background.js";
+import Footer from "../components/footer.js";
 import { BrowserView, MobileView } from "react-device-detect";
 import "../App.css";
 
@@ -80,9 +81,6 @@ function App() {
       <Bg img={bg}></Bg>
       <div className="nav-button--notselected">
         <Link to="/">Home</Link>
-      </div>
-      <div className="nav-button--notselected">
-        <Link to="/Browse">Browse</Link>
       </div>
       {arrow}
       <div className="nav-button--selected">
@@ -183,6 +181,7 @@ function App() {
           <div className="form-other--link">Register</div>
         </Link>
       </div>
+      <Footer></Footer>
     </body>
   );
 }

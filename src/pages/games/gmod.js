@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import Bg from "../../components/background.js";
+import Footer from "../../components/footer.js";
 import { BrowserView, MobileView } from "react-device-detect";
 import "../../App.css";
 
@@ -35,9 +36,6 @@ function App() {
       <Bg img={data.bg}></Bg>
       <div className="nav-button--notselected">
         <Link to="/">Home</Link>
-      </div>
-      <div className="nav-button--notselected">
-        <Link to="/Browse">Browse</Link>
       </div>
       <div className="nav-button--arrow">{arrow}</div>
       <div className="nav-button--selected">
@@ -86,6 +84,7 @@ function App() {
         </div>
       </MobileView>
       <div className="game--desc">{data.desc}</div>
+      <Footer></Footer>
     </body>
   );
 }

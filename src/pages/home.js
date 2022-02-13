@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../auth/auth.js";
 import { useHistory } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { BrowserView, MobileView } from "react-device-detect";
+import Footer from "../components/footer.js";
 import Bg from "../components/background.js";
 import "../App.css";
 
@@ -12,8 +12,8 @@ function App() {
   const num = Math.floor(Math.random() * 2) + 1;
 
   // All states
-  const [bg, setBg] = React.useState(`bg${num}`);
-  const [addonAnim, setAddonAnim] = React.useState(`heading--addon---${num}`);
+  const [bg] = React.useState(`bg${num}`);
+  const [addonAnim] = React.useState(`heading--addon---${num}`);
 
   // Calls when page first renders
   useEffect(() => {
@@ -27,16 +27,6 @@ function App() {
     history.push("/Account");
   };
 
-  const nextBg = () => {
-    if (bg === "bg1") {
-      setBg("bg2");
-      setAddonAnim("heading--addon---2");
-    } else {
-      setBg("bg1");
-      setAddonAnim("heading--addon---1");
-    }
-  };
-
   const arrow = ">";
 
   return (
@@ -44,9 +34,6 @@ function App() {
       <Bg img={bg}></Bg>
       <div className="nav-button--selected">
         <Link to="/">Home</Link>
-      </div>
-      <div className="nav-button--notselected">
-        <Link to="/Browse">Browse</Link>
       </div>
       <div className="buttons--wrapper">
         <div className="account-icon--wrapper">
@@ -112,42 +99,16 @@ function App() {
             {bg === "bg1" ? "Counter Strike : Global Offensive" : "Garry's Mod"}
           </div>
         </MobileView>
-        <div className="next--arrow---wrapper">
-          <div onClick={nextBg} className="next--arrow">
-            <ArrowForwardIosIcon
-              sx={{ fontSize: "75px" }}
-            ></ArrowForwardIosIcon>
-          </div>
-        </div>
       </div>
       <div className="heading-desc">
         An index of commands, tips 'n' tricks and optimizations for any game.
       </div>
       <div className="browse-link">
-        <Link to="/Browse">Start browsing supported titles {arrow}</Link>
+        <Link to={bg === "bg1" ? "/CSGO" : "/Gmod"}>
+          Checkout {bg === "bg1" ? "CS:GO" : "Gmod"} {arrow}
+        </Link>
       </div>
-      <BrowserView>
-        <div className="source">
-          Running nexus-cheats.com for desktop.
-          <br />
-          This page is open source. Check it out
-          <a href="https://github.com/ArchieMourad/Nexus">
-            <div className="source--link">here</div>
-          </a>
-          .
-        </div>
-      </BrowserView>
-      <MobileView>
-        <div className="source">
-          Running nexus-cheats.com for mobile.
-          <br />
-          This page is open source. Check it out
-          <a href="https://github.com/ArchieMourad/Nexus">
-            <div className="source--link">here</div>
-          </a>
-          .
-        </div>
-      </MobileView>
+      <Footer></Footer>
     </React.Fragment>
   );
 }

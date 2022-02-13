@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Bg from "../components/background.js";
+import Footer from "../components/footer.js";
 import { BrowserView, MobileView } from "react-device-detect";
 import "../App.css";
 
@@ -23,9 +24,6 @@ function App() {
       <BrowserView>
         <div className="nav-button--notselected">
           <Link to="/">Home</Link>
-        </div>
-        <div className="nav-button--notselected">
-          <Link to="/Browse">Browse</Link>
         </div>
         {arrow}
         <div className="nav-button--notselected">
@@ -76,6 +74,7 @@ function App() {
           that the email you entered was correct.
         </div>
       </div>
+      <Footer></Footer>
     </body>
   );
 }

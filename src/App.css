@@ -32,6 +32,15 @@ body {
   overflow-x: hidden;
 }
 
+.footer {
+  position: relative;
+  display: block;
+  padding: 20px;
+  background: #0a0f2457;
+  width: 100%;
+  margin-top: 40px;
+}
+
 a {
   color: #ffffff;
   text-decoration: none;
@@ -108,8 +117,10 @@ input:focus {
 .log-in--button {
   position: relative;
   display: inline-block;
+  text-align: center;
   border: 2px solid #a97bff86;
-  border-radius: 4px;
+  border-radius: 50px;
+  width: 125px;
   padding: 7px;
   padding-left: 10px;
   padding-right: 10px;
@@ -156,8 +167,10 @@ input:focus {
 .sign-up--button {
   position: relative;
   display: inline-block;
+  text-align: center;
   border: 2px solid #a97bff86;
-  border-radius: 4px;
+  border-radius: 50px;
+  width: 125px;
   padding: 7px;
   padding-left: 10px;
   padding-right: 10px;
@@ -262,22 +275,6 @@ input:focus {
   }
 }
 
-.next--arrow---wrapper {
-  margin-top: -100px;
-  text-align: right;
-}
-
-.next--arrow---wrapper:hover {
-  margin-right: 25px;
-}
-
-.next--arrow {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-}
-
 .heading-desc {
   position: relative;
   font-weight: 400;
@@ -324,140 +321,6 @@ input:focus {
   position: relative;
   cursor: pointer;
   margin: 10px;
-}
-
-/* browse.js [ src/pages/browse.js ] */
-
-.browse-title--wrapper {
-  margin-top: 10%;
-  margin-left: 5%;
-}
-
-.browse-title {
-  position: relative;
-  display: inline-block;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 75px;
-}
-
-.browse-title--desc {
-  position: relative;
-  font-weight: 400;
-  color: #a97bff;
-  font-size: 20px;
-  margin-left: 5.5%;
-  margin-bottom: 20px;
-}
-
-.filter {
-  position: relative;
-  display: inline-block;
-  border-radius: 4px;
-  cursor: pointer;
-  margin: 10px;
-  padding-bottom: 14px;
-  border: 2px solid #a97bff86;
-}
-
-.filter:hover {
-  background: #a97bff86;
-}
-
-.atoz {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  border: 2px solid #a97bff86;
-  border-radius: 4px;
-  padding: 10px;
-}
-
-.atoz:hover {
-  background: #a97bff86;
-}
-
-.atoz-invis {
-  display: none;
-}
-
-.go-button {
-  position: relative;
-  display: inline-block;
-  border-radius: 4px;
-  cursor: pointer;
-  margin: 10px;
-  margin-left: 20px;
-  padding-bottom: 14px;
-  border: 2px solid #a97bff86;
-}
-
-.go-button:hover {
-  background: #a97bff86;
-}
-
-.go-button-RENDER {
-  position: relative;
-  display: inline-block;
-  border-radius: 4px;
-  cursor: pointer;
-  margin: 10px;
-  margin-left: 20px;
-  padding-bottom: 14px;
-  border: 2px solid #a97bff86;
-}
-
-.go-button-RENDER:hover {
-  background: #a97bff86;
-}
-
-.go-button-invis {
-  display: none;
-}
-
-/* Search error */
-
-.searchError {
-  position: relative;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 700;
-  margin-top: 50px;
-}
-
-.searchErrorInvis {
-  display: none;
-}
-
-/* gametile.js [ src/components/gametile.js ] */
-
-.game-tile--wrapper {
-  display: block;
-  margin-left: 60px;
-}
-
-.gametile {
-  position: relative;
-  display: inline-block;
-  background: #25293b44;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 4px;
-  margin: 20px;
-  margin-top: 40px;
-  width: 250px;
-  height: 430px;
-}
-
-.gametile:hover {
-  background: #25293ba1;
-}
-
-.gametile--name {
-  position: relative;
-  font-weight: 700;
-  font-size: 35px;
-  margin-top: 3px;
 }
 
 /* ALL games [ src/pages/games/____.js ] */
@@ -679,14 +542,16 @@ input:focus {
   position: relative;
   text-align: center;
   margin: 10px auto;
-  width: 200px;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 20px;
-  padding: 10px;
-  color: #ffffff;
   border: 2px solid #a97bff86;
-  border-radius: 4px;
+  border-radius: 50px;
+  width: 200px;
+  padding: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
 }
 
 .form-confirm--button:hover {
@@ -812,16 +677,16 @@ input:focus {
 .user--action---button {
   position: relative;
   border: 2px solid #a97bff86;
-  border-radius: 4px;
+  border-radius: 50px;
+  width: 200px;
   padding: 7px;
   padding-left: 10px;
   padding-right: 10px;
-  margin: 10px auto;
   cursor: pointer;
   font-weight: 400;
   color: #ffffff;
-  width: 200px;
   font-size: 20px;
+  margin: 10px auto;
 }
 
 .user--action---button:hover {
@@ -864,16 +729,16 @@ input:focus {
 .user--action---button---cancel {
   position: relative;
   border: 2px solid #ff7b7b86;
-  border-radius: 4px;
+  border-radius: 50px;
+  width: 200px;
   padding: 7px;
   padding-left: 10px;
   padding-right: 10px;
-  margin: 10px auto;
   cursor: pointer;
   font-weight: 400;
   color: #ffffff;
-  width: 200px;
   font-size: 20px;
+  margin: 10px auto;
 }
 
 .user--action---button---cancel:hover {
@@ -883,16 +748,16 @@ input:focus {
 .user--action---button---continue {
   position: relative;
   border: 2px solid #91ff7b86;
-  border-radius: 4px;
+  border-radius: 50px;
+  width: 200px;
   padding: 7px;
   padding-left: 10px;
   padding-right: 10px;
-  margin: 10px auto;
   cursor: pointer;
   font-weight: 400;
   color: #ffffff;
-  width: 200px;
   font-size: 20px;
+  margin: 10px auto;
 }
 
 .user--action---button---continue:hover {
@@ -906,16 +771,12 @@ input:focus {
   display: inline-block;
   border: 2px solid #91ff7b86;
   border-radius: 4px;
-  padding: 7px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 10px auto;
-  margin-left: 20px;
   cursor: pointer;
-  font-weight: 400;
-  color: #ffffff;
-  width: 25px;
-  font-size: 20px;
+  margin-left: 10px;
+  padding: 5px;
+  padding-right: 7px;
+  padding-left: 7px;
+  padding-top: 5px;
 }
 
 .input--cross {
@@ -923,16 +784,12 @@ input:focus {
   display: inline-block;
   border: 2px solid #ff7b7b86;
   border-radius: 4px;
-  padding: 7px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 10px auto;
-  margin-left: 20px;
   cursor: pointer;
-  font-weight: 400;
-  color: #ffffff;
-  width: 25px;
-  font-size: 20px;
+  margin-left: 10px;
+  padding: 5px;
+  padding-right: 7px;
+  padding-left: 7px;
+  padding-top: 5px;
 }
 
 .input--tick---invis {

@@ -7,6 +7,7 @@ import { signOut, updateEmail, updateProfile } from "@firebase/auth";
 import DoneIcon from "@mui/icons-material/Done";
 import CloseIcon from "@mui/icons-material/Close";
 import Bg from "../components/background.js";
+import Footer from "../components/footer.js";
 import { BrowserView, MobileView } from "react-device-detect";
 import "../App.css";
 
@@ -176,9 +177,6 @@ function App() {
       <div className="nav-button--notselected">
         <Link to="/">Home</Link>
       </div>
-      <div className="nav-button--notselected">
-        <Link to="/Browse">Browse</Link>
-      </div>
       {arrow}
       <div className="nav-button--selected">
         <Link to="/Account">Account</Link>
@@ -324,6 +322,7 @@ function App() {
         </div>
         <div className={errVis2}>{pageErr2.toString()}</div>
       </div>
+      <Footer></Footer>
     </body>
   );
 }
