@@ -54,15 +54,12 @@ function App() {
   };
 
   const history = useHistory();
-  const { updateUser } = React.useContext(AuthContext);
   const { user } = React.useContext(AuthContext);
 
   const SignIn = () => {
     signInWithEmailAndPassword(auth, email, pass, user)
       .then(() => {
         history.push("/");
-        window.location.reload();
-        updateUser(user);
       })
       .catch((err) => {
         setFormErrVis("main-form--error");
@@ -77,7 +74,7 @@ function App() {
   const arrow = ">";
 
   return (
-    <body>
+    <React.Fragment>
       <Bg img={bg}></Bg>
       <div className="nav-button--notselected">
         <Link to="/">Home</Link>
@@ -182,7 +179,7 @@ function App() {
         </Link>
       </div>
       <Footer></Footer>
-    </body>
+    </React.Fragment>
   );
 }
 

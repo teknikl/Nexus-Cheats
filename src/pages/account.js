@@ -172,7 +172,7 @@ function App() {
   const arrow = ">";
 
   return (
-    <body>
+    <React.Fragment>
       <Bg img={bg}></Bg>
       <div className="nav-button--notselected">
         <Link to="/">Home</Link>
@@ -192,8 +192,8 @@ function App() {
           {user === null
             ? "Add Username"
             : user.displayName === null
-            ? "Add Username"
-            : "Update Username"}
+              ? "Add Username"
+              : "Update Username"}
         </div>
         <div className={inputVis2}>
           <BrowserView>
@@ -335,7 +335,7 @@ function App() {
         </MobileView>
       </div>
       <Footer></Footer>
-    </body>
+    </React.Fragment>
   );
 }
 

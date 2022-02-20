@@ -24,10 +24,7 @@ export const useAuth = () => {
 
 export default function AuthProvider({ children }) {
   const [loading, setLoading] = React.useState(true);
-
-  const [currentUser, setCurrentUser] = React.useState({
-    currentUser: null,
-  });
+  const [currentUser, setCurrentUser] = React.useState(null);
 
   React.useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -44,7 +41,12 @@ export default function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user: currentUser, updateUser }}>
+    <AuthContext.Provider
+      value={{
+        user: currentUser,
+        updateUser
+      }}
+    >
       {loading === true ? (
         <HourglassBottomIcon
           sx={{

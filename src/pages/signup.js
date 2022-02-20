@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { createUserWithEmailAndPassword } from "@firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "@firebase/auth";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useHistory } from "react-router-dom";
@@ -12,18 +12,13 @@ import { BrowserView, MobileView } from "react-device-detect";
 import "../App.css";
 
 function App() {
-  // All states
-
+  const history = useHistory();
+  const { user } = React.useContext(AuthContext);
   const [bg, setBg] = React.useState(`bg${Math.floor(Math.random() * 2) + 1}`);
-
   const [passVis, setPassVis] = React.useState("");
-
   const [email, setEmail] = React.useState("");
-
   const [pass, setPass] = React.useState("");
-
   const [formErrVis, setFormErrVis] = React.useState("");
-
   const [formerr, setFormerr] = React.useState("");
 
   // Calls when page first renders
@@ -51,17 +46,17 @@ function App() {
     setPass(e.target.value);
   };
 
-  const history = useHistory();
-  const { updateUser } = React.useContext(AuthContext);
-  const { user } = React.useContext(AuthContext);
-
-  const Register = () => {
+  const registerUser = () => {
     createUserWithEmailAndPassword(auth, email, pass, user)
-      .then(() => {
-        updateUser(user);
-        updateUsername(user);
+      .then((newUser) => {
+        // When the newUser gets created, extract the user key
+        const currUser = newUser.user;
+        let defaultUsername = `user${Math.floor(Math.random() * 1000000) + 1}`;
+        // This function takes in an OPTIONAL parameter called displayName
+        updateProfile(currUser, {
+          displayName: defaultUsername,
+        });
         history.push("/");
-        window.location.reload();
       })
       .catch((err) => {
         setFormErrVis("main-form--error");
@@ -79,7 +74,7 @@ function App() {
   const arrow = ">";
 
   return (
-    <body>
+    <React.Fragment>
       <Bg img={bg}></Bg>
       <div className="nav-button--notselected">
         <Link to="/">Home</Link>
@@ -164,7 +159,7 @@ function App() {
         </div>
       </MobileView>
       <div className={formErrVis}>{formerr.toString()}</div>
-      <div className="form-confirm--button" onClick={Register}>
+      <div className="form-confirm--button" onClick={registerUser}>
         Register
       </div>
       <div className="form-other--wrapper">
@@ -174,7 +169,7 @@ function App() {
         </Link>
       </div>
       <Footer></Footer>
-    </body>
+    </React.Fragment>
   );
 }
 
