@@ -116,10 +116,9 @@ input:focus {
   position: relative;
   display: inline-block;
   text-align: center;
-  border: 2px solid #a97bff86;
   border-radius: 50px;
   width: 125px;
-  padding: 7px;
+  padding: 9px;
   padding-left: 10px;
   padding-right: 10px;
   cursor: pointer;

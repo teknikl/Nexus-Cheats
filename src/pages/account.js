@@ -192,8 +192,8 @@ function App() {
           {user === null
             ? "Add Username"
             : user.displayName === null
-              ? "Add Username"
-              : "Update Username"}
+            ? "Add Username"
+            : "Update Username"}
         </div>
         <div className={inputVis2}>
           <BrowserView>
