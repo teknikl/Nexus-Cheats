@@ -5,6 +5,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useHistory } from "react-router-dom";
 import { AuthContext, auth } from "../auth/auth.js";
+import { updateProfile } from "@firebase/auth";
 import Bg from "../components/background.js";
 import Footer from "../components/footer.js";
 import { BrowserView, MobileView } from "react-device-detect";
@@ -57,14 +58,22 @@ function App() {
   const Register = () => {
     createUserWithEmailAndPassword(auth, email, pass, user)
       .then(() => {
+        updateUser(user);
+        updateUsername(user);
         history.push("/");
         window.location.reload();
-        updateUser(user);
       })
       .catch((err) => {
         setFormErrVis("main-form--error");
         setFormerr(err);
       });
+  };
+
+  const updateUsername = (user) => {
+    let defaultUsername = `user${Math.floor(Math.random() * 1000000) + 1}`;
+    updateProfile(user, {
+      displayName: defaultUsername,
+    });
   };
 
   const arrow = ">";

@@ -1,8 +1,8 @@
 import React from "react";
 import "../App.css";
 
-function Tab() {
-  return <div className={"code-tab--" + this.props.colour}></div>;
+function Tab(props) {
+  return <div className={"code-tab--" + props.colour}></div>;
 }
 
 export default Tab;

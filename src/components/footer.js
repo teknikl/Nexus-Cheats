@@ -10,6 +10,7 @@ function Footer() {
   const share = () => {
     navigator.clipboard.writeText("https://nexus-cheats.com/");
     setTooltip("Copied!");
+    setTimeout(() => setTooltip("Share"), 1000);
   };
 
   return (

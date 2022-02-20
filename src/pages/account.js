@@ -181,40 +181,6 @@ function App() {
       <div className="nav-button--selected">
         <Link to="/Account">Account</Link>
       </div>
-      <BrowserView>
-        <div className={verifyVis}>
-          <div className="verify--box">
-            <div className="verify--box---title">Are you sure?</div>
-            <div className="verify--box---warning">
-              Accounts that are deleted CAN NOT be recovered. Do you want to
-              continue?
-            </div>
-            <div onClick={delaccvis} className="user--action---button---cancel">
-              Cancel
-            </div>
-            <div onClick={delacc} className="user--action---button---continue">
-              Confirm
-            </div>
-          </div>
-        </div>
-      </BrowserView>
-      <MobileView>
-        <div className={verifyVis}>
-          <div className="verify--box" style={{ width: "250px" }}>
-            <div className="verify--box---title">Are you sure?</div>
-            <div className="verify--box---warning">
-              Accounts that are deleted CAN NOT be recovered. Do you want to
-              continue?
-            </div>
-            <div onClick={delaccvis} className="user--action---button---cancel">
-              Cancel
-            </div>
-            <div onClick={delacc} className="user--action---button---continue">
-              Confirm
-            </div>
-          </div>
-        </div>
-      </MobileView>
       <div className="account--wrapper">
         <div className="account-title">Account</div>
 
@@ -224,7 +190,7 @@ function App() {
         </div>
         <div onClick={userVis} className="user--action---button">
           {user === null
-            ? ""
+            ? "Add Username"
             : user.displayName === null
             ? "Add Username"
             : "Update Username"}
@@ -253,10 +219,10 @@ function App() {
           </MobileView>
         </div>
         <div onClick={closeUsername} className={crossVis2}>
-          <CloseIcon></CloseIcon>
+          <CloseIcon sx={{ marginBottom: "-3px" }}></CloseIcon>
         </div>
         <div onClick={updateUsername} className={tickVis2}>
-          <DoneIcon></DoneIcon>
+          <DoneIcon sx={{ marginBottom: "-3px" }}></DoneIcon>
         </div>
         <div className={errVis3}>{pageErr3.toString()}</div>
 
@@ -289,10 +255,10 @@ function App() {
           </MobileView>
         </div>
         <div onClick={closeEmail} className={crossVis}>
-          <CloseIcon></CloseIcon>
+          <CloseIcon sx={{ marginBottom: "-3px" }}></CloseIcon>
         </div>
         <div onClick={updateUserEmail} className={tickVis}>
-          <DoneIcon></DoneIcon>
+          <DoneIcon sx={{ marginBottom: "-3px" }}></DoneIcon>
         </div>
         <div className={errVis}>{pageErr.toString()}</div>
 
@@ -321,6 +287,52 @@ function App() {
           Delete Account
         </div>
         <div className={errVis2}>{pageErr2.toString()}</div>
+        <BrowserView>
+          <div className={verifyVis}>
+            <div className="verify--box">
+              <div className="verify--box---title">Are you sure?</div>
+              <div className="verify--box---warning">
+                Accounts that are deleted CAN NOT be recovered. Do you want to
+                continue?
+              </div>
+              <div
+                onClick={delaccvis}
+                className="user--action---button---cancel"
+              >
+                Cancel
+              </div>
+              <div
+                onClick={delacc}
+                className="user--action---button---continue"
+              >
+                Confirm
+              </div>
+            </div>
+          </div>
+        </BrowserView>
+        <MobileView>
+          <div className={verifyVis}>
+            <div className="verify--box" style={{ width: "250px" }}>
+              <div className="verify--box---title">Are you sure?</div>
+              <div className="verify--box---warning">
+                Accounts that are deleted CAN NOT be recovered. Do you want to
+                continue?
+              </div>
+              <div
+                onClick={delaccvis}
+                className="user--action---button---cancel"
+              >
+                Cancel
+              </div>
+              <div
+                onClick={delacc}
+                className="user--action---button---continue"
+              >
+                Confirm
+              </div>
+            </div>
+          </div>
+        </MobileView>
       </div>
       <Footer></Footer>
     </body>
