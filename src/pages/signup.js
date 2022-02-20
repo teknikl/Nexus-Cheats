@@ -5,7 +5,6 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useHistory } from "react-router-dom";
 import { AuthContext, auth } from "../auth/auth.js";
-import { updateProfile } from "@firebase/auth";
 import Bg from "../components/background.js";
 import Footer from "../components/footer.js";
 import { BrowserView, MobileView } from "react-device-detect";
