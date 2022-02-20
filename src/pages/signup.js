@@ -48,10 +48,8 @@ function App() {
   const registerUser = () => {
     createUserWithEmailAndPassword(auth, email, pass, user)
       .then((newUser) => {
-        // When the newUser gets created, extract the user key
         const currUser = newUser.user;
         let defaultUsername = `user${Math.floor(Math.random() * 1000000) + 1}`;
-        // This function takes in an OPTIONAL parameter called displayName
         updateProfile(currUser, {
           displayName: defaultUsername,
         });
@@ -61,13 +59,6 @@ function App() {
         setFormErrVis("main-form--error");
         setFormerr(err);
       });
-  };
-
-  const updateUsername = (user) => {
-    let defaultUsername = `user${Math.floor(Math.random() * 1000000) + 1}`;
-    updateProfile(user, {
-      displayName: defaultUsername,
-    });
   };
 
   const arrow = ">";
